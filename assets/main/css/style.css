@@ -502,11 +502,11 @@ small,
   color: rgba(43, 43, 43, 0.7);
 }
 
-.rounded-circle {
+/* .rounded-circle {
   border: 1px solid #ecf3fa;
   padding: 2px;
   border-radius: 5px !important;
-}
+} */
 
 /******************************** 
 * Margin => padding => Font-size
@@ -2342,7 +2342,8 @@ td span:hover,
 }
 
 .nav-header .brand-logo .logo-tabib {
-  max-width: 45px;
+  max-width: 80%;
+  height: auto;
 }
 
 @media only screen and (max-width: 767px) {
