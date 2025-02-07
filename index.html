@@ -3,6 +3,7 @@
 
 
 <!-- Mirrored from tabib-v2.inaikas.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Feb 2024 11:34:19 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +15,9 @@
     <!-- Base Styling  -->
     <link rel="stylesheet" href="assets/main/css/fonts.css">
     <link rel="stylesheet" href="assets/main/css/style.css">
+    <link rel="stylesheet" href="assets/fonts/feather/feather.css">
+    <!-- <link rel="stylesheet" href="assets/main/css/style1.css"> -->
+    <link rel="stylesheet" href="assets/main/css/skin_color.css">
 </head>
 
 <body>
@@ -420,7 +424,7 @@
                                         <span>Dr Roberts</span>
                                         <small>Admin</small>
                                     </div>
-                                    <img src="assets/images/client.jpg" alt="people" class="rounded-circle">
+                                    <img src="assets/images/client.jpg" alt="people" class="">
                                 </a>
                                 <div class="account-dropdown-form dropdown-container">
                                     <div class="form-content">
@@ -450,14 +454,70 @@
         <!-- start section content -->
         <div class="content-body">
             <div class="warper container-fluid">
-                <div class="row page-titles mx-0">
-                    <div class="col-lg-12 p-md-0">
-                        <h4 class="text-primary">Good morning <span class="names">Dr Roberts</span></h4>
-                        <p class="mb-0">Tabib Apps web | Admin Dashboard Template</p>
+
+                <div class="new-patients main_container row">
+                    <div class="col-sm-6 col-xl-6 col-12">
+                        <div class="box bg-primary-light no-shadow">
+                            <div class="box-body p-xl-0">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-lg-3"><img
+                                            src="assets/images/svg-icon/color-svg/11683787_4760011.svg" alt="">
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                                        <div id="timeIcon" class="welcome-icon"></div>
+                                        <h1 class="fs-40 text-primary"><span id="greeting"></span> Jhone!</h1>
+                                        <!-- <p class="text-dark mb-0 fs-16">
+                                                Your course Overcoming the fear of public speaking was completed by 11 New users this week!
+                                            </p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3 col-12">
+                        <div class="box bg-gradient-primary no-shadow">
+                            <div class="col-xl-12 col-lg-12 box-body text-center align-items-lg-stretch">
+                                <h3 class=" mb-30">Have More<br>knowledge to share?</h3>
+                                <button type="button" class="waves-effect waves-light w-p100 btn btn-primary"><i
+                                        class="fa fa-plus me-15"></i> Create New Course</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3 col-12">
+                        <div class="box bg-gradient-primary no-shadow">
+                            <div class="col-xl-12 col-lg-12 box-body text-center align-items-lg-stretch">
+                                <h3 class="mb-30">Have More<br>knowledge to share?</h3>
+                                <button type="button" class="waves-effect waves-light w-p100 btn btn-primary"><i
+                                        class="fa fa-plus me-15"></i> Create New Course</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="new-patients main_container">
                     <div class="row">
+                        <div class="col-md-6 grid-margin stretch-card">
+                            <div class="imgboxcard tale-bg">
+                                <div class="card-people mt-auto">
+                                    <img src="assets/images/svg-icon/color-svg/people.svg" alt="people">
+                                    <div class="weather-info">
+                                        <div class="d-flex">
+                                            <!-- <div>
+                                                <h2 class="mb-0 font-weight-normal"><i
+                                                        class="icon-sun mr-2"></i>31<sup>C</sup></h2>
+                                            </div> -->
+                                            <!-- <div class="ml-2">
+                                                <h4 class="location font-weight-normal">Bangalore</h4>
+                                                <h6 class="font-weight-normal">India</h6>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-patients main_container">
+                        <!-- <div class="row">
                         <div class="col-sm-6 col-xl-3 col-lg-6">
                             <div class="widget card card-primary bg-card1">
                                 <div class="card-body">
@@ -518,26 +578,26 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="card shadow widget1">
-                                <div class="card-header">
-                                    <h4 class="card-title">Activity</h4>
-                                    <span class="subtitle">TODAY 24, JAN 2019</span>
-                                </div>
-                                <div class="card-body">
-                                    <canvas id="chart1" width="100%" height="40"></canvas>
+                    </div> -->
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="card shadow widget1">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Activity</h4>
+                                        <span class="subtitle">TODAY 24, JAN 2019</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- <canvas id="chart1" width="100%" height="40"></canvas> -->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="card shadow widget-2">
-                                <div class="card-header">
-                                    <h4 class="card-title">New Patient</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div class="panel-body widget-media main-scroll nicescroll-box">
+                            <div class="col-lg-4">
+                                <div class="card shadow widget-2">
+                                    <div class="card-header">
+                                        <h4 class="card-title">New Patient</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- <div class="panel-body widget-media main-scroll nicescroll-box">
                                         <ul class="list-group list-unstyled">
                                             <li
                                                 class="list-group-item d-flex justify-content-between align-items-center media">
@@ -604,11 +664,11 @@
                                                 </button>
                                             </li>
                                         </ul>
+                                    </div> -->
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
+                            <!-- <div class="col-lg-6">
                             <div class="card shadow widget1">
                                 <div class="card-header">
                                     <h4 class="card-title">Top Diseases</h4>
@@ -641,8 +701,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
+                        </div> -->
+                            <!-- <div class="col-lg-6">
                             <div class="card shadow widget1">
                                 <div class="card-header">
                                     <h4 class="card-title">Total Patient Per Day</h4>
@@ -651,11 +711,11 @@
                                     <canvas id="chart2" width="100%" height="299"></canvas>
                                 </div>
                             </div>
+                        </div> -->
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card shadow">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- <div class="card shadow">
                                 <div class="card-header">
                                     <h4 class="card-title">Appointment List | 04 Aug 2022</h4>
                                 </div>
@@ -884,49 +944,53 @@
                                         </table>
                                     </div>
                                 </div>
+                            </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-        </div>
-        <!-- End section content -->
+            <!-- End section content -->
 
 
-        <!-- start section footer -->
-        <div class="footer">
-            <div class="copyright">
-                <p class="mb-0">Copyright © Designed &amp; Developed by <a href="uxign.html" target="_blank">Uxign</a>
-                    2022
-                </p>
+            <!-- start section footer -->
+            <div class="footer">
+                <div class="copyright">
+                    <p class="mb-0">Copyright © Designed &amp; Developed by <a href="index.html"
+                            target="_blank">MOFHCMIS</a>
+                        <span id="currentYear"></span>
+                    </p>
+                </div>
             </div>
-        </div>
-        <!-- End section footer -->
+            <!-- End section footer -->
 
-        
-    </div>
-    <!-- JQuery v3.5.1 -->
-    <script src="assets/plugins/jquery/jquery.min.js"></script>
-    <!-- popper js -->
-    <script src="assets/plugins/popper/popper.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="assets/plugins/bootstrap/js/bootstrap.js"></script>
-    <!-- Moment -->
-    <script src="assets/plugins/moment/moment.min.js"></script>
-    <!-- Date Range Picker -->
-    <script src="assets/plugins/daterangepicker/daterangepicker.min.js"></script>
-    <!-- Datatable -->
-    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="assets/js/init-tdatatable.js"></script>
-    <!-- Chart js -->
-    <script src="assets/plugins/chart/chart/Chart.min.js"></script>
-    <script src="assets/js/charts-custom.js"></script>
-    <!-- Main Custom JQuery -->
-    <script src="assets/js/toggleFullScreen.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/option-themes.js"></script>
+
+        </div>
+        <!-- JQuery v3.5.1 -->
+        <script src="assets/plugins/jquery/jquery.min.js"></script>
+        <!-- popper js -->
+        <script src="assets/plugins/popper/popper.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/plugins/bootstrap/js/bootstrap.js"></script>
+        <!-- Moment -->
+        <script src="assets/plugins/moment/moment.min.js"></script>
+        <!-- Date Range Picker -->
+        <script src="assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+        <!-- Datatable -->
+        <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/js/init-tdatatable.js"></script>
+        <!-- Chart js -->
+        <script src="assets/plugins/chart/chart/Chart.min.js"></script>
+        <script src="assets/js/charts-custom.js"></script>
+        <!-- Main Custom JQuery -->
+        <script src="assets/js/toggleFullScreen.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/option-themes.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </body>
 
 
 <!-- Mirrored from tabib-v2.inaikas.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Feb 2024 11:34:53 GMT -->
+
 </html>

@@ -268,3 +268,195 @@ jQuery(function ($) {
 
     });
 });
+
+// Code for Printing out the Current year in the footer
+// Get the current year
+const currentYear = new Date().getFullYear();
+
+// Insert the current year into the HTML element with the ID "currentYear"
+document.getElementById("currentYear").textContent = currentYear;
+
+// Display Current Greeting
+// Function to get the current time in Accra (GMT+0)
+function getGreeting() {
+    const now = new Date();
+    const hour = now.getUTCHours(); // Use UTC hours for Accra timezone (GMT+0)
+
+    let greeting;
+    if (hour >= 5 && hour < 12) {
+        greeting = "Good Morning";
+    } else if (hour >= 12 && hour < 18) {
+        greeting = "Good Afternoon";
+    } else {
+        greeting = "Good Evening";
+    }
+
+    return greeting;
+}
+
+// Update the greeting in the HTML
+document.getElementById("greeting").textContent = getGreeting();
+
+
+// Greeting Script
+document.addEventListener('DOMContentLoaded', function () {
+    function updateTimeBasedContent() {
+        // Get current hour in Accra (GMT+0)
+        const accraTime = new Date().toLocaleString('en-US', { timeZone: 'Africa/Accra' });
+        const hour = new Date(accraTime).getHours();
+
+        const welcomeCard = document.querySelector('.welcome-card');
+        const greetingElement = document.getElementById('greeting');
+        const timeIcon = document.getElementById('timeIcon');
+        const timeImage = document.getElementById('timeImage');
+
+        let content = {
+            greeting: '',
+            iconName: '',
+            image: '',
+            theme: ''
+        };
+
+        if (hour >= 5 && hour < 12) {
+            content = {
+                greeting: 'Good Morning',
+                iconName: 'sunrise',
+                image: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&q=80&w=800',
+                theme: 'theme-morning'
+            };
+        } else if (hour >= 12 && hour < 17) {
+            content = {
+                greeting: 'Good Afternoon',
+                iconName: 'sun',
+                image: 'https://images.unsplash.com/photo-1466971736075-ed83bf4c68a9?auto=format&fit=crop&q=80&w=800',
+                theme: 'theme-afternoon'
+            };
+        } else if (hour >= 17 && hour < 20) {
+            content = {
+                greeting: 'Good Evening',
+                iconName: 'sunset',
+                image: 'https://images.unsplash.com/photo-1472120435266-53107fd0c44a?auto=format&fit=crop&q=80&w=800',
+                theme: 'theme-evening'
+            };
+        } else {
+            content = {
+                greeting: 'Good Night',
+                iconName: 'moon',
+                image: 'https://images.unsplash.com/photo-1532978379173-523e16f371f9?auto=format&fit=crop&q=80&w=800',
+                theme: 'theme-night'
+            };
+        }
+
+        // Update content
+        greetingElement.textContent = content.greeting;
+        timeImage.src = content.image;
+
+        // Update theme
+        welcomeCard.className = 'card welcome-card ' + content.theme;
+
+        // Update icon
+        timeIcon.innerHTML = '';
+        const iconSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        iconSvg.setAttribute('width', '24');
+        iconSvg.setAttribute('height', '24');
+        iconSvg.setAttribute('viewBox', '0 0 24 24');
+        iconSvg.setAttribute('fill', 'none');
+        iconSvg.setAttribute('stroke', 'currentColor');
+        iconSvg.setAttribute('stroke-width', '2');
+        iconSvg.setAttribute('stroke-linecap', 'round');
+        iconSvg.setAttribute('stroke-linejoin', 'round');
+
+        // Set the icon path based on the time of day
+        let iconPath = '';
+        switch (content.iconName) {
+            case 'sunrise':
+                iconPath = 'M17 18a5 5 0 0 0-10 0 M12 2v7 M4.22 10.22l1.42 1.42 M1 18h2 M21 18h2 M18.36 11.64l1.42-1.42 M23 22H1 M8 6l4-4 4 4';
+                break;
+            case 'sun':
+                iconPath = 'M12 1v2 M12 21v2 M4.22 4.22l1.42 1.42 M18.36 18.36l1.42 1.42 M1 12h2 M21 12h2 M4.22 19.78l1.42-1.42 M18.36 5.64l1.42-1.42 M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z';
+                break;
+            case 'sunset':
+                iconPath = 'M17 18a5 5 0 0 0-10 0 M12 9V2 M4.22 10.22l1.42 1.42 M1 18h2 M21 18h2 M18.36 11.64l1.42-1.42 M23 22H1 M16 5l-4 4-4-4';
+                break;
+            case 'moon':
+                iconPath = 'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z';
+                break;
+        }
+
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', iconPath);
+        iconSvg.appendChild(path);
+        timeIcon.appendChild(iconSvg);
+    }
+
+    // Initial update
+    updateTimeBasedContent();
+
+    // Update every minute
+    setInterval(updateTimeBasedContent, 60000);
+});
+
+// Weather Script
+// First, you'll need to get an API key from OpenWeatherMap
+const API_KEY = '0f178cf559fad5c51b5e08b1ef7aa89d';
+const CITY = 'Accra';
+const COUNTRY = 'Ghana';
+
+function updateWeather() {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`)
+        .then(response => response.json())
+        .then(data => {
+            const temperature = Math.round(data.main.temp);
+            const weatherIcon = getWeatherIcon(data.weather[0].main);
+
+            document.querySelector('.weather-info').innerHTML = `
+                <div class="d-flex">
+                    <div>
+                        <h2 class="mb-0 font-weight-normal">
+                            <i data-feather="${weatherIcon}" class="mr-2"></i>${temperature}&deg;C
+                        </h2>
+                    </div>
+                    <div class="ml-2">
+                        <h4 class="location font-weight-normal">${CITY}</h4>
+                        <h6 class="font-weight-normal">${COUNTRY}</h6>
+                    </div>
+                </div>
+            `;
+
+            // This line is important - it renders the Feather icons
+            feather.replace();
+        })
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
+            document.querySelector('.weather-info').innerHTML = `
+                <div class="d-flex">
+                    <div>
+                        <h2 class="mb-0 font-weight-normal">
+                            <i data-feather="alert-circle" class="mr-2"></i>Error loading weather data
+                        </h2>
+                    </div>
+                </div>
+            `;
+            feather.replace();
+        });
+}
+
+function getWeatherIcon(weatherCondition) {
+    // Map weather conditions to appropriate icons
+    const iconMap = {
+        'Clear': 'sun',
+        'Clouds': 'cloud',
+        'Rain': 'cloud-rain',
+        'Thunderstorm': 'cloud-lightning',
+        'Snow': 'cloud-snow',
+        'Mist': 'cloud-drizzle',
+        'Haze': 'cloud-drizzle',
+        'Fog': 'cloud-drizzle'
+    };
+
+    return iconMap[weatherCondition] || 'sun';
+}
+
+// Update weather immediately and then every 30 minutes
+updateWeather();
+setInterval(updateWeather, 30 * 60 * 1000);
