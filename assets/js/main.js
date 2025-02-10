@@ -321,28 +321,28 @@ document.addEventListener('DOMContentLoaded', function () {
             content = {
                 greeting: 'Good Morning',
                 iconName: 'sunrise',
-                image: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&q=80&w=800',
+                image: 'assets/images/svg-icon/color-svg/11683787_4760011.svg',
                 theme: 'theme-morning'
             };
         } else if (hour >= 12 && hour < 17) {
             content = {
                 greeting: 'Good Afternoon',
                 iconName: 'sun',
-                image: 'https://images.unsplash.com/photo-1466971736075-ed83bf4c68a9?auto=format&fit=crop&q=80&w=800',
+                image: 'assets/images/svg-icon/color-svg/19879014_6165503.svg',
                 theme: 'theme-afternoon'
             };
         } else if (hour >= 17 && hour < 20) {
             content = {
                 greeting: 'Good Evening',
                 iconName: 'sunset',
-                image: 'https://images.unsplash.com/photo-1472120435266-53107fd0c44a?auto=format&fit=crop&q=80&w=800',
+                image: 'assets/images/svg-icon/color-svg/20547306_6276543.svg',
                 theme: 'theme-evening'
             };
         } else {
             content = {
                 greeting: 'Good Night',
                 iconName: 'moon',
-                image: 'https://images.unsplash.com/photo-1532978379173-523e16f371f9?auto=format&fit=crop&q=80&w=800',
+                image: 'assets/images/svg-icon/color-svg/20547306_6276543.svg',
                 theme: 'theme-night'
             };
         }
@@ -460,3 +460,292 @@ function getWeatherIcon(weatherCondition) {
 // Update weather immediately and then every 30 minutes
 updateWeather();
 setInterval(updateWeather, 30 * 60 * 1000);
+
+// Getting current time via JS
+function getAccraTime() {
+    // Create a date object with the Accra timezone
+    const accraTime = new Date().toLocaleTimeString('en-US', {
+        timeZone: 'Africa/Accra',
+        hour12: true, // Use 12-hour format
+        hour: 'numeric',
+        minute: 'numeric'
+    });
+
+    return accraTime;
+}
+
+// To update time every second
+function updateAccraTime() {
+    const time = getAccraTime();
+    // Assuming you have an element to display the time
+    // Replace 'timeDisplay' with your actual element ID
+    document.getElementById('timeDisplay').textContent = time;
+}
+
+// Initial call to display time immediately
+updateAccraTime();
+
+// Update time every second (1000 milliseconds)
+setInterval(updateAccraTime, 1000);
+
+
+// Featured Calendar 1
+// class Calendar {
+//     constructor(containerId) {
+//         this.container = document.getElementById(containerId);
+//         this.date = new Date();
+//         this.currentMonth = this.date.getMonth();
+//         this.currentYear = this.date.getFullYear();
+//         this.monthDisplay = document.getElementById('monthDisplay');
+//         this.datesContainer = document.getElementById('calendarDates');
+
+//         this.initializeCalendar();
+//         this.addEventListeners();
+//     }
+
+//     initializeCalendar() {
+//         this.renderCalendar();
+//     }
+
+//     addEventListeners() {
+//         document.getElementById('prevMonth').addEventListener('click', () => {
+//             this.navigateMonth(-1);
+//         });
+
+//         document.getElementById('nextMonth').addEventListener('click', () => {
+//             this.navigateMonth(1);
+//         });
+//     }
+
+//     navigateMonth(direction) {
+//         this.currentMonth += direction;
+//         if (this.currentMonth > 11) {
+//             this.currentMonth = 0;
+//             this.currentYear++;
+//         } else if (this.currentMonth < 0) {
+//             this.currentMonth = 11;
+//             this.currentYear--;
+//         }
+//         this.renderCalendar();
+//     }
+
+//     renderCalendar() {
+//         const firstDay = new Date(this.currentYear, this.currentMonth, 1);
+//         const lastDay = new Date(this.currentYear, this.currentMonth + 1, 0);
+//         const startingDay = firstDay.getDay();
+//         const monthDays = lastDay.getDate();
+
+//         this.monthDisplay.textContent = `${firstDay.toLocaleString('default', { month: 'long' })} ${this.currentYear}`;
+
+//         let datesHTML = '';
+
+//         // Previous month's days
+//         const prevMonthLastDay = new Date(this.currentYear, this.currentMonth, 0).getDate();
+//         for (let i = startingDay - 1; i >= 0; i--) {
+//             datesHTML += `<div class="date-cell other-month">${prevMonthLastDay - i}</div>`;
+//         }
+
+//         // Current month's days
+//         const today = new Date();
+//         for (let i = 1; i <= monthDays; i++) {
+//             const isToday = i === today.getDate() &&
+//                 this.currentMonth === today.getMonth() &&
+//                 this.currentYear === today.getFullYear();
+
+//             datesHTML += `<div class="date-cell ${isToday ? 'current-date' : ''}">${i}</div>`;
+//         }
+
+//         // Next month's days
+//         const totalCells = 42; // 6 rows * 7 days
+//         const remainingCells = totalCells - (startingDay + monthDays);
+//         for (let i = 1; i <= remainingCells; i++) {
+//             datesHTML += `<div class="date-cell other-month">${i}</div>`;
+//         }
+
+//         this.datesContainer.innerHTML = datesHTML;
+//     }
+// }
+
+// Initialize calendar when DOM is loaded
+// document.addEventListener('DOMContentLoaded', () => {
+//     new Calendar('calendar');
+// });
+
+// Featured Calendar 2
+// document.addEventListener('DOMContentLoaded', function() {
+//     const monthYear = document.getElementById('month-year');
+//     const calendarDays = document.getElementById('calendar-days');
+//     const date = new Date();
+//     const month = date.getMonth();
+//     const year = date.getFullYear();
+//     const currentDay = date.getDate();
+
+//     const monthNames = ["January", "February", "March", "April", "May", "June",
+//                         "July", "August", "September", "October", "November", "December"];
+
+//     monthYear.textContent = `${monthNames[month]} ${year}`;
+
+//     function getDaysInMonth(month, year) {
+//         return new Date(year, month + 1, 0).getDate();
+//     }
+
+//     function getFirstDayOfMonth(month, year) {
+//         return new Date(year, month, 1).getDay();
+//     }
+
+//     const daysInMonth = getDaysInMonth(month, year);
+//     const firstDay = getFirstDayOfMonth(month, year);
+
+//     let days = '';
+
+//     for (let i = 0; i < firstDay; i++) {
+//         days += '<div></div>';
+//     }
+
+//     for (let i = 1; i <= daysInMonth; i++) {
+//         if (i === currentDay) {
+//             days += `<div class="current-day">${i}</div>`;
+//         } else {
+//             days += `<div>${i}</div>`;
+//         }
+//     }
+
+//     calendarDays.innerHTML = days;
+// });
+
+// Featured Calendar 3
+// class Calendar {
+//     constructor() {
+//         this.date = new Date();
+//         this.currentMonth = this.date.getMonth();
+//         this.currentYear = this.date.getFullYear();
+//         this.currentDay = this.date.getDate();
+
+//         this.monthDisplay = document.querySelector('.month-display');
+//         this.datesGrid = document.querySelector('.dates-grid');
+
+//         this.initializeCalendar();
+//         this.addEventListeners();
+//     }
+
+//     initializeCalendar() {
+//         this.renderCalendar();
+//     }
+
+//     addEventListeners() {
+//         document.querySelector('.prev-month').addEventListener('click', () => {
+//             this.navigateMonth(-1);
+//         });
+
+//         document.querySelector('.next-month').addEventListener('click', () => {
+//             this.navigateMonth(1);
+//         });
+//     }
+
+//     navigateMonth(direction) {
+//         this.currentMonth += direction;
+
+//         if (this.currentMonth > 11) {
+//             this.currentMonth = 0;
+//             this.currentYear++;
+//         } else if (this.currentMonth < 0) {
+//             this.currentMonth = 11;
+//             this.currentYear--;
+//         }
+
+//         this.renderCalendar();
+//     }
+
+//     renderCalendar() {
+//         const firstDay = new Date(this.currentYear, this.currentMonth, 1);
+//         const lastDay = new Date(this.currentYear, this.currentMonth + 1, 0);
+//         const startingDay = firstDay.getDay();
+//         const monthDays = lastDay.getDate();
+
+//         // Update month display
+//         this.monthDisplay.textContent = firstDay.toLocaleString('default', { 
+//             month: 'long', 
+//             year: 'numeric' 
+//         });
+
+//         let datesHTML = '';
+
+//         // Previous month's days
+//         const prevMonthLastDay = new Date(this.currentYear, this.currentMonth, 0).getDate();
+//         for (let i = startingDay - 1; i >= 0; i--) {
+//             datesHTML += `<div class="date-cell other-month">${prevMonthLastDay - i}</div>`;
+//         }
+
+//         // Current month's days
+//         for (let i = 1; i <= monthDays; i++) {
+//             const isToday = i === this.currentDay && 
+//                            this.currentMonth === this.date.getMonth() && 
+//                            this.currentYear === this.date.getFullYear();
+
+//             datesHTML += `<div class="date-cell ${isToday ? 'current' : ''}">${i}</div>`;
+//         }
+
+//         // Next month's days
+//         const totalCells = 42;
+//         const remainingCells = totalCells - (startingDay + monthDays);
+//         for (let i = 1; i <= remainingCells; i++) {
+//             datesHTML += `<div class="date-cell other-month">${i}</div>`;
+//         }
+
+//         this.datesGrid.innerHTML = datesHTML;
+//     }
+// }
+
+// Initialize calendar when DOM is loaded
+// document.addEventListener('DOMContentLoaded', () => {
+//     new Calendar();
+// });
+
+// Featured Calendar 4
+const daysTag = document.querySelector(".days"),
+    currentDate = document.querySelector(".current-date"),
+    prevNextIcon = document.querySelectorAll(".icons span");
+// getting new date, current year and month
+let date = new Date(),
+    currYear = date.getFullYear(),
+    currMonth = date.getMonth();
+// storing full name of all months in array
+const months = ["January", "February", "March", "April", "May", "June", "July",
+    "August", "September", "October", "November", "December"];
+const renderCalendar = () => {
+    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
+        lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
+        lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
+        lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
+    let liTag = "";
+    for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
+        liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+    }
+    for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
+        // adding active class to li if the current day, month, and year matched
+        let isToday = i === date.getDate() && currMonth === new Date().getMonth()
+            && currYear === new Date().getFullYear() ? "active" : "";
+        liTag += `<li class="${isToday}">${i}</li>`;
+    }
+    for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
+        liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
+    }
+    currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
+    daysTag.innerHTML = liTag;
+}
+renderCalendar();
+prevNextIcon.forEach(icon => { // getting prev and next icons
+    icon.addEventListener("click", () => { // adding click event on both icons
+        // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
+        currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+        if (currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
+            // creating a new date of current year & month and pass it as date value
+            date = new Date(currYear, currMonth, new Date().getDate());
+            currYear = date.getFullYear(); // updating current year with new date year
+            currMonth = date.getMonth(); // updating current month with new date month
+        } else {
+            date = new Date(); // pass the current date as date value
+        }
+        renderCalendar(); // calling renderCalendar function
+    });
+});

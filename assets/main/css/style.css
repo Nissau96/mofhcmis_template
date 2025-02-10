@@ -20,6 +20,162 @@ Notes:  Google Fonts
 ****************************************************************************************************************
 ||||||||||||||||||||||||||||            End TABLE OF CONTENT                ||||||||||||||||||||||||||||||||||||
 ****************************************************************************************************************/
+
+/* .calendar-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.calendar-header {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-days div {
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.25s ease;
+}
+
+.calendar-days div:hover {
+  background: #DAE7FF;
+  cursor: pointer;
+}
+
+.calendar-days .current-day {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+} */
+
+
+
+.wrapper {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.wrapper header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+
+header .icons {
+  display: flex;
+}
+
+header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+
+.icons span:last-child {
+  margin-right: -10px;
+}
+
+header .icons span:hover {
+  background: #f2f2f2;
+}
+
+header .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.calendar {
+  padding: 10px;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calendar .days {
+  margin-bottom: 20px;
+}
+
+.calendar li {
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+
+.calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+  background: #2e5797;
+}
+
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+
+
 .welcome-card {
   border: none;
   border-radius: 1rem;
@@ -83,7 +239,7 @@ Notes:  Google Fonts
 
 /* Utilities */
 .grid-margin {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .stretch-card {
@@ -153,8 +309,14 @@ Notes:  Google Fonts
   border-radius: 10px;
 }
 
+
+
 .imgboxcard.tale-bg {
   background: #DAE7FF;
+}
+
+.imgboxcard.white-bg {
+  background: #ffffff;
 }
 
 
@@ -543,7 +705,7 @@ td span:hover,
   width: 100%;
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 0px;
+  padding: 15px;
   -webkit-transition: .5s;
   transition: .5s;
   display: -ms-flexbox;
