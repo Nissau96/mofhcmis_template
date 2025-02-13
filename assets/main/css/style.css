@@ -21,6 +21,568 @@ Notes:  Google Fonts
 ||||||||||||||||||||||||||||            End TABLE OF CONTENT                ||||||||||||||||||||||||||||||||||||
 ****************************************************************************************************************/
 
+
+
+
+.accordion-button {
+  background-color: #FFF;
+  color: #6B7280;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #6B7280;
+  background-color: #F8F9FA;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  border-color: rgba(242, 101, 34, 0.3);
+  box-shadow: none;
+}
+
+.accordion-button:after,
+.accordion-button:not(.collapsed)::after {
+  background-image: none;
+}
+
+.accordion-button:after {
+  content: "\f078";
+  font-family: "Fontawesome";
+  font-size: 12px;
+  line-height: 1;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3.125rem;
+  color: #6B7280;
+}
+
+.accordion-body {
+  padding: 1rem;
+  font-size: 0.8125rem;
+  color: #677788;
+}
+
+.accordion-item {
+  color: #6B7280;
+  background-color: #FFF;
+  border: 1px solid #E9EDF4;
+}
+
+.accordions-items-seperate .accordion-item:not(:first-of-type) {
+  margin-block-start: 1rem;
+}
+
+.accordions-items-seperate .accordion-item {
+  border-block-start: 1px solid #E9EDF4;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.accordion-item:last-of-type {
+  border-bottom-right-radius: 0.35rem;
+  border-bottom-left-radius: 0.35rem;
+}
+
+.accordion-item:first-of-type {
+  border-top-left-radius: 0.35rem;
+  border-top-right-radius: 0.35rem;
+}
+
+.accordion.accordion-primary .accordion-button {
+  background-color: rgba(242, 101, 34, 0.1);
+  color: #F26522;
+}
+
+.accordion.accordion-primary .accordion-button:after {
+  background-color: #F26522;
+  color: #FFF;
+}
+
+.accordion.accordion-primary .accordion-button.collapsed {
+  background-color: #FFF;
+  color: #6B7280;
+}
+
+.accordion.accordion-primary .accordion-button.collapsed:after {
+  background-color: #F8F9FA;
+  color: #6B7280;
+}
+
+.accordion.accordion-secondary .accordion-button {
+  background-color: rgba(59, 112, 128, 0.1);
+  color: #3B7080;
+}
+
+.accordion.accordion-secondary .accordion-button:after {
+  background-color: #3B7080;
+  color: #FFF;
+}
+
+.accordion.accordion-secondary .accordion-button.collapsed {
+  background-color: #FFF;
+  color: #6B7280;
+}
+
+.accordion.accordion-secondary .accordion-button.collapsed:after {
+  background-color: #F8F9FA;
+  color: #6B7280;
+}
+
+.accordion.accordion-success .accordion-button {
+  background-color: rgba(3, 201, 90, 0.1);
+  color: #03C95A;
+}
+
+.accordion.accordion-success .accordion-button:after {
+  background-color: #03C95A;
+  color: #FFF;
+}
+
+.accordion.accordion-success .accordion-button.collapsed {
+  background-color: #FFF;
+  color: #6B7280;
+}
+
+.accordion.accordion-success .accordion-button.collapsed:after {
+  background-color: #F8F9FA;
+  color: #6B7280;
+}
+
+.accordion.accordion-danger .accordion-button {
+  background-color: rgba(231, 13, 13, 0.1);
+  color: #E70D0D;
+}
+
+.accordion.accordion-danger .accordion-button:after {
+  background-color: #E70D0D;
+  color: #FFF;
+}
+
+.accordion.accordion-danger .accordion-button.collapsed {
+  background-color: #FFF;
+  color: #6B7280;
+}
+
+.accordion.accordion-danger .accordion-button.collapsed:after {
+  background-color: #F8F9FA;
+  color: #6B7280;
+}
+
+.accordion.accordion-warning .accordion-button {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #FFC107;
+}
+
+.accordion.accordion-warning .accordion-button:after {
+  background-color: #FFC107;
+  color: #FFF;
+}
+
+.accordion.accordion-warning .accordion-button.collapsed {
+  background-color: #FFF;
+  color: #6B7280;
+}
+
+.accordion.accordion-warning .accordion-button.collapsed:after {
+  background-color: #F8F9FA;
+  color: #6B7280;
+}
+
+.accordion.accordion-info .accordion-button {
+  background-color: rgba(27, 132, 255, 0.1);
+  color: #1B84FF;
+}
+
+.accordion.accordion-info .accordion-button:after {
+  background-color: #1B84FF;
+  color: #FFF;
+}
+
+.accordion.accordion-info .accordion-button.collapsed {
+  background-color: #FFF;
+  color: #6B7280;
+}
+
+.accordion.accordion-info .accordion-button.collapsed:after {
+  background-color: #F8F9FA;
+  color: #6B7280;
+}
+
+.accordion.accordion-solid-primary .accordion-button {
+  background-color: #F26522;
+  color: #FFF;
+}
+
+.accordion.accordion-solid-primary .accordion-button:after {
+  background-color: #FFF;
+  color: #F26522;
+}
+
+.accordion.accordion-solid-primary .accordion-button.collapsed {
+  background-color: #FFF;
+  color: #6B7280;
+}
+
+.accordion.accordion-solid-primary .accordion-button.collapsed:after {
+  background-color: #F8F9FA;
+  color: #6B7280;
+}
+
+.accordion.accordion-solid-secondary .accordion-button {
+  background-color: #3B7080;
+  color: #FFF;
+}
+
+.accordion.accordion-solid-secondary .accordion-button:after {
+  background-color: #FFF;
+  color: #3B7080;
+}
+
+.accordion.accordion-solid-secondary .accordion-button.collapsed {
+  background-color: #FFF;
+  color: #6B7280;
+}
+
+.accordion.accordion-solid-secondary .accordion-button.collapsed:after {
+  background-color: #F8F9FA;
+  color: #6B7280;
+}
+
+.accordion.accordion-solid-success .accordion-button {
+  background-color: #03C95A;
+  color: #FFF;
+}
+
+.accordion.accordion-solid-success .accordion-button:after {
+  background-color: #FFF;
+  color: #03C95A;
+}
+
+.accordion.accordion-solid-success .accordion-button.collapsed {
+  background-color: #FFF;
+  color: #6B7280;
+}
+
+.accordion.accordion-solid-success .accordion-button.collapsed:after {
+  background-color: #F8F9FA;
+  color: #6B7280;
+}
+
+.accordion.accordion-solid-danger .accordion-button {
+  background-color: #E70D0D;
+  color: #FFF;
+}
+
+.accordion.accordion-solid-danger .accordion-button:after {
+  background-color: #FFF;
+  color: #E70D0D;
+}
+
+.accordion.accordion-solid-danger .accordion-button.collapsed {
+  background-color: #FFF;
+  color: #6B7280;
+}
+
+.accordion.accordion-solid-danger .accordion-button.collapsed:after {
+  background-color: #F8F9FA;
+  color: #6B7280;
+}
+
+.accordion.accordion-solid-warning .accordion-button {
+  background-color: #FFC107;
+  color: #FFF;
+}
+
+.accordion.accordion-solid-warning .accordion-button:after {
+  background-color: #FFF;
+  color: #FFC107;
+}
+
+.accordion.accordion-solid-warning .accordion-button.collapsed {
+  background-color: #FFF;
+  color: #6B7280;
+}
+
+.accordion.accordion-solid-warning .accordion-button.collapsed:after {
+  background-color: #F8F9FA;
+  color: #6B7280;
+}
+
+.accordion.accordion-solid-info .accordion-button {
+  background-color: #1B84FF;
+  color: #FFF;
+}
+
+.accordion.accordion-solid-info .accordion-button:after {
+  background-color: #FFF;
+  color: #1B84FF;
+}
+
+.accordion.accordion-solid-info .accordion-button.collapsed {
+  background-color: #FFF;
+  color: #6B7280;
+}
+
+.accordion.accordion-solid-info .accordion-button.collapsed:after {
+  background-color: #F8F9FA;
+  color: #6B7280;
+}
+
+.accordion.accordion-border-primary .accordion-item {
+  border: 1px solid #F26522;
+}
+
+.accordion.accordion-border-primary .accordion-button {
+  background-color: #FFF;
+  color: #F26522;
+  border-block-end: 0px;
+}
+
+.accordion.accordion-border-primary .accordion-button:after {
+  background-color: #FFF;
+  color: #F26522;
+  border: 1px solid #F26522;
+}
+
+.accordion.accordion-border-primary .accordion-button:not(.collapsed) {
+  border-block-end: 1px solid #F26522;
+}
+
+.accordion.accordion-border-secondary .accordion-item {
+  border: 1px solid #3B7080;
+}
+
+.accordion.accordion-border-secondary .accordion-button {
+  background-color: #FFF;
+  color: #3B7080;
+  border-block-end: 0px;
+}
+
+.accordion.accordion-border-secondary .accordion-button:after {
+  background-color: #FFF;
+  color: #3B7080;
+  border: 1px solid #3B7080;
+}
+
+.accordion.accordion-border-secondary .accordion-button:not(.collapsed) {
+  border-block-end: 1px solid #3B7080;
+}
+
+.accordion.accordion-border-success .accordion-item {
+  border: 1px solid #03C95A;
+}
+
+.accordion.accordion-border-success .accordion-button {
+  background-color: #FFF;
+  color: #03C95A;
+  border-block-end: 0px;
+}
+
+.accordion.accordion-border-success .accordion-button:after {
+  background-color: #FFF;
+  color: #03C95A;
+  border: 1px solid #03C95A;
+}
+
+.accordion.accordion-border-success .accordion-button:not(.collapsed) {
+  border-block-end: 1px solid #03C95A;
+}
+
+.accordion.accordion-border-danger .accordion-item {
+  border: 1px solid #E70D0D;
+}
+
+.accordion.accordion-border-danger .accordion-button {
+  background-color: #FFF;
+  color: #E70D0D;
+  border-block-end: 0px;
+}
+
+.accordion.accordion-border-danger .accordion-button:after {
+  background-color: #FFF;
+  color: #E70D0D;
+  border: 1px solid #E70D0D;
+}
+
+.accordion.accordion-border-danger .accordion-button:not(.collapsed) {
+  border-block-end: 1px solid #E70D0D;
+}
+
+.accordion.accordion-border-warning .accordion-item {
+  border: 1px solid #FFC107;
+}
+
+.accordion.accordion-border-warning .accordion-button {
+  background-color: #FFF;
+  color: #FFC107;
+  border-block-end: 0px;
+}
+
+.accordion.accordion-border-warning .accordion-button:after {
+  background-color: #FFF;
+  color: #FFC107;
+  border: 1px solid #FFC107;
+}
+
+.accordion.accordion-border-warning .accordion-button:not(.collapsed) {
+  border-block-end: 1px solid #FFC107;
+}
+
+.accordion.accordion-border-info .accordion-item {
+  border: 1px solid #1B84FF;
+}
+
+.accordion.accordion-border-info .accordion-button {
+  background-color: #FFF;
+  color: #1B84FF;
+  border-block-end: 0px;
+}
+
+.accordion.accordion-border-info .accordion-button:after {
+  background-color: #FFF;
+  color: #1B84FF;
+  border: 1px solid #1B84FF;
+}
+
+.accordion.accordion-border-info .accordion-button:not(.collapsed) {
+  border-block-end: 1px solid #1B84FF;
+}
+
+.accordion.accordionicon-none .accordion-button:after {
+  display: none;
+}
+
+.accordion.accordionicon-left .accordion-button {
+  padding-inline-start: 2.5rem;
+}
+
+.accordion.accordionicon-left .accordion-button:after {
+  position: absolute;
+  inset-inline-start: 0.625rem;
+}
+
+.accordion.accordion-customicon1 .accordion-button:after {
+  content: "+";
+  font-family: "Fontawesome";
+  background-color: #F8F9FA;
+}
+
+.accordion.accordion-customicon1 .accordion-button:not(.collapsed)::after {
+  content: "\f068";
+  font-family: "Fontawesome";
+  background-color: #FFF;
+}
+
+
+
+.customized-accordion .accordion-item.custom-accordion-primary .accordion-button {
+  background-color: rgba(242, 101, 34, 0.1);
+  border-inline-start: 0.25rem solid rgba(242, 101, 34, 0.6);
+}
+
+.customized-accordion .accordion-item.custom-accordion-primary .accordion-button:after {
+  background-color: rgba(242, 101, 34, 0.6);
+  color: #FFF;
+}
+
+.customized-accordion .accordion-item.custom-accordion-primary .accordion-body {
+  background-color: rgba(242, 101, 34, 0.1);
+  padding-block-start: 0;
+  border-inline-start: 0.25rem solid rgba(242, 101, 34, 0.6);
+}
+
+.customized-accordion .accordion-item.custom-accordion-secondary .accordion-button {
+  background-color: rgba(59, 112, 128, 0.1);
+  border-inline-start: 0.25rem solid rgba(59, 112, 128, 0.6);
+}
+
+.customized-accordion .accordion-item.custom-accordion-secondary .accordion-button:after {
+  background-color: rgba(59, 112, 128, 0.6);
+  color: #FFF;
+}
+
+.customized-accordion .accordion-item.custom-accordion-secondary .accordion-body {
+  background-color: rgba(59, 112, 128, 0.1);
+  padding-block-start: 0;
+  border-inline-start: 0.25rem solid rgba(59, 112, 128, 0.6);
+}
+
+.customized-accordion .accordion-item.custom-accordion-warning .accordion-button {
+  background-color: rgba(255, 193, 7, 0.1);
+  border-inline-start: 0.25rem solid rgba(255, 193, 7, 0.6);
+}
+
+.customized-accordion .accordion-item.custom-accordion-warning .accordion-button:after {
+  background-color: rgba(255, 193, 7, 0.6);
+  color: #FFF;
+}
+
+.customized-accordion .accordion-item.custom-accordion-warning .accordion-body {
+  background-color: rgba(255, 193, 7, 0.1);
+  padding-block-start: 0;
+  border-inline-start: 0.25rem solid rgba(255, 193, 7, 0.6);
+}
+
+.customized-accordion .accordion-item.custom-accordion-info .accordion-button {
+  background-color: rgba(27, 132, 255, 0.1);
+  border-inline-start: 0.25rem solid rgba(27, 132, 255, 0.6);
+}
+
+.customized-accordion .accordion-item.custom-accordion-info .accordion-button:after {
+  background-color: rgba(27, 132, 255, 0.6);
+  color: #FFF;
+}
+
+.customized-accordion .accordion-item.custom-accordion-info .accordion-body {
+  background-color: rgba(27, 132, 255, 0.1);
+  padding-block-start: 0;
+  border-inline-start: 0.25rem solid rgba(27, 132, 255, 0.6);
+}
+
+.customized-accordion .accordion-item.custom-accordion-success .accordion-button {
+  background-color: rgba(3, 201, 90, 0.1);
+  border-inline-start: 0.25rem solid rgba(3, 201, 90, 0.6);
+}
+
+.customized-accordion .accordion-item.custom-accordion-success .accordion-button:after {
+  background-color: rgba(3, 201, 90, 0.6);
+  color: #FFF;
+}
+
+.customized-accordion .accordion-item.custom-accordion-success .accordion-body {
+  background-color: rgba(3, 201, 90, 0.1);
+  padding-block-start: 0;
+  border-inline-start: 0.25rem solid rgba(3, 201, 90, 0.6);
+}
+
+.customized-accordion .accordion-item.custom-accordion-danger .accordion-button {
+  background-color: rgba(231, 13, 13, 0.1);
+  border-inline-start: 0.25rem solid rgba(231, 13, 13, 0.6);
+}
+
+.customized-accordion .accordion-item.custom-accordion-danger .accordion-button:after {
+  background-color: rgba(231, 13, 13, 0.6);
+  color: #FFF;
+}
+
+.customized-accordion .accordion-item.custom-accordion-danger .accordion-body {
+  background-color: rgba(231, 13, 13, 0.1);
+  padding-block-start: 0;
+  border-inline-start: 0.25rem solid rgba(231, 13, 13, 0.6);
+}
+
+
+.flex-fill {
+  flex: 1 1 auto !important
+}
+
+
+
 .custom-accordion-items {
   .accordions-items-seperate {
     .accordion-item {
