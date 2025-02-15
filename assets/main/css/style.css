@@ -22,6 +22,241 @@ Notes:  Google Fonts
 ****************************************************************************************************************/
 
 
+/* Manez CSS */
+.education__box,
+.education__list {
+    position: relative
+}
+
+.education__list {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.education__list li {
+    position: relative
+}
+
+.education__user {
+    position: absolute;
+    top: .25rem;
+    margin: 0;
+    height: .625rem;
+    width: .625rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity, 1));
+    padding: 0
+}
+
+.education__user:is(.dark *) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(54 42 42/var(--tw-bg-opacity, 1))
+}
+
+.education__content {
+    position: relative;
+    margin-bottom: 15px;
+    margin-inline-start: 30px;
+    padding: 0
+}
+
+.education__content .timeline-content .name {
+    margin-bottom: 5px;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    --tw-text-opacity: 1;
+    color: rgb(73 80 87/var(--tw-text-opacity, 1))
+}
+
+.education__content .timeline-content .name:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(198 200 204/var(--tw-text-opacity, 1))
+}
+
+.education__content .degree {
+    margin-bottom: .5rem;
+    display: block;
+    font-size: 14px;
+    --tw-text-opacity: 1;
+    color: rgb(169 171 182/var(--tw-text-opacity, 1))
+}
+
+.education__content .year {
+    display: block;
+    font-size: 12px;
+    line-height: 1;
+    --tw-text-opacity: 1;
+    color: rgb(135 138 153/var(--tw-text-opacity, 1))
+}
+
+.before__circle {
+    --tw-bg-opacity: 1;
+    background-color: #2e5797;
+}
+
+.before__circle:is(.dark *) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(108 95 252/var(--tw-bg-opacity, 1))
+}
+
+.before__circle {
+    margin-top: .25rem;
+    height: .625rem;
+    width: .625rem;
+    border-radius: 50%
+}
+/* Manez CSS */
+
+
+.justify-content-center {
+  justify-content: center !important
+}
+
+
+
+.fw-medium {
+  font-weight: 500 !important
+}
+
+.fw-semibold {
+  font-weight: 600 !important
+}
+
+.fw-bold {
+  font-weight: 700 !important
+}
+
+.fw-bolder {
+  font-weight: bolder !important
+}
+
+
+.underline-tabs .nav-tabs {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.underline-tabs .nav-link {
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.625rem 0.9375rem;
+  margin-bottom: -2px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.underline-tabs .nav-link:hover {
+  border-bottom-color: #0d6efd50;
+  color: #2e5797;
+  border-radius: 0;
+}
+
+.underline-tabs .nav-link.active {
+  border-bottom-color: #2e5797;
+  color: #2e5797;
+  border-bottom: solid;
+  border-radius: 0;
+}
+
+/* Content Animation */
+.tab-pane.fade {
+  transition: all 0.2s ease-out;
+}
+
+.tab-pane.fade.show {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.contact-grids-tab {
+  padding: 20px 20px 16px 20px;
+}
+
+.contact-grids-tab .nav-underline {
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.contact-grids-tab .nav-underline .nav-item .nav-link {
+  font-weight: 500;
+}
+
+.contact-grids-tab .nav-underline .nav-item .nav-link.active {
+  background-color: #FFF;
+  color: #2e5797;
+  border-radius: 0;
+  font-weight: 500;
+  padding-right: 0;
+  padding-left: 0;
+  border-bottom: solid;
+}
+
+.contact-grids-tab .nav-underline .nav-item .nav-link:hover {
+  background-color: #FFF;
+  color: #2e5797;
+  border-radius: 0;
+}
+
+
+.nav-item {
+  margin-inline-end: 0.5rem;
+}
+
+.nav-item:last-child {
+  margin-inline-end: 0;
+}
+
+.nav-link {
+  color: #6B7280;
+  border-radius: 4px;
+}
+
+.nav-link.active a{
+  background-color: rgba(242, 101, 34, 0.1);
+  color: #2e5797;
+}
+
+.nav-underline .nav-link {
+  padding-right: 0;
+  padding-left: 0;
+  border-bottom: solid transparent;
+}
+
+
+.sidebar-twocol.sidebar .sidebar-right .tab-content {
+  padding-top: 0;
+}
+
+.sidebar-stacked.sidebar .sidebar-right .tab-content {
+  padding-top: 0;
+}
+
+#tab-style-4 .tab-pane.active {
+  border: 1px solid #2e5797;
+  background-color: #2e5797;
+  color: #FFF;
+  padding: 16px;
+  border-radius: 7px;
+}
+
+.stack-menu .tab-pane {
+  display: none;
+}
+
 
 
 .accordion-button {
@@ -479,7 +714,6 @@ Notes:  Google Fonts
 }
 
 
-
 .customized-accordion .accordion-item.custom-accordion-primary .accordion-button {
   background-color: rgba(242, 101, 34, 0.1);
   border-inline-start: 0.25rem solid rgba(242, 101, 34, 0.6);
@@ -730,6 +964,11 @@ Notes:  Google Fonts
 }
 
 .badge.badge-soft-secondary {
+  background: rgba(59, 112, 128, 0.1);
+  color: #3B7080;
+}
+
+.badge-soft-secondary {
   background: rgba(59, 112, 128, 0.1);
   color: #3B7080;
 }
@@ -2569,7 +2808,7 @@ Theme Primary Color
 }
 
 .bg-secondary {
-  background-color: #f73164 !important;
+  background-color: rgba(59, 112, 128, 0.1) !important;
 }
 
 /************************** 
@@ -6807,7 +7046,7 @@ Buttons
 }
 
 .bg-secondary {
-  background-color: #f73164 !important;
+  background-color: rgba(59, 112, 128, 0.1) !important;
 }
 
 /************************** 
