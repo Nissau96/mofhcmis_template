@@ -22,91 +22,282 @@ Notes:  Google Fonts
 ****************************************************************************************************************/
 
 
+/* Profile image styles */
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  width: 9.5rem;
+  height: 9.5rem;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  
+  border: 3px solid #ecf3fa;
+}
+
+.edit-image-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #374151;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+}
+
+.edit-image-btn:hover {
+  background-color: #4b5563;
+}
+
+
+
 /* Manez CSS */
 .education__box,
 .education__list {
-    position: relative
+  position: relative
 }
 
 .education__list {
-    margin: 0;
-    padding: 0;
-    list-style: none
+  margin: 0;
+  padding: 0;
+  list-style: none
 }
 
 .education__list li {
-    position: relative
+  position: relative
 }
 
 .education__user {
-    position: absolute;
-    top: .25rem;
-    margin: 0;
-    height: .625rem;
-    width: .625rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255/var(--tw-bg-opacity, 1));
-    padding: 0
+  position: absolute;
+  top: .25rem;
+  margin: 0;
+  height: .625rem;
+  width: .625rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255/var(--tw-bg-opacity, 1));
+  padding: 0
 }
 
 .education__user:is(.dark *) {
-    --tw-bg-opacity: 1;
-    background-color: rgb(54 42 42/var(--tw-bg-opacity, 1))
+  --tw-bg-opacity: 1;
+  background-color: rgb(54 42 42/var(--tw-bg-opacity, 1))
 }
 
 .education__content {
-    position: relative;
-    margin-bottom: 15px;
-    margin-inline-start: 30px;
-    padding: 0
+  position: relative;
+  margin-bottom: 15px;
+  margin-inline-start: 30px;
+  padding: 0
 }
 
 .education__content .timeline-content .name {
-    margin-bottom: 5px;
-    display: block;
-    font-size: 15px;
-    font-weight: 700;
-    --tw-text-opacity: 1;
-    color: rgb(73 80 87/var(--tw-text-opacity, 1))
+  margin-bottom: 5px;
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(73 80 87/var(--tw-text-opacity, 1))
 }
 
 .education__content .timeline-content .name:is(.dark *) {
-    --tw-text-opacity: 1;
-    color: rgb(198 200 204/var(--tw-text-opacity, 1))
+  --tw-text-opacity: 1;
+  color: rgb(198 200 204/var(--tw-text-opacity, 1))
 }
 
 .education__content .degree {
-    margin-bottom: .5rem;
-    display: block;
-    font-size: 14px;
-    --tw-text-opacity: 1;
-    color: rgb(169 171 182/var(--tw-text-opacity, 1))
+  margin-bottom: .5rem;
+  display: block;
+  font-size: 14px;
+  --tw-text-opacity: 1;
+  color: rgb(169 171 182/var(--tw-text-opacity, 1))
 }
 
 .education__content .year {
-    display: block;
-    font-size: 12px;
-    line-height: 1;
-    --tw-text-opacity: 1;
-    color: rgb(135 138 153/var(--tw-text-opacity, 1))
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(135 138 153/var(--tw-text-opacity, 1))
 }
 
 .before__circle {
-    --tw-bg-opacity: 1;
-    background-color: #2e5797;
+  --tw-bg-opacity: 1;
+  background-color: #2e5797;
 }
 
 .before__circle:is(.dark *) {
-    --tw-bg-opacity: 1;
-    background-color: rgb(108 95 252/var(--tw-bg-opacity, 1))
+  --tw-bg-opacity: 1;
+  background-color: rgb(108 95 252/var(--tw-bg-opacity, 1))
 }
 
 .before__circle {
-    margin-top: .25rem;
-    height: .625rem;
-    width: .625rem;
-    border-radius: 50%
+  margin-top: .25rem;
+  height: .625rem;
+  width: .625rem;
+  border-radius: 50%
 }
+
+
+/* .employee__profile-chnage {
+  position: relative;
+  margin: 0 auto 25px;
+  max-width: 205px
+}
+
+.employee__profile-edit {
+  position: absolute;
+  right: .75rem;
+  top: .625rem;
+  z-index: 1
+}
+
+.employee__profile-edit input {
+  display: none
+}
+
+.employee__profile-edit input+label {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255/var(--tw-bg-opacity, 1))
+}
+
+.employee__profile-edit input+label:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(54 42 42/var(--tw-bg-opacity, 1))
+}
+
+.employee__profile-edit input+label {
+  display: inline-block;
+  height: 34px;
+  width: 34px;
+  border-radius: 100%;
+  border: 1px solid transparent
+}
+
+.employee__profile-edit input+label {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12);
+  cursor: pointer;
+  font-family: normal;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .15s;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out
+}
+
+.employee__profile-edit input+label:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(108 95 252/var(--tw-bg-opacity, 1))
+}
+
+.employee__profile-edit input+label:hover:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(108 95 252/var(--tw-bg-opacity, 1))
+}
+
+.employee__profile-edit input+label:hover:after {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255/var(--tw-text-opacity, 1))
+}
+
+.employee__profile-edit input+label:hover:is(.dark *):after {
+  --tw-text-opacity: 1;
+  color: rgb(54 42 42/var(--tw-text-opacity, 1))
+}
+
+.employee__profile-edit input+label:after {
+  --tw-content: "";
+  content: var(--tw-content);
+  font-family: Font Awesome\ 5 Pro;
+  --tw-text-opacity: 1;
+  color: rgb(54 42 42/var(--tw-text-opacity, 1))
+}
+
+.employee__profile-edit input+label:is(.dark *):after {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255/var(--tw-text-opacity, 1))
+}
+
+.employee__profile-edit input+label:after {
+  position: absolute;
+  top: 45%;
+  inset-inline-start: 50%;
+  --tw-translate-x: -50%;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .15s;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out
+}
+
+.employee__profile-preview {
+  position: relative;
+  height: 15.625rem;
+  width: 15.625rem;
+  border-radius: 100%;
+  border-width: 6px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(248 248 251/var(--tw-border-opacity, 1))
+}
+
+.employee__profile-preview:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99/var(--tw-border-opacity, 1))
+}
+
+.employee__profile-preview {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1)
+}
+
+.employee__profile-preview-box {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat
+}
+
+.bd-timeline-item:nth-child(2n) .employee__profile-edit input+label {
+  margin: 0 0 38px
+}
+
+.bd-timeline-item:first-child .employee__profile-edit input+label {
+  border-radius: 4px 0 0 4px
+}
+
+.bd-timeline-item:last-child.employee__profile-edit input+label {
+  border-radius: 0 4px 4px 0
+}
+
+@media only screen and (max-width:767px) {
+  .employee__profile-edit input+label {
+    margin-bottom: .625rem
+  }
+
+  .bd-timeline-item:nth-child(2n) .employee__profile-edit input+label {
+    margin: .625rem 0 0
+  }
+} */
+
+
+
 /* Manez CSS */
 
 
@@ -172,13 +363,13 @@ Notes:  Google Fonts
 
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(10px);
+    opacity: 0;
+    transform: translateY(10px);
   }
 
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -212,9 +403,9 @@ Notes:  Google Fonts
 }
 
 
-.nav-item {
+/* .nav-item {
   margin-inline-end: 0.5rem;
-}
+} */
 
 .nav-item:last-child {
   margin-inline-end: 0;
@@ -222,10 +413,10 @@ Notes:  Google Fonts
 
 .nav-link {
   color: #6B7280;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 
-.nav-link.active a{
+.nav-link.active a {
   background-color: rgba(242, 101, 34, 0.1);
   color: #2e5797;
 }
@@ -2420,6 +2611,15 @@ small,
   border-radius: 5px !important;
 } */
 
+.rounded-circle {
+  border-radius: 50% !important
+}
+
+.round-circle {
+  border: 2px solid #ecf3fa;
+  border-radius: 50% !important
+}
+
 /******************************** 
 * Margin => padding => Font-size
 *********************************/
@@ -2659,7 +2859,7 @@ table.dataTable.display tbody td {
   background-color: #2e5797;
   border-color: #2e5797;
   margin-bottom: 0;
-  border-radius: 2px !important;
+  border-radius: 1px !important;
 }
 
 /************************** 
