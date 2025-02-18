@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Tabib Apps web | Admin Dashboard Template" />
+    <title>Ministry of Finance HCMIS</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" href="assets/images/android-chrome-512x512.png" />
+    <!-- Base Styling  -->
+    <link rel="stylesheet" href="assets/main/css/fonts.css" />
+    <link rel="stylesheet" href="assets/main/css/style.css" />
+    <link rel="stylesheet" href="assets/fonts/feather/feather.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- <link rel="stylesheet" href="assets/main/css/style1.css"> -->
+    <link rel="stylesheet" href="assets/main/css/skin_color.css" />
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/fonts/tabler-icons/tabler-icons.css">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div id="main-wrapper" class="show">
+        <!-- start logo components -->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index-2.html">
+                    <img class="logo-tabib" src="assets/images/moflogo.png" alt="" /></a>
+                <!-- <a href="index-2.html"><img class="brand-title" src="assets/images/logo.png" alt=""></a> -->
+            </div>
+        </div>
+        <!-- End logo components -->
+
+        <!-- start section sidebar -->
+        <aside class="left-panel nicescroll-box">
+            <nav class="navigation">
+                <ul class="list-unstyled main-menu">
+                    <li class="has-submenu ">
+                        <a href="index.html">
+                            <i class="fas fa-th-large"></i>
+                            <span class="nav-label">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="has-submenu active">
+                        <a href="javascript:void()" class="has-arrow mm-collapsed">
+                            <i class="fa fa-id-badge"></i>
+                            <span class="nav-label">Staff Information</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="staff-profile.html">Staff Profile</a></li>
+                            <li><a href="update-profile.html">Update Staff Profile</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-widgets"></div>
+        </aside>
+        <!-- End section sidebar -->
+
+        <!-- start section header -->
+        <div class="header">
+            <header class="top-head container-fluid">
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="line"></span><span class="line"></span><span class="line"></span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="fullscreen notification_dropdown widget-5">
+                        <div class="full">
+                            <a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="my-account-wrapper widget-7">
+                        <div class="account-wrapper">
+                            <div class="account-control">
+                                <a class="login header-profile" href="#" title="Sign in">
+                                    <div class="header-info">
+                                        <span>John Doe</span>
+                                        <small>Economics Officer</small>
+                                    </div>
+                                    <img src="assets/images/avtar/1.jpg" alt="people" class="" />
+                                </a>
+                                <div class="account-dropdown-form dropdown-container">
+                                    <div class="form-content">
+                                        <a href="doctor-settings.html">
+                                            <i class="far fa-user"></i>
+                                            <span class="ml-2">Profile</span>
+                                        </a>
+                                        <a href="#">
+                                            <i class="far fa-envelope"></i>
+                                            <span class="ml-2">Inbox</span>
+                                        </a>
+                                        <a href="page-login.html">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            <span class="ml-2">Logout </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- End section header -->
+
+        <!-- start section content -->
+        <div class="content-body">
+            <div class="warper container-fluid">
+                <div class="main_container">
+                    <div class="row">
+                        <div class="col-xl-4 theiaStickySidebar">
+                            <div class="card card-bg-1">
+                                <div class="card-body p-01">
+                                    <span
+                                        class="avatar avatar-xl avatar-rounded border border-2 border-white m-auto d-flex mb-2 align-items-center">
+                                        <img src="assets/images/avtar/1.jpg" class="rounded-circle" width="300"
+                                            alt="Img">
+                                    </span>
+                                    <div class="text-center px-3 pb-3 border-bottom">
+                                        <div class="mb-3">
+                                            <h4 class="d-flex align-items-center justify-content-center mb-1">
+                                                John Doe
+                                                <i class="ti ti-discount-check-filled text-success ms-1"></i>
+                                            </h4>
+                                            <span class="badge bg-gradient-primary text-white fw-medium me-2">
+                                                <i class="ti ti-point-filled me-1"></i>Economics Officer
+                                            </span>
+                                            <span class="badge badge-soft-secondary fw-medium">10+ years in the
+                                                Ministry</span>
+                                        </div>
+                                        <div class="">
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <span class="d-inline-flex align-items-center">
+                                                    <i class="ti ti-id me-2"></i>
+                                                    Staff ID
+                                                </span>
+                                                <p class="text-primary fw-bold">1577070</p>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <span class="d-inline-flex align-items-center">
+                                                    <i class="ti ti-building-bank me-2"></i>
+                                                    Division
+                                                </span>
+                                                <p class="text-dark">Budget Division</p>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <span class="d-inline-flex align-items-center">
+                                                    <i class="ti ti-accessible me-2"></i>
+                                                    Unit
+                                                </span>
+                                                <p class="text-dark">Budget Technical Advisory</p>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <span class="d-inline-flex align-items-center">
+                                                    <i class="ti ti-calendar-check me-2"></i>
+                                                    Date Of Appointment
+                                                </span>
+                                                <p class="text-dark">1st January 2023</p>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <span class="d-inline-flex align-items-center">
+                                                    <i class="ti ti-building-skyscraper me-2"></i>
+                                                    Office
+                                                </span>
+                                                <p class="text-dark">Main Block, 4th Floor, Room 419</p>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <span class="d-inline-flex align-items-center">
+                                                    <i class="ti ti-award me-2"></i>
+                                                    Classification
+                                                </span>
+                                                <p class="text-dark">Professional</p>
+                                            </div>
+                                            <div class="row gx-2 mt-3">
+                                                <div class="col-12">
+                                                    <div>
+                                                        <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                                            data-bs-target="#edit_employee"><i
+                                                                class="ti ti-edit me-1"></i>Update Info</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 border-bottom">
+                                        <div class="d-flex align-items-center justify-content-between mb-2">
+                                            <h6>Basic information</h6>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mb-2">
+                                            <span class="d-inline-flex align-items-center">
+                                                <i class="ti ti-user-square-rounded me-2"></i>
+                                                Title
+                                            </span>
+                                            <p class="text-dark">Mr.</p>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mb-2">
+                                            <span class="d-inline-flex align-items-center">
+                                                <i class="ti ti-phone me-2"></i>
+                                                Phone
+                                            </span>
+                                            <p class="text-dark">+233 302-747-197</p>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mb-2">
+                                            <span class="d-inline-flex align-items-center">
+                                                <i class="ti ti-mail-check me-2"></i>
+                                                Official Email
+                                            </span>
+                                            <p class="text-info">helpdesk@mofep.gov.gh</p>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mb-2">
+                                            <span class="d-inline-flex align-items-center">
+                                                <i class="ti ti-mail-check me-2"></i>
+                                                Personal Email
+                                            </span>
+                                            <p class="text-info">pjwsjw@gmail.com</p>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mb-2">
+                                            <span class="d-inline-flex align-items-center">
+                                                <i class="ti ti-gender-male me-2"></i>
+                                                Gender
+                                            </span>
+                                            <p class="text-dark">Male</p>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mb-2">
+                                            <span class="d-inline-flex align-items-center">
+                                                <i class="ti ti-calendar me-2"></i>
+                                                Date of Birth
+                                            </span>
+                                            <p class="text-dark">24th July 2000</p>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mb-2">
+                                            <span class="d-inline-flex align-items-center">
+                                                <i class="ti ti-map-pin-check me-2"></i>
+                                                Digital Address
+                                            </span>
+                                            <p class="text-dark">GA-144-2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="card shadow widget1">
+                                        <!-- <div class="card-header">
+                                            <h5 class="mb-1">
+                                                Notifications
+                                            </h5>
+                                        </div> -->
+                                        <div class="card-body">
+                                            <div
+                                                class="d-flex align-items-center pb-3 mb-3 border-bottom align-items-center flex-fill">
+                                                <div>
+                                                    <h5 class="mb-1">Personal Information</h5>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <span class="d-inline-flex align-items-center">
+                                                        <i class="ti ti-id me-2"></i>
+                                                        Ghana Card Number
+                                                    </span>
+                                                    <p class="text-primary fw-bold">GHA-12203-864-3</p>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <span class="d-inline-flex align-items-center">
+                                                        <i class="ti ti-id me-2"></i>
+                                                        SSNIT Number
+                                                    </span>
+                                                    <p class="text-dark">12349587</p>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <span class="d-inline-flex align-items-center">
+                                                        <i class="ti ti-bookmark-plus me-2"></i>
+                                                        Religion
+                                                    </span>
+                                                    <p class="text-dark">Christian</p>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <span class="d-inline-flex align-items-center">
+                                                        <i class="ti ti-spaces me-2"></i>
+                                                        Marital Status
+                                                    </span>
+                                                    <p class="text-dark">Single</p>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <span class="d-inline-flex align-items-center">
+                                                        <i class="ti ti-baby-bottle me-2"></i>
+                                                        No. of children
+                                                    </span>
+                                                    <p class="text-dark">2</p>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <span class="d-inline-flex align-items-center">
+                                                        <i class="ti ti-map-pins me-2"></i>
+                                                        Residential Address
+                                                    </span>
+                                                    <p class="text-dark">Finance Drive, Accra.</p>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <span class="d-inline-flex align-items-center">
+                                                        <i class="ti ti-mailbox me-2"></i>
+                                                        Postal Address
+                                                    </span>
+                                                    <p class="text-dark">P. O. Box M40, Accra</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="card shadow widget1">
+                                        <div class="card-body">
+                                            <div
+                                                class="d-flex align-items-center pb-3 mb-3 border-bottom align-items-center flex-fill">
+                                                <div>
+                                                    <h5 class="mb-1">Education Qualification</h5>
+                                                </div>
+                                            </div>
+                                            <div class="border-bottom">
+                                                <div class="education__box">
+                                                    <ul class="education__list">
+                                                        <li>
+                                                            <div class="education__user">
+                                                                <div class="before__circle"></div>
+                                                            </div>
+                                                            <div class="education__content st-current">
+                                                                <div class="timeline-content"><a class="name"
+                                                                        href="#">International College of Arts and
+                                                                        Science (UG)</a><span class="degree">MSc In
+                                                                        Computer Science</span><span class="year">2000 -
+                                                                        2003</span></div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="education__user">
+                                                                <div class="before__circle"></div>
+                                                            </div>
+                                                            <div class="education__content">
+                                                                <div class="timeline-content"><a class="name"
+                                                                        href="#">International College of Arts and
+                                                                        Science (PG)</a><span class="degree">BSc In
+                                                                        Computer Science</span><span class="year">2000 -
+                                                                        2003</span></div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex align-items-center pb-3 mb-3 border-bottom align-items-center flex-fill">
+                                                <div>
+                                                    <h5 class="mt-3 mb-1">Experience</h5>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="education__box">
+                                                    <ul class="education__list">
+                                                        <li>
+                                                            <div class="education__user">
+                                                                <div class="before__circle"></div>
+                                                            </div>
+                                                            <div class="education__content st-current">
+                                                                <div class="timeline-content"><a class="name"
+                                                                        href="#">Envato Inc, Melbourne</a><span
+                                                                        class="degree">Head Of Review Team</span><span
+                                                                        class="year">2020 - Present</span></div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="">
+                                                            <div class="education__user">
+                                                                <div class="before__circle"></div>
+                                                            </div>
+                                                            <div class="education__content">
+                                                                <div class="timeline-content"><a class="name"
+                                                                        href="#">CodeCanyon Sydney</a><span
+                                                                        class="degree">Software Developer</span><span
+                                                                        class="year">2016 - 2018</span></div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="tab-content custom-accordion-items shadow">
+                                    <div class="tab-pane active show" id="bottom-justified-tab1" role="tabpanel">
+                                        <div class="accordion accordions-items-seperate" id="accordionExample">
+                                            <div class="accordion-item">
+                                                <div class="accordion-header" id="headingOne">
+                                                    <div class="accordion-button">
+                                                        <div class="d-flex align-items-center flex-fill">
+                                                            <h5>Family Background</h5>
+
+                                                            <a href="#"
+                                                                class="d-flex align-items-center collapsed ms-auto collapse-arrow"
+                                                                data-bs-toggle="collapse"
+                                                                data-bs-target="#primaryBorderOne" aria-expanded="false"
+                                                                aria-controls="primaryBorderOne">
+                                                                <i class="ti ti-chevron-down fs-18"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="primaryBorderOne"
+                                                    class="accordion-collapse collapse show border-top"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        <div class="underline-tabs mb-1 ">
+                                                            <ul class="nav nav-tabs d-flex" id="underlineTabs"
+                                                                role="tablist">
+                                                                <li class="nav-item flex-fill" role="presentation">
+                                                                    <button class="nav-link active" id="home-tab2"
+                                                                        data-bs-toggle="tab" data-bs-target="#home2"
+                                                                        type="button" role="tab">
+                                                                        Family Information
+                                                                    </button>
+                                                                </li>
+                                                                <li class="nav-item flex-fill" role="presentation">
+                                                                    <button class="nav-link" id="profile-tab2"
+                                                                        data-bs-toggle="tab" data-bs-target="#profile2"
+                                                                        type="button" role="tab">
+                                                                        Next of Kin
+                                                                    </button>
+                                                                </li>
+                                                                <li class="nav-item flex-fill" role="presentation">
+                                                                    <button class="nav-link" id="contact-tab2"
+                                                                        data-bs-toggle="tab" data-bs-target="#contact2"
+                                                                        type="button" role="tab">
+                                                                        Emergency Contact
+                                                                    </button>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tab-content" id="underlineTabsContent">
+                                                                <div class="tab-pane fade show active" id="home2"
+                                                                    role="tabpanel">
+                                                                    <div class="row mt-3">
+                                                                        <div class="col-xl-12 col-12 d-flex">
+                                                                            <div
+                                                                                class="card bg-secondary text-primary shadow flex-fill mb-4 mb-md-0">
+                                                                                <div class="card-body mb-3">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Name
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                Mary Doe</p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Relationship
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                Wife</p>
+
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Date of birth
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                25 May 1993</p>
+
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Phone
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                +6956 961</p>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xl-12 col-12 d-flex">
+                                                                            <div
+                                                                                class="card bg-secondary text-primary shadow flex-fill mb-2 mb-md-0">
+                                                                                <div class="card-body mb-3">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Name
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                Hendry
+                                                                                                Peralt</p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Relationship
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                Brother
+                                                                                            </p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Date of birth
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                25 May
+                                                                                                2014</p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Phone
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                +1 265
+                                                                                                6956 961</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xl-12 col-12 d-flex">
+                                                                            <div
+                                                                                class="card shadow bg-secondary text-primary flex-fill mb-4 mb-md-0">
+                                                                                <div class="card-body mb-3">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Name
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                Paul
+                                                                                                Watson</p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Relationship
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                Son
+                                                                                            </p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Date of birth
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                25 May
+                                                                                                2014</p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Phone
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                +1 265
+                                                                                                6956 961</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="profile2"
+                                                                    role="tabpanel">
+                                                                    <div class="row mt-3">
+                                                                        <div class="col-xl-12 col-12 d-flex">
+                                                                            <div
+                                                                                class="card shadow bg-secondary text-primary flex-fill mb-4 mb-md-0">
+                                                                                <div class="card-body mb-3">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Name
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                Paul
+                                                                                                Watson</p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Relationship
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                Son
+                                                                                            </p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Address
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                25 May
+                                                                                                2014</p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Phone
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                +1 265
+                                                                                                6956 961</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="contact2"
+                                                                    role="tabpanel">
+                                                                    <div class="row mt-3">
+                                                                        <div class="col-xl-12 col-12 d-flex">
+                                                                            <div
+                                                                                class="card shadow bg-secondary text-primary flex-fill mb-4 mb-md-0">
+                                                                                <div class="card-body mb-3">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Name
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                Paul
+                                                                                                Watson</p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Relationship
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                Son
+                                                                                            </p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Address
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                25 May
+                                                                                                2014</p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Phone
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                +1 265
+                                                                                                6956 961</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xl-12 col-12 d-flex">
+                                                                            <div
+                                                                                class="card shadow bg-secondary text-primary flex-fill mb-4 mb-md-0">
+                                                                                <div class="card-body mb-3">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Name
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                Paul
+                                                                                                Watson</p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Relationship
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                Son
+                                                                                            </p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Address
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                25 May
+                                                                                                2014</p>
+                                                                                        </div>
+                                                                                        <div class="col-md-3">
+                                                                                            <span
+                                                                                                class="d-inline-flex align-items-center fw-medium">
+                                                                                                Phone
+                                                                                            </span>
+                                                                                            <p
+                                                                                                class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                +1 265
+                                                                                                6956 961</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- End section content -->
+
+    <!-- start section footer -->
+    <div class="footer">
+        <div class="copyright">
+            <p class="mb-0">
+                Copyright © <span id="currentYear"></span> Designed &amp; Developed by
+                <a href="index.html" target="_blank">MOF ICT Unit</a>
+
+            </p>
+        </div>
+    </div>
+    <!-- End section footer -->
+
+    <!-- JQuery v3.5.1 -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- popper js -->
+    <script src="assets/plugins/popper/popper.min.js"></script>
+
+    <!-- Bootstrap -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script> -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Moment -->
+    <script src="assets/plugins/moment/moment.min.js"></script>
+
+    <!-- Date Range Picker -->
+    <script src="assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- Datatable -->
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/init-tdatatable.js"></script>
+
+    <!-- Main Custom JQuery -->
+    <script src="assets/js/toggleFullScreen.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/option-themes.js"></script>
+</body>
+
+<!-- Mirrored from tabib-v2.inaikas.com/doctor-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Feb 2024 11:35:05 GMT -->
+
+</html>
