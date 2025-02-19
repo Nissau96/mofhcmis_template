@@ -142,10 +142,7 @@
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                         <div class="row m-t-30 m-l-0 m-r-0">
-                                            <div class="col-xl-2">
-
-                                            </div>
-                                            <div class="col-xl-8">
+                                            <div class="col-xl-6">
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h4 class="card-title">Personal Information</h4>
@@ -380,27 +377,441 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-2">
-
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h4 class="card-title">Contact Information</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <div class="basic-form">
+                                            <div class="col-xl-6">
+                                                <div class="row">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h4 class="card-title">Contact Information</h4>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="basic-form">
+                                                                <form action="">
+                                                                    <div class="row mb-2">
+                                                                        <div class="col-xl-4">
+                                                                            <div class="form-group row">
+                                                                                <div class="col-lg-12">
+                                                                                    <label class="form-label">Corporate
+                                                                                        Email</label>
+                                                                                    <input type="email"
+                                                                                        class="form-control"
+                                                                                        id="corporate_email"
+                                                                                        name="corporate_email" value="">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xl-4">
+                                                                            <div class="form-group row">
+                                                                                <div class="col-lg-12">
+                                                                                    <label class="form-label">Personal
+                                                                                        Email</label>
+                                                                                    <input type="email"
+                                                                                        class="form-control" id="email"
+                                                                                        name="email" value="">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xl-4">
+                                                                            <div class="form-group row">
+                                                                                <div class="col-lg-12">
+                                                                                    <label class="form-label">Phone
+                                                                                        Number</label>
+                                                                                    <input type="tel"
+                                                                                        class="form-control" id="unit"
+                                                                                        name="unit" value="">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-xl-6">
+                                                                            <div class="form-group row">
+                                                                                <div class="col-lg-12">
+                                                                                    <label class="form-label">Digital
+                                                                                        Address</label>
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="digiAddress"
+                                                                                        name="digiAddress" value="">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xl-6">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label">Postal
+                                                                                    Address</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="postal_address"
+                                                                                    name="postal_address" value="  ">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group text-right">
+                                                                        <button type="submit"
+                                                                            class="btn btn-primary float-end ">Update</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
 
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h4 class="card-title"> Change Password & User Name </h4>
-                                                </div>
-                                                <div class="card-body">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h4 class="card-title">Family Background</h4>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="basic-form">
+                                                                <div class="underline-tabs mb-1 ">
+                                                                    <ul class="nav nav-tabs d-flex" id="underlineTabs"
+                                                                        role="tablist">
+                                                                        <li class="nav-item flex-fill"
+                                                                            role="presentation">
+                                                                            <button class="nav-link active"
+                                                                                id="home-tab2" data-bs-toggle="tab"
+                                                                                data-bs-target="#home2" type="button"
+                                                                                role="tab">
+                                                                                Family Information
+                                                                            </button>
+                                                                        </li>
+                                                                        <li class="nav-item flex-fill"
+                                                                            role="presentation">
+                                                                            <button class="nav-link" id="profile-tab2"
+                                                                                data-bs-toggle="tab"
+                                                                                data-bs-target="#profile2" type="button"
+                                                                                role="tab">
+                                                                                Next of Kin
+                                                                            </button>
+                                                                        </li>
+                                                                        <li class="nav-item flex-fill"
+                                                                            role="presentation">
+                                                                            <button class="nav-link" id="contact-tab2"
+                                                                                data-bs-toggle="tab"
+                                                                                data-bs-target="#contact2" type="button"
+                                                                                role="tab">
+                                                                                Emergency Contact
+                                                                            </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="tab-content" id="underlineTabsContent">
+                                                                        <div class="tab-pane fade show active"
+                                                                            id="home2" role="tabpanel">
+                                                                            <div class="row mt-3">
+                                                                                <div class="col-xl-12 col-12 d-flex">
+                                                                                    <div
+                                                                                        class="card bg-secondary text-primary shadow flex-fill mb-4 mb-md-0">
+                                                                                        <div class="card-body mb-3">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Name
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        Mary Doe</p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Relationship
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        Wife</p>
 
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Date of birth
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        25 May 1993</p>
+
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Phone
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        +6956 961</p>
+
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xl-12 col-12 d-flex">
+                                                                                    <div
+                                                                                        class="card bg-secondary text-primary shadow flex-fill mb-2 mb-md-0">
+                                                                                        <div class="card-body mb-3">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Name
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        Hendry
+                                                                                                        Peralt</p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Relationship
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        Brother
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Date of birth
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        25 May
+                                                                                                        2014</p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Phone
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        +1 265
+                                                                                                        6956 961</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xl-12 col-12 d-flex">
+                                                                                    <div
+                                                                                        class="card shadow bg-secondary text-primary flex-fill mb-4 mb-md-0">
+                                                                                        <div class="card-body mb-3">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Name
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        Paul
+                                                                                                        Watson</p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Relationship
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        Son
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Date of birth
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        25 May
+                                                                                                        2014</p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Phone
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        +1 265
+                                                                                                        6956 961</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="tab-pane fade" id="profile2"
+                                                                            role="tabpanel">
+                                                                            <div class="row mt-3">
+                                                                                <div class="col-xl-12 col-12 d-flex">
+                                                                                    <div
+                                                                                        class="card shadow bg-secondary text-primary flex-fill mb-4 mb-md-0">
+                                                                                        <div class="card-body mb-3">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Name
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        Paul
+                                                                                                        Watson</p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Relationship
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        Son
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Address
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        25 May
+                                                                                                        2014</p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Phone
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        +1 265
+                                                                                                        6956 961</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="tab-pane fade" id="contact2"
+                                                                            role="tabpanel">
+                                                                            <div class="row mt-3">
+                                                                                <div class="col-xl-12 col-12 d-flex">
+                                                                                    <div
+                                                                                        class="card shadow bg-secondary text-primary flex-fill mb-4 mb-md-0">
+                                                                                        <div class="card-body mb-3">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Name
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        Paul
+                                                                                                        Watson</p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Relationship
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        Son
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Address
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        25 May
+                                                                                                        2014</p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Phone
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        +1 265
+                                                                                                        6956 961</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xl-12 col-12 d-flex">
+                                                                                    <div
+                                                                                        class="card shadow bg-secondary text-primary flex-fill mb-4 mb-md-0">
+                                                                                        <div class="card-body mb-3">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Name
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        Paul
+                                                                                                        Watson</p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Relationship
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        Son
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Address
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        25 May
+                                                                                                        2014</p>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+                                                                                                    <span
+                                                                                                        class="d-inline-flex align-items-center fw-medium">
+                                                                                                        Phone
+                                                                                                    </span>
+                                                                                                    <p
+                                                                                                        class="d-flex align-items-center  mt-1 text-dark">
+                                                                                                        +1 265
+                                                                                                        6956 961</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <form action="">
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
+
                                             </div>
+
+
                                         </div>
                                     </div>
                                 </div>
