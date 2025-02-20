@@ -39,7 +39,7 @@ Notes:  Google Fonts
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  
+
   border: 3px solid #ecf3fa;
 }
 
@@ -337,6 +337,7 @@ Notes:  Google Fonts
   font-size: 1rem;
   color: #6c757d;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .underline-tabs .nav-link:hover {
@@ -351,6 +352,44 @@ Notes:  Google Fonts
   border-bottom: solid;
   border-radius: 0;
 }
+
+
+
+/* linear nav-tabs */
+.underline-tabs .lnav-tabs {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.underline-tabs .lnav-link {
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.625rem 0.9375rem;
+  margin-bottom: -2px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  width: 100%;
+}
+
+
+
+.underline-tabs .lnav-link:hover {
+  border-bottom-color: #0d6efd50;
+  color: #2e5797;
+  border-radius: 0;
+}
+
+.underline-tabs .lnav-link.active {
+  border-bottom-color: #2e5797;
+  color: #2e5797;
+  border-bottom: solid;
+  border-radius: 0;
+  font-weight: 500;
+}
+
+/* linear nav-tabs */
 
 /* Content Animation */
 .tab-pane.fade {
@@ -412,7 +451,7 @@ Notes:  Google Fonts
 }
 
 .nav-link {
-  color: #6B7280;
+  color: #2e5797;
   border-radius: 1px;
 }
 
@@ -2860,6 +2899,7 @@ table.dataTable.display tbody td {
   border-color: #2e5797;
   margin-bottom: 0;
   border-radius: 1px !important;
+  font-weight: 700;
 }
 
 /************************** 

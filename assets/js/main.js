@@ -749,3 +749,29 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
         renderCalendar(); // calling renderCalendar function
     });
 });
+
+
+// Condition Script for Form Fields
+document.getElementById('marital_status').addEventListener('change', function () {
+    const spouseDetails = document.getElementById('spouse_details');
+    if (this.value === 'Married') {
+        spouseDetails.style.display = 'block';
+        // Make spouse fields required when married is selected
+        document.getElementById('spouseName').required = true;
+        document.getElementById('spouse_date_of_birth').required = true;
+        document.getElementById('spouse_contact').required = true;
+    } else {
+        spouseDetails.style.display = 'none';
+        // Remove required attribute when not married
+        document.getElementById('spouseName').required = false;
+        document.getElementById('spouse_date_of_birth').required = false;
+        document.getElementById('spouse_contact').required = false;
+    }
+});
+
+document.getElementById('personalInfoForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log('Form submitted');
+    // Add your form submission logic here
+});
+// Condition Script for Form Fields
