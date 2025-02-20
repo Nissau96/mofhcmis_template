@@ -752,26 +752,37 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
 
 
 // Condition Script for Form Fields
-document.getElementById('marital_status').addEventListener('change', function () {
+// Wait for DOM to be fully loaded
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+    const maritalStatus = document.getElementById('marital_status');
     const spouseDetails = document.getElementById('spouse_details');
-    if (this.value === 'Married') {
-        spouseDetails.style.display = 'block';
-        // Make spouse fields required when married is selected
-        document.getElementById('spouseName').required = true;
-        document.getElementById('spouse_date_of_birth').required = true;
-        document.getElementById('spouse_contact').required = true;
-    } else {
-        spouseDetails.style.display = 'none';
-        // Remove required attribute when not married
-        document.getElementById('spouseName').required = false;
-        document.getElementById('spouse_date_of_birth').required = false;
-        document.getElementById('spouse_contact').required = false;
-    }
-});
 
-document.getElementById('personalInfoForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    console.log('Form submitted');
-    // Add your form submission logic here
+    if (maritalStatus && spouseDetails) {
+        maritalStatus.addEventListener('change', function () {
+            const isMarried = this.value === 'Married';
+
+            // Show or hide the spouse details section
+            spouseDetails.style.display = isMarried ? 'block' : 'none';
+
+            // Toggle required attributes for spouse fields
+            ['spouseName', 'spouse_date_of_birth', 'spouse_contact'].forEach(id => {
+                const field = document.getElementById(id);
+                if (field) {
+                    field.required = isMarried;
+                }
+            });
+        });
+    }
+
+    // Ensure the form exists before adding event listener
+    const familyInfoForm = document.getElementById('familyInfo');
+    if (familyInfoForm) {
+        familyInfoForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            console.log('Form submitted');
+            // Handle form submission
+        });
+    }
 });
 // Condition Script for Form Fields
