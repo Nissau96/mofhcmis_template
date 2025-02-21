@@ -22,6 +22,7 @@
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"> -->
 
     <script>
+        // Script for Marital Status
         // Wait for DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', function () {
             const maritalStatus = document.getElementById('marital_status');
@@ -54,6 +55,58 @@
                 });
             }
         });
+
+        // Script for Child Details
+        document.addEventListener('DOMContentLoaded', function () {
+            const childNumber = document.getElementById('number_of_children');
+            const childrenDetails = document.getElementById('children_details');
+            const firstChild = document.getElementById('firstChild');
+            const secondChild = document.getElementById('secondChild');
+            const thirdChild = document.getElementById('thirdChild');
+            const fourthChild = document.getElementById('fourthChild');
+
+            if (childNumber && childrenDetails) {
+                childNumber.addEventListener('change', function () {
+                    const selectedValue = parseInt(this.value) || 0;
+
+                    // Show/hide children details section
+                    childrenDetails.style.display = selectedValue > 0 ? 'block' : 'none';
+
+                    // Show/hide specific child sections based on number selected
+                    firstChild.style.display = selectedValue >= 1 ? 'block' : 'none';
+                    secondChild.style.display = selectedValue >= 2 ? 'block' : 'none';
+                    thirdChild.style.display = selectedValue >= 3 ? 'block' : 'none';
+                    fourthChild.style.display = selectedValue >= 4 ? 'block' : 'none';
+
+                    // Toggle required attributes
+                    toggleRequired(firstChild, selectedValue >= 1);
+                    toggleRequired(secondChild, selectedValue >= 2);
+                    toggleRequired(thirdChild, selectedValue >= 3);
+                    toggleRequired(fourthChild, selectedValue >= 4);
+                });
+            }
+
+            // Helper function to toggle required attributes for child fields
+            function toggleRequired(childElement, isRequired) {
+                const inputs = childElement.querySelectorAll('input');
+                inputs.forEach(input => {
+                    input.required = isRequired;
+                });
+            }
+
+            // Form submission handler
+            const familyInfoForm = document.getElementById('familyInfo');
+            if (familyInfoForm) {
+                familyInfoForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    console.log('Form submitted');
+                    // Handle form submission
+                });
+            }
+        });
+
+        // Script for Child Details
+
     </script>
 
 </head>
@@ -438,8 +491,8 @@
                                                                                             Number</label>
                                                                                         <input type="tel"
                                                                                             class="form-control"
-                                                                                            id="spouse_phone_number"
-                                                                                            name="spouse_phone_number"
+                                                                                            id="phone_number"
+                                                                                            name="phone_number"
                                                                                             value="" />
                                                                                     </div>
                                                                                 </div>
@@ -452,7 +505,7 @@
                                                                                             Address</label>
                                                                                         <input type="text"
                                                                                             class="form-control"
-                                                                                            id="spouse_digiAddress"
+                                                                                            id="digiAddress"
                                                                                             name="digiAddress"
                                                                                             value="" />
                                                                                     </div>
@@ -538,7 +591,7 @@
                                                                                                 id="familyInfo">
                                                                                                 <div class="row">
                                                                                                     <div
-                                                                                                        class="col-xl-12">
+                                                                                                        class="col-xl-6">
                                                                                                         <div
                                                                                                             class="form-group">
                                                                                                             <label
@@ -569,6 +622,74 @@
                                                                                                                 <option
                                                                                                                     value="Separated">
                                                                                                                     Separated
+                                                                                                                </option>
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="col-xl-6">
+                                                                                                        <div
+                                                                                                            class="form-group">
+                                                                                                            <label
+                                                                                                                class="form-label">Number
+                                                                                                                of
+                                                                                                                Children</label>
+                                                                                                            <select
+                                                                                                                name="number_of_children"
+                                                                                                                id="number_of_children"
+                                                                                                                class="form-control form-select">
+                                                                                                                <option
+                                                                                                                    value="">
+                                                                                                                    Select
+                                                                                                                    Number
+                                                                                                                    of
+                                                                                                                    Children
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="0">
+                                                                                                                    0
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="1">
+                                                                                                                    1
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="2">
+                                                                                                                    2
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="3">
+                                                                                                                    3
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="4">
+                                                                                                                    4
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="5">
+                                                                                                                    5
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="6">
+                                                                                                                    6
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="7">
+                                                                                                                    7
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="8">
+                                                                                                                    8
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="9">
+                                                                                                                    9
+                                                                                                                </option>
+                                                                                                                <option
+                                                                                                                    value="10+">
+                                                                                                                    10
+                                                                                                                    or
+                                                                                                                    more
                                                                                                                 </option>
                                                                                                             </select>
                                                                                                         </div>
@@ -633,27 +754,180 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <!-- Remaining form fields -->
-                                                                                                <div class="row">
-                                                                                                    <div
-                                                                                                        class="col-xl-6">
+                                                                                                <!-- Children Details -->
+                                                                                                <div id="children_details"
+                                                                                                    style="display: none;">
+                                                                                                    <!-- First Child -->
+                                                                                                    <div class="row"
+                                                                                                        id="firstChild"
+                                                                                                        style="display: none;">
                                                                                                         <div
-                                                                                                            class="form-group">
-                                                                                                            <label
-                                                                                                                class="form-label"
-                                                                                                                for="unit">Phone
-                                                                                                                Number</label>
-                                                                                                            <input
-                                                                                                                type="tel"
-                                                                                                                class="form-control"
-                                                                                                                id="unit"
-                                                                                                                name="unit"
-                                                                                                                value="" />
+                                                                                                            class="col-xl-6">
+                                                                                                            <div
+                                                                                                                class="form-group row">
+                                                                                                                <label
+                                                                                                                    for="firstChildname"
+                                                                                                                    class="form-label">Name
+                                                                                                                    of
+                                                                                                                    First
+                                                                                                                    Child</label>
+                                                                                                                <input
+                                                                                                                    type="text"
+                                                                                                                    class="form-control"
+                                                                                                                    id="firstChildname"
+                                                                                                                    name="firstChildname"
+                                                                                                                    value="" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="col-xl-6">
+                                                                                                            <div
+                                                                                                                class="form-group row">
+                                                                                                                <label
+                                                                                                                    class="form-label"
+                                                                                                                    for="firstChild_dob">Date
+                                                                                                                    of
+                                                                                                                    Birth</label>
+                                                                                                                <input
+                                                                                                                    type="date"
+                                                                                                                    class="form-control"
+                                                                                                                    name="firstChild_dob"
+                                                                                                                    id="firstChild_dob"
+                                                                                                                    value="" />
+                                                                                                            </div>
                                                                                                         </div>
                                                                                                     </div>
+
+                                                                                                    <!-- Second Child -->
+                                                                                                    <div class="row"
+                                                                                                        id="secondChild"
+                                                                                                        style="display: none;">
+                                                                                                        <div
+                                                                                                            class="col-xl-6">
+                                                                                                            <div
+                                                                                                                class="form-group">
+                                                                                                                <label
+                                                                                                                    for="secondChildname"
+                                                                                                                    class="form-label">Name
+                                                                                                                    of
+                                                                                                                    Second
+                                                                                                                    Child</label>
+                                                                                                                <input
+                                                                                                                    type="text"
+                                                                                                                    class="form-control"
+                                                                                                                    id="secondChildname"
+                                                                                                                    name="secondChildname"
+                                                                                                                    value="" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="col-xl-6">
+                                                                                                            <div
+                                                                                                                class="form-group">
+                                                                                                                <label
+                                                                                                                    class="form-label"
+                                                                                                                    for="secondChild_dob">Date
+                                                                                                                    of
+                                                                                                                    Birth</label>
+                                                                                                                <input
+                                                                                                                    type="date"
+                                                                                                                    class="form-control"
+                                                                                                                    name="secondChild_dob"
+                                                                                                                    id="secondChild_dob"
+                                                                                                                    value="" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+
+                                                                                                    <!-- Third Child -->
+                                                                                                    <div class="row"
+                                                                                                        id="thirdChild"
+                                                                                                        style="display: none;">
+                                                                                                        <div
+                                                                                                            class="col-xl-6">
+                                                                                                            <div
+                                                                                                                class="form-group">
+                                                                                                                <label
+                                                                                                                    for="thirdChildname"
+                                                                                                                    class="form-label">Name
+                                                                                                                    of
+                                                                                                                    Third
+                                                                                                                    Child</label>
+                                                                                                                <input
+                                                                                                                    type="text"
+                                                                                                                    class="form-control"
+                                                                                                                    id="thirdChildname"
+                                                                                                                    name="thirdChildname"
+                                                                                                                    value="" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="col-xl-6">
+                                                                                                            <div
+                                                                                                                class="form-group">
+                                                                                                                <label
+                                                                                                                    class="form-label"
+                                                                                                                    for="thirdChild_dob">Date
+                                                                                                                    of
+                                                                                                                    Birth</label>
+                                                                                                                <input
+                                                                                                                    type="date"
+                                                                                                                    class="form-control"
+                                                                                                                    name="thirdChild_dob"
+                                                                                                                    id="thirdChild_dob"
+                                                                                                                    value="" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+
+                                                                                                    <!-- Fourth Child -->
+                                                                                                    <div class="row"
+                                                                                                        id="fourthChild"
+                                                                                                        style="display: none;">
+                                                                                                        <div
+                                                                                                            class="col-xl-6">
+                                                                                                            <div
+                                                                                                                class="form-group">
+                                                                                                                <label
+                                                                                                                    for="fourthChildname"
+                                                                                                                    class="form-label">Name
+                                                                                                                    of
+                                                                                                                    Fourth
+                                                                                                                    Child</label>
+                                                                                                                <input
+                                                                                                                    type="text"
+                                                                                                                    class="form-control"
+                                                                                                                    id="fourthChildname"
+                                                                                                                    name="fourthChildname"
+                                                                                                                    value="" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="col-xl-6">
+                                                                                                            <div
+                                                                                                                class="form-group">
+                                                                                                                <label
+                                                                                                                    class="form-label"
+                                                                                                                    for="fourthChild_dob">Date
+                                                                                                                    of
+                                                                                                                    Birth</label>
+                                                                                                                <input
+                                                                                                                    type="date"
+                                                                                                                    class="form-control"
+                                                                                                                    name="fourthChild_dob"
+                                                                                                                    id="fourthChild_dob"
+                                                                                                                    value="" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <!-- Children Details -->
+                                                                                                <div class="row">
+
                                                                                                     <div
                                                                                                         class="col-xl-6">
-                                                                                                        <div
-                                                                                                            class="form-group">
+                                                                                                        <div class="
+                                                                                                        form-group">
                                                                                                             <label
                                                                                                                 for="digiAddress"
                                                                                                                 class="form-label">Digital
