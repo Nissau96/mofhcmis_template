@@ -135,7 +135,7 @@
                 <div class="warper container-fluid">
                     <div class="new-patients main_container">
                         <div class="row">
-                            <div class="col-xl-8 col-lg-12 col-12">
+                            <div class="col-xl-8 col-lg-12 col-12 grid-margin stretch-card">
                                 <div class="box bg-primary-light no-shadow">
                                     <div class="box-body p-xl-0">
                                         <div class="row align-items-center">
@@ -144,10 +144,10 @@
                                             </div>
                                             <div class="col-12 col-md-9">
                                                 <div id="timeIcon" class="welcome-icon"></div>
-                                                <h1 class="fs-40 text-primary"><span id="greeting"></span> Jhone!</h1>
+                                                <h1 class="fs-40 text-primary"><span id="greeting"></span> John Doe!</h1>
                                                 <p class="text-dark fs-20">
                                                     <span>
-                                                        <box-icon style="display: inline-block; vertical-align: middle" name="stopwatch" color="#2e5797" animation="tada"></box-icon>
+                                                        <box-icon style="display: inline-block; vertical-align: middle" name="time" color="#2e5797" animation="spin"></box-icon>
                                                     </span>
                                                     Its Currently <span id="timeDisplay"></span>
                                                 </p>
@@ -223,7 +223,7 @@
 
                         <div class="row">
                             <div class="col-xl-4">
-                                <div class="card white-bg widget1 shadow">
+                                <div class="card white-bg widget1 shadow" style="height: fit-content">
                                     <div class="wrapper">
                                         <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
                                             <div class="cal-icons">
@@ -298,11 +298,11 @@
                                             Notifications
                                         </h4>
                                     </div>
-                                    <div class="card-body" style="overflow-y: auto; max-height: calc(400px - 61px)"></div>
+                                    <div class="card-body" style="overflow-y: auto; overflow-x: hidden; max-height: calc(400px - 61px)"></div>
                                 </div>
                             </div>
                             <div class="col-xl-4">
-                                <div class="card shadow widget1">
+                                <div class="card shadow widget1" style="height: fit-content">
                                     <div class="card-header align-items-center">
                                         <h4 class="card-title">
                                             <span>
@@ -331,7 +331,7 @@
                                                 </div>
 
                                                 <button class="btn btn-primary">View Profile</button>
-                                                <button class="btn btn-outline-primary">Update Profile</button>
+                                                <!-- <button class="btn btn-outline-primary">Update Profile</button> -->
                                             </div>
                                         </div>
                                     </div>

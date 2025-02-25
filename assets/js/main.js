@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function () {
             content = {
                 greeting: 'Good Morning',
                 iconName: 'sunrise',
-                image: 'assets/images/svg-icon/color-svg/11683787_4760011.svg',
+                image: 'assets/images/svg-icon/color-svg/morning.svg',
                 theme: 'theme-morning'
             };
         } else if (hour >= 12 && hour < 17) {
