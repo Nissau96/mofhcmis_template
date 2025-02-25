@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function () {
             content = {
                 greeting: 'Good Afternoon',
                 iconName: 'sun',
-                image: 'assets/images/svg-icon/color-svg/19879014_6165503.svg',
+                image: 'assets/images/svg-icon/color-svg/afternoon.svg',
                 theme: 'theme-afternoon'
             };
         } else if (hour >= 17 && hour < 20) {
