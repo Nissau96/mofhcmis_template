@@ -321,28 +321,28 @@ document.addEventListener('DOMContentLoaded', function () {
             content = {
                 greeting: 'Good Morning',
                 iconName: 'sunrise',
-                image: 'assets/images/svg-icon/color-svg/morning.svg',
+                image: 'assets/images/morning.png',
                 theme: 'theme-morning'
             };
         } else if (hour >= 12 && hour < 17) {
             content = {
                 greeting: 'Good Afternoon',
                 iconName: 'sun',
-                image: 'assets/images/svg-icon/color-svg/afternoon.svg',
+                image: 'assets/images/afternoon.png',
                 theme: 'theme-afternoon'
             };
         } else if (hour >= 17 && hour < 20) {
             content = {
                 greeting: 'Good Evening',
                 iconName: 'sunset',
-                image: 'assets/images/svg-icon/color-svg/20547306_6276543.svg',
+                image: 'assets/images/evening.png',
                 theme: 'theme-evening'
             };
         } else {
             content = {
                 greeting: 'Good Night',
                 iconName: 'moon',
-                image: 'assets/images/svg-icon/color-svg/20547306_6276543.svg',
+                image: 'assets/images/night.png',
                 theme: 'theme-night'
             };
         }
@@ -488,218 +488,6 @@ updateAccraTime();
 // Update time every second (1000 milliseconds)
 setInterval(updateAccraTime, 1000);
 
-
-// Featured Calendar 1
-// class Calendar {
-//     constructor(containerId) {
-//         this.container = document.getElementById(containerId);
-//         this.date = new Date();
-//         this.currentMonth = this.date.getMonth();
-//         this.currentYear = this.date.getFullYear();
-//         this.monthDisplay = document.getElementById('monthDisplay');
-//         this.datesContainer = document.getElementById('calendarDates');
-
-//         this.initializeCalendar();
-//         this.addEventListeners();
-//     }
-
-//     initializeCalendar() {
-//         this.renderCalendar();
-//     }
-
-//     addEventListeners() {
-//         document.getElementById('prevMonth').addEventListener('click', () => {
-//             this.navigateMonth(-1);
-//         });
-
-//         document.getElementById('nextMonth').addEventListener('click', () => {
-//             this.navigateMonth(1);
-//         });
-//     }
-
-//     navigateMonth(direction) {
-//         this.currentMonth += direction;
-//         if (this.currentMonth > 11) {
-//             this.currentMonth = 0;
-//             this.currentYear++;
-//         } else if (this.currentMonth < 0) {
-//             this.currentMonth = 11;
-//             this.currentYear--;
-//         }
-//         this.renderCalendar();
-//     }
-
-//     renderCalendar() {
-//         const firstDay = new Date(this.currentYear, this.currentMonth, 1);
-//         const lastDay = new Date(this.currentYear, this.currentMonth + 1, 0);
-//         const startingDay = firstDay.getDay();
-//         const monthDays = lastDay.getDate();
-
-//         this.monthDisplay.textContent = `${firstDay.toLocaleString('default', { month: 'long' })} ${this.currentYear}`;
-
-//         let datesHTML = '';
-
-//         // Previous month's days
-//         const prevMonthLastDay = new Date(this.currentYear, this.currentMonth, 0).getDate();
-//         for (let i = startingDay - 1; i >= 0; i--) {
-//             datesHTML += `<div class="date-cell other-month">${prevMonthLastDay - i}</div>`;
-//         }
-
-//         // Current month's days
-//         const today = new Date();
-//         for (let i = 1; i <= monthDays; i++) {
-//             const isToday = i === today.getDate() &&
-//                 this.currentMonth === today.getMonth() &&
-//                 this.currentYear === today.getFullYear();
-
-//             datesHTML += `<div class="date-cell ${isToday ? 'current-date' : ''}">${i}</div>`;
-//         }
-
-//         // Next month's days
-//         const totalCells = 42; // 6 rows * 7 days
-//         const remainingCells = totalCells - (startingDay + monthDays);
-//         for (let i = 1; i <= remainingCells; i++) {
-//             datesHTML += `<div class="date-cell other-month">${i}</div>`;
-//         }
-
-//         this.datesContainer.innerHTML = datesHTML;
-//     }
-// }
-
-// Initialize calendar when DOM is loaded
-// document.addEventListener('DOMContentLoaded', () => {
-//     new Calendar('calendar');
-// });
-
-// Featured Calendar 2
-// document.addEventListener('DOMContentLoaded', function() {
-//     const monthYear = document.getElementById('month-year');
-//     const calendarDays = document.getElementById('calendar-days');
-//     const date = new Date();
-//     const month = date.getMonth();
-//     const year = date.getFullYear();
-//     const currentDay = date.getDate();
-
-//     const monthNames = ["January", "February", "March", "April", "May", "June",
-//                         "July", "August", "September", "October", "November", "December"];
-
-//     monthYear.textContent = `${monthNames[month]} ${year}`;
-
-//     function getDaysInMonth(month, year) {
-//         return new Date(year, month + 1, 0).getDate();
-//     }
-
-//     function getFirstDayOfMonth(month, year) {
-//         return new Date(year, month, 1).getDay();
-//     }
-
-//     const daysInMonth = getDaysInMonth(month, year);
-//     const firstDay = getFirstDayOfMonth(month, year);
-
-//     let days = '';
-
-//     for (let i = 0; i < firstDay; i++) {
-//         days += '<div></div>';
-//     }
-
-//     for (let i = 1; i <= daysInMonth; i++) {
-//         if (i === currentDay) {
-//             days += `<div class="current-day">${i}</div>`;
-//         } else {
-//             days += `<div>${i}</div>`;
-//         }
-//     }
-
-//     calendarDays.innerHTML = days;
-// });
-
-// Featured Calendar 3
-// class Calendar {
-//     constructor() {
-//         this.date = new Date();
-//         this.currentMonth = this.date.getMonth();
-//         this.currentYear = this.date.getFullYear();
-//         this.currentDay = this.date.getDate();
-
-//         this.monthDisplay = document.querySelector('.month-display');
-//         this.datesGrid = document.querySelector('.dates-grid');
-
-//         this.initializeCalendar();
-//         this.addEventListeners();
-//     }
-
-//     initializeCalendar() {
-//         this.renderCalendar();
-//     }
-
-//     addEventListeners() {
-//         document.querySelector('.prev-month').addEventListener('click', () => {
-//             this.navigateMonth(-1);
-//         });
-
-//         document.querySelector('.next-month').addEventListener('click', () => {
-//             this.navigateMonth(1);
-//         });
-//     }
-
-//     navigateMonth(direction) {
-//         this.currentMonth += direction;
-
-//         if (this.currentMonth > 11) {
-//             this.currentMonth = 0;
-//             this.currentYear++;
-//         } else if (this.currentMonth < 0) {
-//             this.currentMonth = 11;
-//             this.currentYear--;
-//         }
-
-//         this.renderCalendar();
-//     }
-
-//     renderCalendar() {
-//         const firstDay = new Date(this.currentYear, this.currentMonth, 1);
-//         const lastDay = new Date(this.currentYear, this.currentMonth + 1, 0);
-//         const startingDay = firstDay.getDay();
-//         const monthDays = lastDay.getDate();
-
-//         // Update month display
-//         this.monthDisplay.textContent = firstDay.toLocaleString('default', { 
-//             month: 'long', 
-//             year: 'numeric' 
-//         });
-
-//         let datesHTML = '';
-
-//         // Previous month's days
-//         const prevMonthLastDay = new Date(this.currentYear, this.currentMonth, 0).getDate();
-//         for (let i = startingDay - 1; i >= 0; i--) {
-//             datesHTML += `<div class="date-cell other-month">${prevMonthLastDay - i}</div>`;
-//         }
-
-//         // Current month's days
-//         for (let i = 1; i <= monthDays; i++) {
-//             const isToday = i === this.currentDay && 
-//                            this.currentMonth === this.date.getMonth() && 
-//                            this.currentYear === this.date.getFullYear();
-
-//             datesHTML += `<div class="date-cell ${isToday ? 'current' : ''}">${i}</div>`;
-//         }
-
-//         // Next month's days
-//         const totalCells = 42;
-//         const remainingCells = totalCells - (startingDay + monthDays);
-//         for (let i = 1; i <= remainingCells; i++) {
-//             datesHTML += `<div class="date-cell other-month">${i}</div>`;
-//         }
-
-//         this.datesGrid.innerHTML = datesHTML;
-//     }
-// }
-
-// Initialize calendar when DOM is loaded
-// document.addEventListener('DOMContentLoaded', () => {
-//     new Calendar();
-// });
 
 // Featured Calendar 4
 const daysTag = document.querySelector(".days"),
