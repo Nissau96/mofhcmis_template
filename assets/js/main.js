@@ -490,7 +490,7 @@ setInterval(updateAccraTime, 1000);
 
 
 // Featured Calendar 4
-const daysTag = document.querySelector(".days"),
+/*const daysTag = document.querySelector(".days"),
     currentDate = document.querySelector(".current-date"),
     prevNextIcon = document.querySelectorAll(".cal-icons span");
 // getting new date, current year and month
@@ -536,7 +536,7 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
         }
         renderCalendar(); // calling renderCalendar function
     });
-});
+});*/
 
 
 // Condition Script for Form Fields
@@ -574,3 +574,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 // Condition Script for Form Fields
+
+// Calendar Scripts
+
+
+// Calendar Scripts

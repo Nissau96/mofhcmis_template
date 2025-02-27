@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Mirrored from tabib-v2.inaikas.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Feb 2024 11:34:19 GMT -->
-
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,6 +15,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <!-- <link rel="stylesheet" href="assets/main/css/style1.css"> -->
         <link rel="stylesheet" href="assets/main/css/skin_color.css" />
+        <link rel="stylesheet" href="assets/fonts/tabler-icons/tabler-icons.css" />
     </head>
 
     <body>
@@ -134,14 +133,14 @@
             <div class="content-body">
                 <div class="warper container-fluid">
                     <div class="new-patients main_container">
-                        <div class="row">
+                        <div class="row mb-3">
                             <div class="col-xxl-4">
                                 <div class="box tale-bg">
                                     <div class="box-body">
                                         <div class="row">
                                             <div class="col-8">
                                                 <h3 class="mt-25 fw-500"><span id="greeting"></span> John</h3>
-                                                <p class="text-fade">Welcome to the MOF HCMIS. <br />A platform for all HR-related tasks and information.</p>
+                                                <p class="text-fade">Welcome to the <strong>MOF HCMIS</strong> . <br />A platform for all HR-related tasks and information.</p>
 
                                                 <div>
                                                     <img src="/assets/images/PEER.png" alt="logo" />
@@ -155,7 +154,7 @@
                             <div class="col-xxl-8">
                                 <div class="row fx-element-overlay">
                                     <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="box pull-up h-100">
+                                        <div class="box h-100">
                                             <div class="box-body d-flex justify-content-center align-items-center">
                                                 <div class="text-center" style="margin-bottom: -10px; padding-top: 2px">
                                                     <img src="/assets/images/undraw_journey_brk8.svg" class="max-w-60 mb-3" width="60" />
@@ -170,7 +169,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="box pull-up h-100">
+                                        <div class="box h-100">
                                             <div class="box-body d-flex justify-content-center align-items-center">
                                                 <div class="text-center" style="margin-bottom: -10px; padding-top: 2px">
                                                     <img src="/assets/images/undraw_add-files_d04y.svg" class="max-w-60 mb-3" width="60" />
@@ -185,7 +184,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="box pull-up h-100">
+                                        <div class="box h-100">
                                             <div class="box-body d-flex justify-content-center align-items-center">
                                                 <div class="text-center" style="margin-bottom: -10px; padding-top: 2px">
                                                     <img src="/assets/images/undraw_calendar_76t8.svg" class="max-w-60 mb-3" width="60" />
@@ -194,7 +193,7 @@
                                                     </h6>
                                                     <h1 style="font-size: 3rem !important">
                                                         <span class="fw-500 promotion-countdown">20</span>
-                                                        <span class="fw-light fs-24" style="text-transform: uppercase"> days</span>
+                                                        <span class="fw-light" style="text-transform: uppercase; font: size 20px"> days</span>
                                                     </h1>
                                                 </div>
                                             </div>
@@ -205,8 +204,8 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card shadow widget1" style="height: fit-content">
+                            <div class="col-xl-3">
+                                <div class="card shadow widget1">
                                     <div class="card-header align-items-center">
                                         <h4 class="card-title">
                                             <span>
@@ -215,39 +214,79 @@
                                             Staff Profile
                                         </h4>
                                     </div>
-                                    <div class="card-body" style="height: fit-content">
-                                        <div class="d-flex flex-column align-items-center text-center">
-                                            <img src="assets/images/avtar/1.jpg" alt="Admin" class="rounded-circle" width="150" />
-                                            <div class="mt-3">
-                                                <h4>
-                                                    John Doe
-                                                    <span class="text-primary fw-light">(935122)</span>
-                                                </h4>
-                                                <!-- <span class="text-primary fw-">935122</span> -->
-                                                <!-- <h6 class="text-primary fw-">935122</h6> -->
-                                                <span class="badge bg-gradient-primary text-white fs-10 fw-medium mb-1"> Economics Officer </span>
-                                                <!-- <p class="text-secondary mb-1">Full Stack Developer</p> -->
-                                                <div class="mt-1">
-                                                    <p class="text-muted font-size-sm">
-                                                        <span>
-                                                            <box-icon style="display: inline-block; vertical-align: middle" name="id-card" type="solid" color="#2e5797"></box-icon>
-                                                        </span>
-                                                        Budget Division
-                                                    </p>
-                                                    <!-- <p class="text-primary font-size-sm">
-                                                    heldesk@mofep.gov.gh
-                                                </p> -->
+                                    <div class="card-body" style="padding: 3px 0px !important">
+                                        <div class="box-widget widget-user">
+                                            <!-- Add the bg color to the header using any of the bg-* classes -->
+                                            <div class="widget-user-header bg-img bbsr-0 bber-0" style="background: url('/assets/images/mofstaff-bg.png') center center; background-size: cover; background-repeat: no-repeat" data-overlay="5"></div>
+                                            <div class="widget-user-image">
+                                                <img class="rounded-circle" src="assets/images/avtar/1.jpg" alt="User Avatar" width="300" />
+                                            </div>
+                                            <div class="box-footer" style="padding-left: 5px !important; padding-right: 5px !important">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="text-center px-3 pb-3 border-bottom">
+                                                            <div class="mb-3">
+                                                                <h4 class="d-flex align-items-center justify-content-center mb-1">
+                                                                    John Doe
+                                                                    <i class="ti ti-discount-check-filled text-success ms-1"></i>
+                                                                </h4>
+                                                                <span class="badge bg-gradient-primary text-white fs-10 fw-medium mb-1"> Economics Officer </span>
+                                                            </div>
+                                                            <div class="">
+                                                                <div class="info-row mb-3">
+                                                                    <span class="info-label">
+                                                                        <i class="ti ti-id me-2"></i>
+                                                                        Staff ID
+                                                                    </span>
+                                                                    <p class="info-value text-primary fw-bold">1577070</p>
+                                                                </div>
+                                                                <div class="info-row mb-3">
+                                                                    <span class="info-label">
+                                                                        <i class="ti ti-building-bank me-2"></i>
+                                                                        Division
+                                                                    </span>
+                                                                    <p class="info-value text-dark">Budget Division</p>
+                                                                </div>
+                                                                <div class="info-row mb-3">
+                                                                    <span class="info-label">
+                                                                        <i class="ti ti-accessible me-2"></i>
+                                                                        Unit
+                                                                    </span>
+                                                                    <p class="info-value text-dark">Budget Technical Advisory</p>
+                                                                </div>
+                                                                <div class="info-row mb-3">
+                                                                    <span class="info-label">
+                                                                        <i class="ti ti-building-skyscraper me-2"></i>
+                                                                        Office
+                                                                    </span>
+                                                                    <p class="info-value text-dark">Room 419, Main Block</p>
+                                                                </div>
+                                                                <div class="info-row mb-3">
+                                                                    <span class="info-label">
+                                                                        <i class="ti ti-award me-2"></i>
+                                                                        Class
+                                                                    </span>
+                                                                    <p class="info-value text-dark">Professional</p>
+                                                                </div>
+                                                                <div class="row gx-2 mt-3">
+                                                                    <div class="col-12">
+                                                                        <div>
+                                                                            <a href="staff-profile.html" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#edit_employee"><i class="ti ti-scan-eye me-1"></i>View Profile</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-
-                                                <button class="btn btn-primary">View Profile</button>
-                                                <!-- <button class="btn btn-outline-primary">Update Profile</button> -->
+                                                <!-- /.row -->
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="card shadow widget1">
+                            <div class="col-xl-4">
+                                <div class="card widget1">
                                     <div class="card-header">
                                         <h4 class="card-title">
                                             <span>
@@ -256,11 +295,43 @@
                                             Notifications
                                         </h4>
                                     </div>
-                                    <div class="card-body" style="overflow-y: auto; overflow-x: hidden; max-height: calc(400px - 61px)"></div>
+                                    <div class="card-body" style="overflow-y: auto; overflow-x: hidden; max-height: calc(500px - 61px)"></div>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="card white-bg widget1 shadow" style="height: fit-content">
+                            <div class="col-xl-5">
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="card white-bg widget1 shadow" style="height: fit-content">
+                                            <div class="wrapper">
+                                                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                                                    <div class="cal-icons">
+                                                        <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                                    </div>
+                                                    <h5 class="mb-0 current-date text-white"></h5>
+                                                    <div class="cal-icons">
+                                                        <span id="next" class="material-symbols-rounded">chevron_right</span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar">
+                                                    <ul class="weeks">
+                                                        <li>Sun</li>
+                                                        <li>Mon</li>
+                                                        <li>Tue</li>
+                                                        <li>Wed</li>
+                                                        <li>Thu</li>
+                                                        <li>Fri</li>
+                                                        <li>Sat</li>
+                                                    </ul>
+                                                    <ul class="days"></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        
+                                    </div>
+                                </div>
+                                <!-- <div class="card white-bg widget1 shadow" style="height: fit-content">
                                     <div class="wrapper">
                                         <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
                                             <div class="cal-icons">
@@ -270,11 +341,6 @@
                                             <div class="cal-icons">
                                                 <span id="next" class="material-symbols-rounded">chevron_right</span>
                                             </div>
-                                            <!-- <div class="icons">
-                                            <span id="prev" class="material-symbols-rounded">chevron_left</span>
-                                            <p class="current-date"></p>
-                                            <span id="next" class="material-symbols-rounded">chevron_right</span>
-                                        </div> -->
                                         </div>
                                         <div class="calendar">
                                             <ul class="weeks">
@@ -289,7 +355,7 @@
                                             <ul class="days"></ul>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -334,6 +400,74 @@
         <script src="assets/js/option-themes.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <script src="assets/plugins/fullcalendar/fullcalendar.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const daysTag = document.querySelector('.days');
+                const currentDate = document.querySelector('.current-date');
+                const prevNextIcon = document.querySelectorAll('.cal-icons span');
+
+                // getting new date, current year and month
+                let date = new Date(),
+                    currYear = date.getFullYear(),
+                    currMonth = date.getMonth();
+
+                // storing full name of all months in array
+                const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                const renderCalendar = () => {
+                    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
+                        lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
+                        lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
+                        lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
+
+                    let liTag = '';
+
+                    for (let i = firstDayofMonth; i > 0; i--) {
+                        // creating li of previous month last days
+                        liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+                    }
+
+                    for (let i = 1; i <= lastDateofMonth; i++) {
+                        // creating li of all days of current month
+                        // adding active class to li if the current day, month, and year matched
+                        let isToday = i === date.getDate() && currMonth === new Date().getMonth() && currYear === new Date().getFullYear() ? 'active' : '';
+                        liTag += `<li class="${isToday}">${i}</li>`;
+                    }
+
+                    for (let i = lastDayofMonth; i < 6; i++) {
+                        // creating li of next month first days
+                        liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
+                    }
+
+                    currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current month and year as currentDate text
+                    daysTag.innerHTML = liTag;
+                };
+
+                renderCalendar();
+
+                prevNextIcon.forEach(icon => {
+                    // getting prev and next icons
+                    icon.addEventListener('click', () => {
+                        // adding click event on both icons
+                        // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
+                        currMonth = icon.id === 'prev' ? currMonth - 1 : currMonth + 1;
+
+                        if (currMonth < 0 || currMonth > 11) {
+                            // if current month is less than 0 or greater than 11
+                            // creating a new date of current year & month and pass it as date value
+                            date = new Date(currYear, currMonth, new Date().getDate());
+                            currYear = date.getFullYear(); // updating current year with new date year
+                            currMonth = date.getMonth(); // updating current month with new date month
+                        } else {
+                            date = new Date(); // pass the current date as date value
+                        }
+
+                        renderCalendar(); // calling renderCalendar function
+                    });
+                });
+            });
+        </script>
     </body>
 
     <!-- Mirrored from tabib-v2.inaikas.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Feb 2024 11:34:53 GMT -->
