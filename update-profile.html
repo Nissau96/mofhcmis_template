@@ -118,21 +118,50 @@
             <!-- End logo components -->
             <!-- start section sidebar -->
             <aside class="left-panel nicescroll-box">
-                <nav class="navigation">
-                    <ul class="list-unstyled main-menu">
-                        <li class="has-submenu">
-                            <a href="index.html"> <i class="fas fa-th-large"></i> <span class="nav-label">Dashboard</span> </a>
-                        </li>
-                        <li class="has-submenu active">
-                            <a href="javascript:void()" class="has-arrow mm-collapsed"> <i class="fa fa-id-badge"></i> <span class="nav-label">Staff Information</span> </a>
-                            <ul class="list-unstyled mm-collapse">
-                                <li><a href="staff-profile.html">Staff Profile</a></li>
-                                <li><a href="update-profile.html">Update Staff Profile</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="sidebar-widgets"></div>
+                <div class="sidebar-content">
+                    <nav class="navigation">
+                        <ul class="list-unstyled main-menu">
+                            <li class="has-submenu active">
+                                <a href="index.html">
+                                    <i class="fas fa-th-large"></i>
+                                    <span class="nav-label">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="javascript:void()" class="has-arrow mm-collapsed">
+                                    <i class="fa fa-id-badge"></i>
+                                    <span class="nav-label">Staff Information</span>
+                                </a>
+                                <ul class="list-unstyled mm-collapse">
+                                    <li>
+                                        <a href="staff-profile.html">
+                                            <!-- <i class="fa fa-address-book"></i> -->
+                                            <!-- <span class="nav-label">Staff Details</span> -->
+                                            Staff Details
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="update-profile.html">
+                                            <!-- <i class="fas fa-user-edit"></i> -->
+                                            <!-- <span class="nav-label"></span> -->
+                                            Update Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="sidebar-footer" style="margin-bottom: 5px">
+                    <div class="sidebar-widgets">
+                        <div class="top-sidebar box-shadow mx-25 m-b-30 text-center">
+                            <a href="#">
+                                <img src="assets/images/peerblack.svg" class="side-img" alt="img" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </aside>
             <!-- End section sidebar -->
             <!-- start section header -->
@@ -174,12 +203,19 @@
                             <div class="col-xl-12">
                                 <div class="doctor-info-content">
                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                        <li class="nav-item col-md-4" role="presentation"><button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Personal Information</button></li>
-                                        <li class="nav-item col-md-4" role="presentation"><button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Position & Promotion</button></li>
-                                        <li class="nav-item col-md-4" role="presentation"><button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Job & Qualification</button></li>
+                                        <li class="nav-item col-md-4" role="presentation">
+                                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#personal-info" type="button" role="tab" aria-controls="home" aria-selected="true">Personal Information</button>
+                                        </li>
+                                        <li class="nav-item col-md-4" role="presentation">
+                                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#promotion" type="button" role="tab" aria-controls="profile" aria-selected="false">Position & Promotion</button>
+                                        </li>
+                                        <li class="nav-item col-md-4" role="presentation">
+                                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#qualification" type="button" role="tab" aria-controls="contact" aria-selected="false">Job & Qualification</button>
+                                        </li>
                                     </ul>
                                     <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <!-- Personal Information Tab -->
+                                        <div class="tab-pane active" id="personal-info" role="tabpanel" aria-labelledby="personal-tab">
                                             <div class="row m-t-30 m-l-0 m-r-0">
                                                 <div class="col-xl-6">
                                                     <div class="card" style="height: fit-content">
@@ -203,7 +239,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="row">
-                                                                        <div class="col-xl-6">
+                                                                        <div class="col-md-6">
                                                                             <div class="form-group">
                                                                                 <label class="form-label">Title</label>
                                                                                 <select class="form-control form-select" id="ptitle" name="ptitle">
@@ -215,9 +251,15 @@
                                                                                     <option value="Prof.">Prof.</option>
                                                                                 </select>
                                                                             </div>
-                                                                            <div class="form-group"><label class="form-label">Surname</label> <input type="text" class="form-control" value="Halidu" name="surname" id="surname" /></div>
+                                                                            <div class="form-group">
+                                                                                <label class="form-label">Surname</label>
+                                                                                <input type="text" class="form-control" value="Halidu" name="surname" id="surname" />
+                                                                            </div>
                                                                             <div class="form-group row">
-                                                                                <div class="col-lg-12"><label class="form-label">Staff ID</label> <input type="text" class="form-control" id="staff_id" name="staff_id" value="" /></div>
+                                                                                <div class="col-md-12">
+                                                                                    <label class="form-label">Staff ID</label>
+                                                                                    <input type="text" class="form-control" id="staff_id" name="staff_id" value="" />
+                                                                                </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="form-label">Religion</label>
@@ -233,7 +275,10 @@
                                                                                 </select>
                                                                             </div>
                                                                             <div class="form-group row">
-                                                                                <div class="col-lg-12"><label class="form-label">Ghana Card Number</label> <input type="text" class="form-control" id="ghana_card_number" name="ghana_card_number" value="" /></div>
+                                                                                <div class="col-md-12">
+                                                                                    <label class="form-label">Ghana Card Number</label>
+                                                                                    <input type="text" class="form-control" id="ghana_card_number" name="ghana_card_number" value="" />
+                                                                                </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="form-label">Division</label>
@@ -255,9 +300,15 @@
                                                                                 </select>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-xl-6">
-                                                                            <div class="form-group"><label class="form-label">First Name</label> <input type="text" class="form-control" value="Ibrahim" name="firstname" id="firstname" /></div>
-                                                                            <div class="form-group"><label class="form-label">Other Names</label> <input type="text" class="form-control" value="" name="othernames" id="othernames" /></div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label class="form-label">First Name</label>
+                                                                                <input type="text" class="form-control" value="Ibrahim" name="firstname" id="firstname" />
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label class="form-label">Other Names</label>
+                                                                                <input type="text" class="form-control" value="" name="othernames" id="othernames" />
+                                                                            </div>
                                                                             <div class="form-group">
                                                                                 <label class="form-label">Gender</label>
                                                                                 <select class="form-control form-select" id="gender" name="gender">
@@ -266,17 +317,26 @@
                                                                                     <option value="Female">Female</option>
                                                                                 </select>
                                                                             </div>
-                                                                            <div class="form-group"><label class="form-label">Date of Birth</label> <input type="date" class="form-control" name="date_of_birth" id="date_of_birth" value="" /></div>
-                                                                            <div class="form-group row">
-                                                                                <div class="col-lg-12"><label class="form-label">SSNIT Number</label> <input type="text" class="form-control" id="ssnit_number" name="ssnit_number" value="" /></div>
+                                                                            <div class="form-group">
+                                                                                <label class="form-label">Date of Birth</label>
+                                                                                <input type="date" class="form-control" name="date_of_birth" id="date_of_birth" value="" />
                                                                             </div>
                                                                             <div class="form-group row">
-                                                                                <div class="col-lg-12"><label class="form-label">Unit</label> <input type="text" class="form-control" id="unit" name="unit" value="" /></div>
+                                                                                <div class="col-lg-12">
+                                                                                    <label class="form-label">SSNIT Number</label>
+                                                                                    <input type="text" class="form-control" id="ssnit_number" name="ssnit_number" value="" />
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <div class="col-md-12">
+                                                                                    <label class="form-label">Unit</label>
+                                                                                    <input type="text" class="form-control" id="unit" name="unit" value="" />
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-xl-12">
+                                                                        <div class="col-md-12">
                                                                             <div class="row">
-                                                                                <div class="col-lg-6">
+                                                                                <div class="col-md-6">
                                                                                     <div class="form-group">
                                                                                         <label class="form-label">Employee Status</label>
                                                                                         <select name="employeeStatus" id="employeeStatus" class="form-control form-select">
@@ -290,7 +350,7 @@
                                                                                         </select>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="col-lg-6">
+                                                                                <div class="col-md-6">
                                                                                     <div class="form-group">
                                                                                         <label class="form-label">OHCS Scheme of Service Category </label>
                                                                                         <select name="ohcsSOS" id="ohcsSOS" class="form-control form-select">
@@ -322,35 +382,52 @@
                                                                     <div class="basic-form">
                                                                         <form action="">
                                                                             <div class="row">
-                                                                                <div class="col-xl-6">
+                                                                                <div class="col-md-6">
                                                                                     <div class="form-group row">
-                                                                                        <div class="col-lg-12"><label class="form-label">Corporate Email</label> <input type="email" class="form-control" id="corporate_email" name="corporate_email" value="" /></div>
+                                                                                        <div class="col-md-12">
+                                                                                            <label class="form-label">Corporate Email</label>
+                                                                                            <input type="email" class="form-control" id="corporate_email" name="corporate_email" value="" />
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="col-xl-6">
+                                                                                <div class="col-md-6">
                                                                                     <div class="form-group row">
-                                                                                        <div class="col-lg-12"><label class="form-label">Personal Email</label> <input type="email" class="form-control" id="email" name="email" value="" /></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-xl-6">
-                                                                                    <div class="form-group row">
-                                                                                        <div class="col-lg-12"><label class="form-label">Phone Number</label> <input type="tel" class="form-control" id="phone_number" name="phone_number" value="" /></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-xl-6">
-                                                                                    <div class="form-group row">
-                                                                                        <div class="col-lg-12"><label class="form-label">Digital Address</label> <input type="text" class="form-control" id="digiAddress" name="digiAddress" value="" /></div>
+                                                                                        <div class="col-lg-12">
+                                                                                            <label class="form-label">Personal Email</label>
+                                                                                            <input type="email" class="form-control" id="email" name="email" value="" />
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="row">
-                                                                                <div class="col-xl-12">
-                                                                                    <div class="form-group"><label class="form-label">Residential Address</label> <input type="text" class="form-control" id="spouse_residential_address" name="spouse_residential_address" value="  " /></div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group row">
+                                                                                        <div class="col-md-12">
+                                                                                            <label class="form-label">Phone Number</label>
+                                                                                            <input type="tel" class="form-control" id="phone_number" name="phone_number" value="" />
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group row">
+                                                                                        <div class="col-md-12">
+                                                                                            <label class="form-label">Digital Address</label>
+                                                                                            <input type="text" class="form-control" id="digiAddress" name="digiAddress" value="" />
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="form-group text-right"><button type="submit" class="btn btn-primary float-end">Update</button></div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="form-group">
+                                                                                        <label class="form-label">Residential Address</label>
+                                                                                        <input type="text" class="form-control" id="spouse_residential_address" name="spouse_residential_address" value="  " />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group text-right">
+                                                                                <button type="submit" class="btn btn-primary float-end">Update</button>
+                                                                            </div>
                                                                         </form>
                                                                     </div>
                                                                 </div>
@@ -372,11 +449,11 @@
                                                                             <div class="tab-content" id="underlineTabsContent">
                                                                                 <div class="tab-pane fade show active" id="home2" role="tabpanel" style="overflow-y: auto; overflow-x: hidden; max-height: calc(445px - 61px)">
                                                                                     <div class="row mt-3">
-                                                                                        <div class="col-xl-12 col-12 d-flex">
+                                                                                        <div class="col-md-12 col-12 d-flex">
                                                                                             <div class="basic-form flex-fill">
                                                                                                 <form action="" id="familyInfo">
                                                                                                     <div class="row">
-                                                                                                        <div class="col-xl-6">
+                                                                                                        <div class="col-md-6">
                                                                                                             <div class="form-group">
                                                                                                                 <label class="form-label" for="marital_status">Marital Status</label>
                                                                                                                 <select class="form-control form-select" name="marital_status" id="marital_status">
@@ -388,7 +465,7 @@
                                                                                                                 </select>
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                        <div class="col-xl-6">
+                                                                                                        <div class="col-md-6">
                                                                                                             <div class="form-group">
                                                                                                                 <label class="form-label">Number of Children</label>
                                                                                                                 <select name="number_of_children" id="number_of_children" class="form-control form-select">
@@ -408,17 +485,17 @@
                                                                                                             </div>
                                                                                                         </div>
                                                                                                     </div>
-                                                                                                    <div class="col-xl-12">
+                                                                                                    <div class="col-md-12">
                                                                                                         <div id="spouse_details" style="display: none">
                                                                                                             <!-- Spouse details fields -->
                                                                                                             <div class="row">
-                                                                                                                <div class="col-xl-4">
+                                                                                                                <div class="col-md-4">
                                                                                                                     <div class="form-group"><label for="spouseName" class="form-label">Name of Spouse</label> <input type="text" class="form-control" id="spouseName" name="spouseName" value="" /></div>
                                                                                                                 </div>
-                                                                                                                <div class="col-xl-4">
+                                                                                                                <div class="col-md-4">
                                                                                                                     <div class="form-group"><label class="form-label" for="spouse_date_of_birth">Date of Birth</label> <input type="date" class="form-control" name="spouse_date_of_birth" id="spouse_date_of_birth" value="" /></div>
                                                                                                                 </div>
-                                                                                                                <div class="col-xl-4">
+                                                                                                                <div class="col-md-4">
                                                                                                                     <div class="form-group"><label for="spouse_contact" class="form-label">Spouse Phone Number</label> <input type="tel" class="form-control" id="spouse_contact" name="spouse_contact" value="" /></div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -429,40 +506,40 @@
                                                                                                     <div id="children_details" style="display: none">
                                                                                                         <!-- First Child -->
                                                                                                         <div class="row" id="firstChild" style="display: none">
-                                                                                                            <div class="col-lg-6">
+                                                                                                            <div class="col-md-6">
                                                                                                                 <div class="form-group"><label for="firstChildname" class="form-label">Name of First Child</label> <input type="text" class="form-control" id="firstChildname" name="firstChildname" value="" /></div>
                                                                                                             </div>
-                                                                                                            <div class="col-lg-6">
+                                                                                                            <div class="col-md-6">
                                                                                                                 <div class="form-group"><label class="form-label" for="firstChild_dob">Date of Birth</label> <input type="date" class="form-control" name="firstChild_dob" id="firstChild_dob" value="" /></div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <!-- First Child -->
                                                                                                         <!-- Second Child -->
                                                                                                         <div class="row" id="secondChild" style="display: none">
-                                                                                                            <div class="col-lg-6">
+                                                                                                            <div class="col-md-6">
                                                                                                                 <div class="form-group"><label for="secondChildname" class="form-label">Name of Second Child</label> <input type="text" class="form-control" id="secondChildname" name="secondChildname" value="" /></div>
                                                                                                             </div>
-                                                                                                            <div class="col-lg-6">
+                                                                                                            <div class="col-md-6">
                                                                                                                 <div class="form-group"><label class="form-label" for="secondChild_dob">Date of Birth</label> <input type="date" class="form-control" name="secondChild_dob" id="secondChild_dob" value="" /></div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <!-- Second Child -->
                                                                                                         <!-- Third Child -->
                                                                                                         <div class="row" id="thirdChild" style="display: none">
-                                                                                                            <div class="col-lg-6">
+                                                                                                            <div class="col-md-6">
                                                                                                                 <div class="form-group"><label for="thirdChildname" class="form-label">Name of Third Child</label> <input type="text" class="form-control" id="thirdChildname" name="thirdChildname" value="" /></div>
                                                                                                             </div>
-                                                                                                            <div class="col-lg-6">
+                                                                                                            <div class="col-md-6">
                                                                                                                 <div class="form-group"><label class="form-label" for="thirdChild_dob">Date of Birth</label> <input type="date" class="form-control" name="thirdChild_dob" id="thirdChild_dob" value="" /></div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <!-- Third Child -->
                                                                                                         <!-- Fourth Child -->
                                                                                                         <div class="row" id="fourthChild" style="display: none">
-                                                                                                            <div class="col-lg-6">
+                                                                                                            <div class="col-md-6">
                                                                                                                 <div class="form-group"><label for="fourthChildname" class="form-label">Name of Fourth Child</label> <input type="text" class="form-control" id="fourthChildname" name="fourthChildname" value="" /></div>
                                                                                                             </div>
-                                                                                                            <div class="col-lg-6">
+                                                                                                            <div class="col-md-6">
                                                                                                                 <div class="form-group"><label class="form-label" for="fourthChild_dob">Date of Birth</label> <input type="date" class="form-control" name="fourthChild_dob" id="fourthChild_dob" value="" /></div>
                                                                                                             </div>
                                                                                                         </div>
@@ -470,10 +547,10 @@
                                                                                                     </div>
                                                                                                     <!-- Children Details -->
                                                                                                     <div class="row">
-                                                                                                        <div class="col-lg-6">
+                                                                                                        <div class="col-md-6">
                                                                                                             <div class="form-group"><label for="fatherName" class="form-label">Father's Name</label> <input type="text" class="form-control" id="fatherName" name="fatherName" value="" /></div>
                                                                                                         </div>
-                                                                                                        <div class="col-lg-6">
+                                                                                                        <div class="col-md-6">
                                                                                                             <div class="form-group">
                                                                                                                 <label for="fatherContact" class="form-label"> Father's Contact</label>
                                                                                                                 <input type="tel" class="form-control" id="fatherContact" name="fatherContact" value="" />
@@ -481,10 +558,10 @@
                                                                                                         </div>
                                                                                                     </div>
                                                                                                     <div class="row">
-                                                                                                        <div class="col-lg-6">
+                                                                                                        <div class="col-md-6">
                                                                                                             <div class="form-group"><label for="motherName" class="form-label">Mother's Name</label> <input type="text" class="form-control" id="motherName" name="motherName" value="" /></div>
                                                                                                         </div>
-                                                                                                        <div class="col-lg-6">
+                                                                                                        <div class="col-md-6">
                                                                                                             <div class="form-group">
                                                                                                                 <label for="fatherContact" class="form-label"> Mother's Contact</label>
                                                                                                                 <input type="tel" class="form-control" id="motherContact" name="motherContact" value="" />
@@ -508,10 +585,10 @@
                                                                                                     <div class="row">
                                                                                                         <div class="col-xl-6">
                                                                                                             <div class="form-group row">
-                                                                                                                <div class="col-lg-12"><label class="form-label">Next of Kin Name</label> <input type="text" class="form-control" id="nextKinName" name="nextKinName" value="" /></div>
+                                                                                                                <div class="col-md-12"><label class="form-label">Next of Kin Name</label> <input type="text" class="form-control" id="nextKinName" name="nextKinName" value="" /></div>
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                        <div class="col-xl-6">
+                                                                                                        <div class="col-md-6">
                                                                                                             <div class="form-group row">
                                                                                                                 <div class="col-lg-12">
                                                                                                                     <label class="form-label">Relationship</label>
@@ -534,7 +611,7 @@
                                                                                                         </div>
                                                                                                     </div>
                                                                                                     <div class="row">
-                                                                                                        <div class="col-xl-6">
+                                                                                                        <div class="col-md-6">
                                                                                                             <div class="form-group row">
                                                                                                                 <div class="col-lg-12">
                                                                                                                     <label class="form-label">Next of Kin Phone Number</label>
@@ -542,7 +619,7 @@
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                        <div class="col-xl-6">
+                                                                                                        <div class="col-md-6">
                                                                                                             <div class="form-group row">
                                                                                                                 <div class="col-lg-12">
                                                                                                                     <label class="form-label">Next of Kin Digital Address</label>
@@ -552,7 +629,7 @@
                                                                                                         </div>
                                                                                                     </div>
                                                                                                     <div class="row">
-                                                                                                        <div class="col-xl-12">
+                                                                                                        <div class="col-md-12">
                                                                                                             <div class="form-group">
                                                                                                                 <label class="form-label">Next of Kin Residential Address</label>
                                                                                                                 <input type="text" class="form-control" id="nextKin_residential_address" name="nextKin_residential_address" value="  " />
@@ -576,7 +653,7 @@
                                                                                         </div>
                                                                                         <form action="">
                                                                                             <div class="row">
-                                                                                                <div class="col-xl-6">
+                                                                                                <div class="col-md-6">
                                                                                                     <div class="form-group row">
                                                                                                         <div class="col-lg-12">
                                                                                                             <label class="form-label">Emergency Contact Name</label>
@@ -584,7 +661,7 @@
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div class="col-xl-6">
+                                                                                                <div class="col-md-6">
                                                                                                     <div class="form-group row">
                                                                                                         <div class="col-lg-12">
                                                                                                             <label class="form-label">Relationship</label>
@@ -607,7 +684,7 @@
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="row">
-                                                                                                <div class="col-xl-6">
+                                                                                                <div class="col-md-6">
                                                                                                     <div class="form-group row">
                                                                                                         <div class="col-lg-12">
                                                                                                             <label class="form-label">Emergency Contact Phone Number</label>
@@ -615,7 +692,7 @@
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div class="col-xl-6">
+                                                                                                <div class="col-md-6">
                                                                                                     <div class="form-group row">
                                                                                                         <div class="col-lg-12">
                                                                                                             <label class="form-label">Emergency Contact Digital Address</label>
@@ -636,7 +713,7 @@
                                                                                                 <h6>Emergency Contact 2</h6>
                                                                                             </div>
                                                                                             <div class="row">
-                                                                                                <div class="col-xl-6">
+                                                                                                <div class="col-md-6">
                                                                                                     <div class="form-group row">
                                                                                                         <div class="col-lg-12">
                                                                                                             <label class="form-label">Emergency Contact Name</label>
@@ -644,7 +721,7 @@
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div class="col-xl-6">
+                                                                                                <div class="col-md-6">
                                                                                                     <div class="form-group row">
                                                                                                         <div class="col-lg-12">
                                                                                                             <label class="form-label">Relationship</label>
@@ -667,7 +744,7 @@
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="row">
-                                                                                                <div class="col-xl-6">
+                                                                                                <div class="col-md-6">
                                                                                                     <div class="form-group row">
                                                                                                         <div class="col-lg-12">
                                                                                                             <label class="form-label">Emergency Contact Phone Number</label>
@@ -675,7 +752,7 @@
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <div class="col-xl-6">
+                                                                                                <div class="col-md-6">
                                                                                                     <div class="form-group row">
                                                                                                         <div class="col-lg-12">
                                                                                                             <label class="form-label">Emergency Contact Digital Address</label>
@@ -705,6 +782,122 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Promotion Tab -->
+                                        <div class="tab-pane fade" id="promotion" role="tabpanel" aria-labelledby="promotion-tab">
+                                            <div class="card m-t-30">
+                                                <div class="card-body">
+                                                    <div class="basic-form">
+                                                        <form action="">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group row">
+                                                                        <div class="col-md-12">
+                                                                            <label class="form-label">Corporate Email</label>
+                                                                            <input type="email" class="form-control" id="corporate_email" name="corporate_email" value="" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group row">
+                                                                        <div class="col-lg-12">
+                                                                            <label class="form-label">Personal Email</label>
+                                                                            <input type="email" class="form-control" id="email" name="email" value="" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group row">
+                                                                        <div class="col-md-12">
+                                                                            <label class="form-label">Phone Number</label>
+                                                                            <input type="tel" class="form-control" id="phone_number" name="phone_number" value="" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group row">
+                                                                        <div class="col-md-12">
+                                                                            <label class="form-label">Digital Address</label>
+                                                                            <input type="text" class="form-control" id="digiAddress" name="digiAddress" value="" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">Residential Address</label>
+                                                                        <input type="text" class="form-control" id="spouse_residential_address" name="spouse_residential_address" value="  " />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group text-right">
+                                                                <button type="submit" class="btn btn-primary float-end">Update</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Qualification Tab -->
+                                        <div class="tab-pane fade" id="qualification" role="tabpanel" aria-labelledby="promotion-tab">
+                                            <div class="card m-t-30">
+                                                <div class="card-body">
+                                                    <div class="basic-form">
+                                                        <form action="">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group row">
+                                                                        <div class="col-md-12">
+                                                                            <label class="form-label">Corporate Email</label>
+                                                                            <input type="email" class="form-control" id="corporate_email" name="corporate_email" value="" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group row">
+                                                                        <div class="col-lg-12">
+                                                                            <label class="form-label">Personal Email</label>
+                                                                            <input type="email" class="form-control" id="email" name="email" value="" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group row">
+                                                                        <div class="col-md-12">
+                                                                            <label class="form-label">Phone Number</label>
+                                                                            <input type="tel" class="form-control" id="phone_number" name="phone_number" value="" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group row">
+                                                                        <div class="col-md-12">
+                                                                            <label class="form-label">Digital Address</label>
+                                                                            <input type="text" class="form-control" id="digiAddress" name="digiAddress" value="" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">Residential Address</label>
+                                                                        <input type="text" class="form-control" id="spouse_residential_address" name="spouse_residential_address" value="  " />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group text-right">
+                                                                <button type="submit" class="btn btn-primary float-end">Update</button>
+                                                            </div>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>

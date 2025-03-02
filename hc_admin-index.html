@@ -27,52 +27,44 @@
         <div id="main-wrapper" class="show">
             <!-- start section sidebar -->
             <aside class="left-panel nicescroll-box">
-                <nav class="navigation">
-                    <ul class="list-unstyled main-menu">
-                        <li class="has-submenu active">
-                            <a href="index.html">
-                                <i class="fas fa-th-large"></i>
-                                <span class="nav-label">Dashboard</span>
-                            </a>
-                        </li>
+                <div class="sidebar-content">
+                    <nav class="navigation">
+                        <ul class="list-unstyled main-menu">
+                            <li class="has-submenu active">
+                                <a href="index.html">
+                                    <i class="fas fa-th-large"></i>
+                                    <span class="nav-label">Dashboard</span>
+                                </a>
+                            </li>
 
-                        <li class="has-submenu">
-                            <a href="javascript:void()" class="has-arrow mm-collapsed">
-                                <i class="fa fa-id-badge"></i>
-                                <span class="nav-label">Staff Information</span>
+                            <li class="has-submenu">
+                                <a href="javascript:void()" class="has-arrow mm-collapsed">
+                                    <i class="fa fa-id-badge"></i>
+                                    <span class="nav-label">Staff Information</span>
+                                </a>
+                                <ul class="list-unstyled mm-collapse">
+                                    <li>
+                                        <a href="staff-profile.html"> Staff Details </a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="update-profile.html">
+                                            
+                                            Update Details
+                                        </a>
+                                    </li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="sidebar-footer" style="margin-bottom: 5px">
+                    <div class="sidebar-widgets">
+                        <div class="top-sidebar box-shadow mx-25 m-b-30 text-center">
+                            <a href="#">
+                                <img src="assets/images/peerblack.svg" class="side-img" alt="img" />
                             </a>
-                            <ul class="list-unstyled mm-collapse">
-                                <li>
-                                    <a href="staff-profile.html">
-                                        <!-- <i class="fa fa-address-book"></i> -->
-                                        <!-- <span class="nav-label">Staff Details</span> -->
-                                        Staff Details
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="update-profile.html">
-                                        <!-- <i class="fas fa-user-edit"></i> -->
-                                        <!-- <span class="nav-label"></span> -->
-                                        Update Details
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="sidebar-widgets">
-                    <!-- <div class="top-sidebar box-shadow mx-25 m-b-30 p-b-20 text-center">
-                    <a href="new-appointment.html">
-                        <img src="assets/images/appointement.svg" class="side-img" alt="img">
-                    </a>
-                    <a href="#">
-                        <h4 class="text-primary mb-0">Make an Appointments</h4>
-                    </a>
-                </div> -->
-                    <!-- <div class="copyright text-center">
-                    <p class="mb-0">Tabib Dashboard</p>
-                    <p class="mb-0">© 2022</p>
-                </div> -->
+                        </div>
+                    </div>
                 </div>
             </aside>
             <!-- End section sidebar -->
@@ -112,14 +104,6 @@
                                     </a>
                                     <div class="account-dropdown-form dropdown-container">
                                         <div class="form-content">
-                                            <a href="update-profile.html">
-                                                <i class="far fa-user"></i>
-                                                <span class="ml-2">Profile</span>
-                                            </a>
-                                            <a href="#">
-                                                <i class="far fa-envelope"></i>
-                                                <span class="ml-2">Inbox</span>
-                                            </a>
                                             <a href="page-login.html">
                                                 <i class="fas fa-sign-in-alt"></i>
                                                 <span class="ml-2">Logout </span>
@@ -138,34 +122,70 @@
             <div class="content-body">
                 <div class="warper container-fluid">
                     <div class="new-patients main_container">
-                        <div class="row">
-                            <div class="col-xl-8 col-lg-12 col-12 grid-margin stretch-card">
-                                <div class="box bg-primary-light no-shadow">
-                                    <div class="box-body p-xl-0">
-                                        <div class="row align-items-center">
-                                            <div class="col-12 col-md-3">
-                                                <img id="timeImage" alt="Time of day illustration" class="welcome-image" />
+                        <div class="row mb-3">
+                            <div class="col-xxl-4">
+                                <div class="box tale-bg">
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <h3 class="mt-25 fw-500"><span id="greeting"></span> John</h3>
+                                                <p class="text-fade">Welcome to the <strong>MOF HCMIS</strong> . <br />A platform for all HR-related tasks and information.</p>
+
+                                                <div>
+                                                    <img src="/assets/images/PEER.png" alt="logo" />
+                                                </div>
                                             </div>
-                                            <div class="col-12 col-md-9">
-                                                <div id="timeIcon" class="welcome-icon"></div>
-                                                <h1 class="fs-40 text-primary"><span id="greeting"></span> John Doe!</h1>
-                                                <p class="text-dark fs-20">
-                                                    <span>
-                                                        <box-icon style="display: inline-block; vertical-align: middle" name="time" color="#2e5797" animation="spin"></box-icon>
-                                                    </span>
-                                                    Its Currently <span id="timeDisplay"></span>
-                                                </p>
-                                            </div>
+                                            <div class="col-4 book-image align-content-center text-center"><img id="timeImage"" alt="greeting" /></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-12 col-12 grid-margin stretch-card">
-                                <div class="imgboxcard tale-bg">
-                                    <div class="card-people p-xl-0">
-                                        <img src="assets/images/svg-icon/color-svg/people.svg" alt="people" />
-                                        <div class="weather-info">
-                                            <div class="d-flex"></div>
+                            <div class="col-xxl-8">
+                                <div class="row fx-element-overlay">
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="box h-100">
+                                            <div class="box-body d-flex justify-content-center align-items-center">
+                                                <div class="text-center" style="margin-bottom: -10px; padding-top: 2px">
+                                                    <img src="/assets/images/undraw_journey_brk8.svg" class="max-w-60 mb-3" width="60" />
+                                                    <h6>
+                                                        <span class="text-fade fs-24 mb-2" style="text-transform: uppercase">Years In MoF</span>
+                                                    </h6>
+                                                    <h1 style="font-size: 3rem !important">
+                                                        <span class="fw-500">12</span>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="box h-100">
+                                            <div class="box-body d-flex justify-content-center align-items-center">
+                                                <div class="text-center" style="margin-bottom: -10px; padding-top: 2px">
+                                                    <img src="/assets/images/undraw_add-files_d04y.svg" class="max-w-60 mb-3" width="60" />
+                                                    <h6>
+                                                        <span class="text-fade fs-24 mb-2" style="text-transform: uppercase">Uploaded Documents</span>
+                                                    </h6>
+                                                    <h1 style="font-size: 3rem !important">
+                                                        <span class="fw-500">10</span>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="box h-100">
+                                            <div class="box-body d-flex justify-content-center align-items-center">
+                                                <div class="text-center" style="margin-bottom: -10px; padding-top: 2px">
+                                                    <img src="/assets/images/undraw_calendar_76t8.svg" class="max-w-60 mb-3" width="60" />
+                                                    <h6>
+                                                        <span class="text-fade fs-24 mb-2" style="text-transform: uppercase">Next Promotion</span>
+                                                    </h6>
+                                                    <h1 style="font-size: 3rem !important">
+                                                        <span class="fw-500 promotion-countdown">20</span>
+                                                        <span class="fw-light" style="text-transform: uppercase; font: size 20px"> days</span>
+                                                    </h1>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -252,66 +272,18 @@
 
                         <div class="row">
                             <div class="col-xl-4">
-                                <div class="card white-bg widget1 shadow" style="height: fit-content">
-                                    <div class="wrapper">
-                                        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-                                            <div class="cal-icons">
-                                                <span id="prev" class="material-symbols-rounded">chevron_left</span>
-                                            </div>
-                                            <h5 class="mb-0 current-date text-white"></h5>
-                                            <div class="cal-icons">
-                                                <span id="next" class="material-symbols-rounded">chevron_right</span>
-                                            </div>
-                                        </div>
-                                        <div class="calendar">
-                                            <ul class="weeks">
-                                                <li>Sun</li>
-                                                <li>Mon</li>
-                                                <li>Tue</li>
-                                                <li>Wed</li>
-                                                <li>Thu</li>
-                                                <li>Fri</li>
-                                                <li>Sat</li>
-                                            </ul>
-                                            <ul class="days"></ul>
-                                        </div>
+                                <div class="card shadow widget1">
+                                    <div class="card-header">
+                                        <h4 class="card-title">
+                                            <span>
+                                                <box-icon style="display: inline-block; vertical-align: middle" name="bell-ring" animation="tada" type="solid" color="#2e5797"></box-icon>
+                                            </span>
+                                            Notifications
+                                        </h4>
                                     </div>
+                                    <div class="card-body" style="overflow-y: auto; overflow-x: hidden; max-height: calc(400px - 61px)"></div>
                                 </div>
                             </div>
-                            <!-- <div class="col-xl-6 grid-margin stretch-card">
-                            <div class="imgboxcard white-bg">
-                                <div class="card-people mt-auto">
-                                    <div>
-                                        <div class="d-flex">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                            <!-- <div class="col-xl-6 grid-margin stretch-card">
-                            <div class="imgboxcard white-bg">
-                                <div class="card-people mt-auto">
-                                    <div class="calendar-container">
-                                        <div class="calendar-header">
-                                            <span class="month-year" id="month-year"></span>
-                                        </div>
-                                        <div class="calendar-grid">
-                                            <div class="calendar-weekdays">
-                                                <div>Sun</div>
-                                                <div>Mon</div>
-                                                <div>Tue</div>
-                                                <div>Wed</div>
-                                                <div>Thu</div>
-                                                <div>Fri</div>
-                                                <div>Sat</div>
-                                            </div>
-                                            <div class="calendar-days" id="calendar-days"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                             <div class="col-xl-4">
                                 <div class="card shadow widget1">
                                     <div class="card-header">

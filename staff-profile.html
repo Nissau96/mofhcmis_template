@@ -33,28 +33,44 @@
 
             <!-- start section sidebar -->
             <aside class="left-panel nicescroll-box">
-                <nav class="navigation">
-                    <ul class="list-unstyled main-menu">
-                        <li class="has-submenu">
-                            <a href="index.html">
-                                <i class="fas fa-th-large"></i>
-                                <span class="nav-label">Dashboard</span>
-                            </a>
-                        </li>
+                <div class="sidebar-content">
+                    <nav class="navigation">
+                        <ul class="list-unstyled main-menu">
+                            <li class="has-submenu">
+                                <a href="index.html">
+                                    <i class="fas fa-th-large"></i>
+                                    <span class="nav-label">Dashboard</span>
+                                </a>
+                            </li>
 
-                        <li class="has-submenu active">
-                            <a href="javascript:void()" class="has-arrow mm-collapsed">
-                                <i class="fa fa-id-badge"></i>
-                                <span class="nav-label">Staff Information</span>
+                            <li class="has-submenu active">
+                                <a href="javascript:void()" class="has-arrow mm-collapsed">
+                                    <i class="fa fa-id-badge"></i>
+                                    <span class="nav-label">Staff Information</span>
+                                </a>
+                                <ul class="list-unstyled mm-collapse">
+                                    <li>
+                                        <a href="staff-profile.html"> Staff Details </a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="update-profile.html">
+                                            Update Details
+                                        </a>
+                                    </li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="sidebar-footer" style="margin-bottom: 5px">
+                    <div class="sidebar-widgets">
+                        <div class="top-sidebar box-shadow mx-25 m-b-30 text-center">
+                            <a href="#">
+                                <img src="assets/images/peerblack.svg" class="side-img" alt="img" />
                             </a>
-                            <ul class="list-unstyled mm-collapse">
-                                <li><a href="staff-profile.html">Staff Profile</a></li>
-                                <li><a href="update-profile.html">Update Staff Profile</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="sidebar-widgets"></div>
+                        </div>
+                    </div>
+                </div>
             </aside>
             <!-- End section sidebar -->
 
@@ -169,15 +185,13 @@
                                                     </span>
                                                     <p class="info-value text-dark">Professional</p>
                                                 </div>
-                                                <!-- <div class="row gx-2 mt-3">
-                                                <div class="col-12">
-                                                    <div>
-                                                        <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal"
-                                                            data-bs-target="#edit_employee"><i
-                                                                class="ti ti-edit me-1"></i>Update Info</a>
+                                                <div class="row gx-2 mt-3">
+                                                    <div class="col-12">
+                                                        <div>
+                                                            <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#edit_employee"><i class="ti ti-edit me-1"></i>Request Update</a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div> -->
                                             </div>
                                         </div>
                                         <div class="p-3 border-bottom">
@@ -327,7 +341,11 @@
                                                                     <div class="before__circle"></div>
                                                                 </div>
                                                                 <div class="education__content st-current">
-                                                                    <div class="timeline-content"><a class="name" href="#">Envato Inc, Melbourne</a><span class="degree">Head Of Review Team</span><span class="year">2020 - Present</span></div>
+                                                                    <div class="timeline-content">
+                                                                        <a class="name" href="#">Economics Officer</a>
+                                                                        <span class="degree">Budget Division</span>
+                                                                        <span class="year">2023 - Present</span>
+                                                                    </div>
                                                                 </div>
                                                             </li>
                                                             <li class="">
@@ -335,7 +353,11 @@
                                                                     <div class="before__circle"></div>
                                                                 </div>
                                                                 <div class="education__content">
-                                                                    <div class="timeline-content"><a class="name" href="#">CodeCanyon Sydney</a><span class="degree">Software Developer</span><span class="year">2016 - 2018</span></div>
+                                                                    <div class="timeline-content">
+                                                                        <a class="name" href="#">Assistant Economics Officer</a>
+                                                                        <span class="degree">Budget Division</span>
+                                                                        <span class="year">2020 - 2023</span>
+                                                                    </div>
                                                                 </div>
                                                             </li>
                                                         </ul>
