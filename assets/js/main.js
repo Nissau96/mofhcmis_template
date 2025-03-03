@@ -1,23 +1,21 @@
 $(function () {
-
     // ========================================================================= //
     //    Add remove class active has menu
     // ========================================================================= //
 
-    jQuery(".has-submenu").click(function () {
-        $(".has-submenu").removeClass("active");
-        $(this).toggleClass("active");
+    jQuery('.has-submenu').click(function () {
+        $('.has-submenu').removeClass('active');
+        $(this).toggleClass('active');
     });
 
     // ========================================================================= //
     //    Toggle Aside Menu
     // ========================================================================= //
 
-    jQuery(".hamburger").click(function () {
-        jQuery("body").toggleClass("sidebar-toggled");
-        jQuery("#main-wrapper").toggleClass("menu-toggle");
-        jQuery(".left-panel").toggleClass("collapsed");
-
+    jQuery('.hamburger').click(function () {
+        jQuery('body').toggleClass('sidebar-toggled');
+        jQuery('#main-wrapper').toggleClass('menu-toggle');
+        jQuery('.left-panel').toggleClass('collapsed');
     });
 
     // ========================================================================= //
@@ -25,10 +23,10 @@ $(function () {
     // ========================================================================= //
 
     jQuery('body').attr({
-        'data-typography': "rubik",
+        'data-typography': 'rubik',
         //'data-sidebar-style': "full",
-        'data-sidebar-position': "fixed",
-        'data-header-position': "fixed",
+        'data-sidebar-position': 'fixed',
+        'data-header-position': 'fixed',
         // 'data-nav-headerbg': 'primary_color_1',
         // 'data-headerbg': 'primary_color_1',
         // 'data-primary': 'primary_color_1',
@@ -42,7 +40,6 @@ $(function () {
         //'data-container': "boxed",
         // 'layout-positions': "full",
     });
-
 
     // ========================================================================= //
     //    Set attibute isnide body (Dark)
@@ -60,46 +57,34 @@ $(function () {
         jQuery('.brand-title').attr('src', 'assets/images/logo-dark.png');
     }
 
-
-
     // ========================================================================= //
-    //   Top bar change 
+    //   Top bar change
     // ========================================================================= //
-
 
     if ($('.auth').hasClass('dark')) {
         $('.logo img').attr('src', 'assets/images/logo-dark.png');
-
     }
 
-
     // ========================================================================= //
-    //    resize 
+    //    resize
     // ========================================================================= //
 
     function resize() {
-        if (window.matchMedia("(max-width: 767px)").matches) {
+        if (window.matchMedia('(max-width: 767px)').matches) {
             $('body').attr('data-sidebar-style', 'overlay');
-
-        } else if (window.matchMedia("(max-width: 1199px)").matches) {
-
+        } else if (window.matchMedia('(max-width: 1199px)').matches) {
             $('body').attr('data-sidebar-style', 'mini');
-
         } else {
             // $('body').attr('data-sidebar-style', 'full');
             // $("#main-wrapper").removeClass('mini');
         }
-
-
     }
-
 
     resize();
 
     jQuery(window).resize(function () {
         resize();
-    })
-
+    });
 });
 
 // ========================================================================= //
@@ -109,9 +94,9 @@ $(function () {
 function showPreview(event) {
     if (event.target.files.length > 0) {
         var src = URL.createObjectURL(event.target.files[0]);
-        var preview = document.getElementById("file-ip-1-preview");
+        var preview = document.getElementById('file-ip-1-preview');
         preview.src = src;
-        preview.style.display = "block";
+        preview.style.display = 'block';
     }
 }
 
@@ -119,20 +104,22 @@ function showPreview(event) {
 //   Preview Pictures
 // ========================================================================= //
 
-$(".widget-3 input[type='file']").on("change", function () {
-    $(".widget-3").addClass("custom-text");
+$(".widget-3 input[type='file']").on('change', function () {
+    $('.widget-3').addClass('custom-text');
 });
 
 // ========================================================================= //
 //   Date Range
 // ========================================================================= //
 
-$('input[name="daterange"]').daterangepicker({
-    opens: 'right'
-}, function (start, end, label) {
-    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-});
-
+$('input[name="daterange"]').daterangepicker(
+    {
+        opens: 'right',
+    },
+    function (start, end, label) {
+        console.log('A new date selection was made: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    }
+);
 
 // ========================================================================= //
 //   Button Add Drugs
@@ -165,7 +152,7 @@ $('#butonAddDrug').click(function () {
             </div>
         </form>
         <hr/>`;
-    $(".drugslist").append(structure);
+    $('.drugslist').append(structure);
     // $('select').selectpicker();
 });
 
@@ -204,28 +191,27 @@ $('#butonAddTest').click(function () {
     </div>
     <hr/>
 </form>`;
-    $(".addTest").append(structure);
+    $('.addTest').append(structure);
     // $('select').selectpicker();
-
 });
-
 
 // ========================================================================= //
 //  Change dates patient
 // ========================================================================= //
 
 $(function () {
-    $('input[name="dates"]').daterangepicker({
-        singleDatePicker: true,
-        showDropdowns: true,
-        minYear: 1901,
-        maxYear: parseInt(moment().format('YYYY'), 10)
-    }, function (start, end, label) {
-        var years = moment().diff(start, 'years');
-    });
+    $('input[name="dates"]').daterangepicker(
+        {
+            singleDatePicker: true,
+            showDropdowns: true,
+            minYear: 1901,
+            maxYear: parseInt(moment().format('YYYY'), 10),
+        },
+        function (start, end, label) {
+            var years = moment().diff(start, 'years');
+        }
+    );
 });
-
-
 
 // ========================================================================= //
 //   refrech select picker inside modal
@@ -234,15 +220,13 @@ $('.selectRefresh').on('shown', function () {
     $('.selectpicker').selectpicker('refresh');
 });
 
-
 // ========================================================================= //
 //   Responsive
 // ========================================================================= //
 
-
 function resize() {
-    if (window.matchMedia("(max-width: 1199px)").matches) {
-        $(".has-submenu").removeClass('active');
+    if (window.matchMedia('(max-width: 1199px)').matches) {
+        $('.has-submenu').removeClass('active');
     }
 }
 
@@ -250,22 +234,20 @@ resize();
 
 jQuery(window).resize(function () {
     resize();
-})
-
+});
 
 jQuery(function ($) {
     var path = window.location.href;
     $('ul li a').each(function () {
-        if (window.matchMedia("(max-width: 1199px) and (max-width: 1199px)").matches) {
+        if (window.matchMedia('(max-width: 1199px) and (max-width: 1199px)').matches) {
             if (this.href === path) {
-                if ($(this).parent().hasClass("has-submenu")) {
-                    $(this).parent().addClass("active-submenu");
+                if ($(this).parent().hasClass('has-submenu')) {
+                    $(this).parent().addClass('active-submenu');
                 } else {
                     $(this).parent().parent().parent().addClass('active-submenu');
                 }
             }
         }
-
     });
 });
 
@@ -274,7 +256,7 @@ jQuery(function ($) {
 const currentYear = new Date().getFullYear();
 
 // Insert the current year into the HTML element with the ID "currentYear"
-document.getElementById("currentYear").textContent = currentYear;
+document.getElementById('currentYear').textContent = currentYear;
 
 // Display Current Greeting
 // Function to get the current time in Accra (GMT+0)
@@ -284,19 +266,18 @@ function getGreeting() {
 
     let greeting;
     if (hour >= 5 && hour < 12) {
-        greeting = "Good Morning";
+        greeting = 'Good Morning';
     } else if (hour >= 12 && hour < 18) {
-        greeting = "Good Afternoon";
+        greeting = 'Good Afternoon';
     } else {
-        greeting = "Good Evening";
+        greeting = 'Good Evening';
     }
 
     return greeting;
 }
 
 // Update the greeting in the HTML
-document.getElementById("greeting").textContent = getGreeting();
-
+document.getElementById('greeting').textContent = getGreeting();
 
 // Greeting Script
 document.addEventListener('DOMContentLoaded', function () {
@@ -314,36 +295,36 @@ document.addEventListener('DOMContentLoaded', function () {
             greeting: '',
             iconName: '',
             image: '',
-            theme: ''
+            theme: '',
         };
 
-        if (hour >= 5 && hour < 12) {
+        if (hour >= 0 && hour < 12) {
             content = {
                 greeting: 'Good Morning',
                 iconName: 'sunrise',
                 image: 'assets/images/morning.png',
-                theme: 'theme-morning'
+                theme: 'theme-morning',
             };
         } else if (hour >= 12 && hour < 17) {
             content = {
                 greeting: 'Good Afternoon',
                 iconName: 'sun',
                 image: 'assets/images/afternoon.png',
-                theme: 'theme-afternoon'
+                theme: 'theme-afternoon',
             };
         } else if (hour >= 17 && hour < 20) {
             content = {
                 greeting: 'Good Evening',
                 iconName: 'sunset',
                 image: 'assets/images/evening.png',
-                theme: 'theme-evening'
+                theme: 'theme-evening',
             };
         } else {
             content = {
                 greeting: 'Good Night',
                 iconName: 'moon',
                 image: 'assets/images/night.png',
-                theme: 'theme-night'
+                theme: 'theme-night',
             };
         }
 
@@ -444,14 +425,14 @@ function updateWeather() {
 function getWeatherIcon(weatherCondition) {
     // Map weather conditions to appropriate icons
     const iconMap = {
-        'Clear': 'sun',
-        'Clouds': 'cloud',
-        'Rain': 'cloud-rain',
-        'Thunderstorm': 'cloud-lightning',
-        'Snow': 'cloud-snow',
-        'Mist': 'cloud-drizzle',
-        'Haze': 'cloud-drizzle',
-        'Fog': 'cloud-drizzle'
+        Clear: 'sun',
+        Clouds: 'cloud',
+        Rain: 'cloud-rain',
+        Thunderstorm: 'cloud-lightning',
+        Snow: 'cloud-snow',
+        Mist: 'cloud-drizzle',
+        Haze: 'cloud-drizzle',
+        Fog: 'cloud-drizzle',
     };
 
     return iconMap[weatherCondition] || 'sun';
@@ -468,7 +449,7 @@ function getAccraTime() {
         timeZone: 'Africa/Accra',
         hour12: true, // Use 12-hour format
         hour: 'numeric',
-        minute: 'numeric'
+        minute: 'numeric',
     });
 
     return accraTime;
@@ -487,7 +468,6 @@ updateAccraTime();
 
 // Update time every second (1000 milliseconds)
 setInterval(updateAccraTime, 1000);
-
 
 // Featured Calendar 4
 /*const daysTag = document.querySelector(".days"),
@@ -538,7 +518,6 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
     });
 });*/
 
-
 // Condition Script for Form Fields
 // Wait for DOM to be fully loaded
 // Wait for DOM to be fully loaded
@@ -576,6 +555,5 @@ document.addEventListener('DOMContentLoaded', function () {
 // Condition Script for Form Fields
 
 // Calendar Scripts
-
 
 // Calendar Scripts
