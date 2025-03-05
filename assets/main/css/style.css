@@ -1,3 +1,16 @@
+/* Doughnut CSS */
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 320px;
+    max-width: 660px;
+    margin: 1em auto;
+}
+/* Doughnut CSS */
+
+
+
+
+
 /* File Directory Styling */
 .file-list {
     flex: 1;
