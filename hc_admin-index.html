@@ -179,11 +179,11 @@
                                                 <div class="text-center" style="margin-bottom: -10px; padding-top: 2px">
                                                     <img src="/assets/images/undraw_calendar_76t8.svg" class="max-w-60 mb-3" width="60" />
                                                     <h6>
-                                                        <span class="text-fade fs-24 mb-2" style="text-transform: uppercase">Next Promotion</span>
+                                                        <span class="text-fade fs-24 mb-2" style="text-transform: uppercase">Promotion Eligibility</span>
                                                     </h6>
                                                     <h1 style="font-size: 3rem !important">
-                                                        <span class="fw-500 promotion-countdown">20</span>
-                                                        <span class="fw-light" style="text-transform: uppercase; font: size 20px"> days</span>
+                                                        <span class="fw-500 promotion-countdown">3</span>
+                                                        <small class="fw-light" style="text-transform: uppercase; font: size 16px"> years</small>
                                                     </h1>
                                                 </div>
                                             </div>
@@ -274,57 +274,17 @@
                         <div class="row">
                             <div class="col-xl-4">
                                 <div class="box">
+                                    <!-- <h4 class="box-title">Staff Demographics</h4> -->
                                     <div class="box-body analytics-info">
                                         <div id="basic-doughnut" style="height: 400px"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4">
-                                <div class="card shadow widget1">
-                                    <div class="card-header">
-                                        <h4 class="card-title">
-                                            <span>
-                                                <box-icon style="display: inline-block; vertical-align: middle" name="bell-ring" animation="tada" type="solid" color="#2e5797"></box-icon>
-                                            </span>
-                                            Notifications
-                                        </h4>
-                                    </div>
-                                    <div class="card-body" style="overflow-y: auto; overflow-x: hidden; max-height: calc(400px - 61px)"></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4">
-                                <div class="card shadow widget1" style="height: fit-content">
-                                    <div class="card-header align-items-center">
-                                        <h4 class="card-title">
-                                            <span>
-                                                <box-icon style="display: inline-block; vertical-align: middle" name="user-badge" type="solid" color="#2e5797"></box-icon>
-                                            </span>
-                                            Staff Profile
-                                        </h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="d-flex flex-column align-items-center text-center">
-                                            <img src="assets/images/avtar/1.jpg" alt="Admin" class="rounded-circle" width="150" />
-                                            <div class="mt-3">
-                                                <h4>John Doe</h4>
-                                                <span class="badge bg-gradient-primary text-white fs-10 fw-medium mb-1"> Economics Officer </span>
-                                                <!-- <p class="text-secondary mb-1">Full Stack Developer</p> -->
-                                                <div class="mt-1">
-                                                    <p class="text-muted font-size-sm">
-                                                        <span>
-                                                            <box-icon style="display: inline-block; vertical-align: middle" name="id-card" type="solid" color="#2e5797"></box-icon>
-                                                        </span>
-                                                        Budget Division
-                                                    </p>
-                                                    <!-- <p class="text-primary font-size-sm">
-                                                    heldesk@mofep.gov.gh
-                                                </p> -->
-                                                </div>
-
-                                                <button class="btn btn-primary">View Profile</button>
-                                                <!-- <button class="btn btn-outline-primary">Update Profile</button> -->
-                                            </div>
-                                        </div>
+                            <div class="col-xl-8">
+                                <div class="box">
+                                    <!-- <h4 class="box-title">Staff Strength</h4> -->
+                                    <div class="box-body analytics-info" style="overflow-y: auto; overflow-x: hidden; max-height: calc(510px - 61px)">
+                                        <div id="division-chart" style="height: 400px"></div>
                                     </div>
                                 </div>
                             </div>
@@ -370,10 +330,12 @@
         <script src="assets/js/main.js"></script>
         <script src="assets/js/echarts-en.min.js"></script>
         <script src="assets/js/echart-pie-doghnut.js"></script>
+        <script src="assets/js/radial-bar-chart.js"></script>
         <script src="assets/js/option-themes.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <script src="assets/plugins/fullcalendar/fullcalendar.js"></script>
         <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
         <!-- jQuery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 

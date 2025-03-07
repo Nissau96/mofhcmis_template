@@ -26,7 +26,8 @@
                 },
                 legend: {
                     orient: 'vertical',
-                    x: 'left',
+                    x: 'right',
+                    y: 'bottom',
                     data: ['Male', 'Female']
                 },
                 color: ['#38649f', '#ffe702'],
@@ -38,15 +39,15 @@
                     itemStyle: {
                         normal: {
                             label: { show: true },
-                            labelLine: { show: false }
+                            labelLine: { show: true }
                         },
                         emphasis: {
                             label: {
                                 show: true,
-                                formatter: '{b}' + '\n\n' + '{c} ({d}%)',
+                                formatter: '{b}' + '\n' + '{c}',
                                 position: 'center',
                                 textStyle: {
-                                    fontSize: '17',
+                                    fontSize: '14',
                                     fontWeight: '500'
                                 }
                             }
