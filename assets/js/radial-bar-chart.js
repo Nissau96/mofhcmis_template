@@ -22,7 +22,7 @@ $(document).ready(function () {
         ],
         chart: {
             type: 'bar',
-            height: 400,
+            height: 420,
             width: '100%',
             toolbar: {
                 show: false,
@@ -32,7 +32,7 @@ $(document).ready(function () {
         plotOptions: {
             bar: {
                 horizontal: true,
-                barHeight: '70%',
+                barHeight: '60%',
                 distributed: false,
                 dataLabels: {
                     position: 'right',
