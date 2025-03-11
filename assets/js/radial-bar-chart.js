@@ -25,7 +25,7 @@ $(document).ready(function () {
 
     // Sort the data alphabetically by division name
     data.sort(function (a, b) {
-        return a.division.localeCompare(b.division);
+        return b.division.localeCompare(a.division);
     });
 
     // Extract sorted divisions and staff counts
@@ -38,90 +38,95 @@ $(document).ready(function () {
     // Initialize ECharts instance
     var chart = echarts.init(chartElement);
 
-    // Configure chart options
-    var option = {
-        title: {
-            text: 'Staff Strength',
-            subtext: 'By Division',
-            x: 'center',
-            // textStyle: {
-            //     fontSize: 18,
-            //     fontWeight: 600
-            // },
-        },
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-                type: 'shadow'
+    try {
+        var gradeClassChart = echarts.init(chartElement);
+        // Configure chart options
+        var option = {
+            title: {
+                text: 'Staff Strength',
+                subtext: 'By Division',
+                left: 'center',
+                // textStyle: {
+                //     fontSize: 18,
+                //     fontWeight: 600
+                // },
             },
-            formatter: function (params) {
-                return params[0].name + ': ' + params[0].value + ' staff members';
-            }
-        },
-        grid: {
-            left: '3%',
-            right: '10%',
-            bottom: '5%',
-            containLabel: true
-        },
-        xAxis: {
-            type: 'value',
-            name: 'Staff Strength',
-            nameLocation: 'middle', // Positions the name in the middle
-            nameGap: 22, // Gap between axis and name
-            nameTextStyle: {
-                fontSize: 12,
-                fontWeight: 'normal'
-            },
-            axisLabel: {
-                fontSize: 12
-            },
-            splitLine: {
-                show: false // Keep horizontal gridlines
-            }
-        },
-        yAxis: {
-            type: 'category',
-            data: divisions,
-            axisLabel: {
-                fontSize: 12
-            },
-            axisTick: {
-                alignWithLabel: true
-            },
-            splitLine: {
-                show: false // Remove vertical gridlines
-            }
-
-        },
-        series: [
-            {
-                name: 'Staff Count',
-                type: 'bar',
-                barWidth: '75%', // Increased bar width from 60% to 70%
-                itemStyle: {
-                    color: barColor // Single color for all bars
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
                 },
-                data: staffData,
-                label: {
-                    show: true,
-                    position: 'right',
+                formatter: function (params) {
+                    return params[0].name + ': ' + params[0].value + ' staff members';
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '10%',
+                bottom: '5%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'value',
+                name: 'Staff Strength',
+                nameLocation: 'middle', // Positions the name in the middle
+                nameGap: 22, // Gap between axis and name
+                nameTextStyle: {
                     fontSize: 12,
-                    color: '#333',
-                    fontWeight: 'normal',
-                    formatter: function (params) {
-                        return params.value;
+                    fontWeight: 'normal'
+                },
+                axisLabel: {
+                    fontSize: 12
+                },
+                splitLine: {
+                    show: false // Keep horizontal gridlines
+                }
+            },
+            yAxis: {
+                type: 'category',
+                data: divisions,
+                // axisLabel: {
+                //     fontSize: 12
+                // },
+                axisTick: {
+                    alignWithLabel: true
+                },
+                splitLine: {
+                    show: true // Remove vertical gridlines
+                }
+
+            },
+            series: [
+                {
+                    name: 'Staff Count',
+                    type: 'bar',
+                    barWidth: '70%', // Increased bar width from 60% to 70%
+                    itemStyle: {
+                        color: barColor // Single color for all bars
+                    },
+                    data: staffData,
+                    label: {
+                        show: true,
+                        position: 'right',
+                        fontSize: 12,
+                        color: '#333',
+                        fontWeight: 'normal',
+                        formatter: function (params) {
+                            return params.value;
+                        }
                     }
                 }
-            }
-        ]
-    };
+            ]
+        };
 
-    // Apply options to the chart
-    chart.setOption(option);
+        // Apply options to the chart
+        chart.setOption(option);
 
-    // Handle window resize
-    $(window).on('resize', function () {
-        chart.resize();
-    });
+        // Handle window resize
+        $(window).on('resize', function () {
+            chart.resize();
+        });
+    } catch (error) {
+        console.error('Error initializing chart:', error);
+    }
 });

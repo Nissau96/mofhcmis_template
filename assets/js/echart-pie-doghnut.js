@@ -35,8 +35,8 @@
                     {
                         name: 'Gender',
                         type: 'pie',
-                        radius: ['50%', '70%'],
-                        center: ['50%', '57.5%'],
+                        radius: ['40%', '70%'],
+                        // center: ['50%', '57.5%'],
                         itemStyle: {
                             normal: {
                                 label: {
@@ -80,6 +80,7 @@
     });
 })(jQuery, echarts);
 
+// Scheme of Service classification
 (function ($, echarts) {
     $(document).ready(function () {
         var chartElement = document.getElementById('sos-class');
@@ -119,11 +120,9 @@
                         type: 'pie',
                         radius: ['40%', '70%'],
                         avoidLabelOverlap: false,
-                        center: ['50%', '57.5%'],
+                        padAngle: 5,
+                        // center: ['50%', '57.5%'],
                         itemStyle: {
-                            borderRadius: 10,
-                            borderColor: '#fff',
-                            borderWidth: 2,
                             normal: {
                                 label: {
                                     show: true,
@@ -146,6 +145,9 @@
                                     },
                                 },
                             },
+                            borderRadius: 10,
+                            // borderColor: '#fff',
+                            // borderWidth: 2,
                         },
                         data: [
                             { value: 450, name: 'Professional' },
@@ -166,3 +168,274 @@
     });
 })(jQuery, echarts);
 
+
+// Grade Analogous Class
+// (function ($, echarts) {
+//     $(document).ready(function () {
+//         var chartElement = document.getElementById('grade-class');
+
+//         if (!chartElement) {
+//             console.error('Chart container not found. Check your HTML.');
+//             return;
+//         }
+
+//         if (typeof echarts === 'undefined') {
+//             console.error('ECharts library not loaded');
+//             return;
+//         }
+
+//         try {
+//             var gradeClassChart = echarts.init(chartElement);
+
+//             var option = {
+//                 title: {
+//                     text: 'Staff Demographics',
+//                     subtext: 'Grade Analogous Class',
+//                     left: 'center'
+//                 },
+//                 tooltip: {
+//                     trigger: 'item',
+//                     formatter: '{a} <br/>{b}: {c} ({d}%)'
+//                 },
+//                 legend: {
+//                     orient: 'vertical',
+//                     x: 'right',
+//                     y: 'bottom',
+//                     data: ['Chief', 'Principal', 'Senior', 'Professional', 'Assistant', 'Sub-Professional']
+//                 },
+//                 color: ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272'],
+//                 series: [{
+//                     name: 'Employee Grade',
+//                     type: 'pie',
+//                     radius: ['65%', '70%'],
+//                     itemStyle: {
+//                         borderRadius: 10
+//                     },
+//                     label: {
+//                         show: true,
+//                         formatter: '{c}',
+//                     },
+//                     emphasis: {
+//                         label: {
+//                             show: true,
+//                             fontSize: 16,
+//                             fontWeight: 'bold'
+//                         }
+//                     },
+//                     labelLine: {
+//                         show: false
+//                     },
+//                     data: [
+//                         { value: 75, name: 'Chief' },
+//                         { value: 120, name: 'Principal' },
+//                         { value: 190, name: 'Senior' },
+//                         { value: 230, name: 'Professional' },
+//                         { value: 65, name: 'Assistant' },
+//                         { value: 253, name: 'Sub-Professional' }
+//                     ]
+//                 }]
+//             };
+
+//             gradeClassChart.setOption(option);
+
+//             $(window).on('resize', function () {
+//                 gradeClassChart.resize();
+//             });
+//         } catch (error) {
+//             console.error('Error initializing chart:', error);
+//         }
+//     });
+// })(jQuery, echarts);
+
+(function ($, echarts) {
+    $(document).ready(function () {
+        var chartElement = document.getElementById('grade-class');
+
+        if (!chartElement) {
+            console.error('Chart container not found. Check your HTML.');
+            return;
+        }
+        var barColor = "#2e5797";
+
+        var data = [
+            { grade: 'Chief', officers: 75 },
+            { grade: 'Principal', officers: 120 },
+            { grade: 'Senior', officers: 190 },
+            { grade: 'Professional', officers: 230 },
+            { grade: 'Assistant', officers: 65 },
+            { grade: 'Sub-Professional', officers: 253 }
+        ];
+
+        // Sort the data alphabetically by division name
+        data.sort(function (a, b) {
+            return b.grade.localeCompare(a.grade);
+        });
+
+        // Extract sorted divisions and staff counts
+        var grades = data.map(function (item) { return item.grade; });
+        var officerCount = data.map(function (item) { return item.officers; });
+
+        if (typeof echarts === 'undefined') {
+            console.error('ECharts library not loaded');
+            return;
+        }
+
+        try {
+            var gradeClassChart = echarts.init(chartElement);
+
+            var option = {
+                title: {
+                    text: 'Staff Demographics',
+                    subtext: 'Grade Analogous Class',
+                    left: 'center'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    },
+                    formatter: function (params) {
+                        return params[0].name + ': ' + params[0].value + ' staff members';
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '10%',
+                    bottom: '5%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value',
+                    name: 'Staff Number',
+                    nameLocation: 'middle', // Positions the name in the middle
+                    nameGap: 22, // Gap between axis and name
+                    nameTextStyle: {
+                        fontSize: 12,
+                        fontWeight: 'normal'
+                    },
+                    axisLabel: {
+                        fontSize: 12
+                    },
+                    splitLine: {
+                        show: false // Keep horizontal gridlines
+                    }
+                },
+                yAxis: {
+                    type: 'category',
+                    data: grades,
+                    axisTick: {
+                        alignWithLabel: true
+                    }
+                },
+                series: [
+                    {
+                        name: 'Staff Count',
+                        type: 'bar',
+                        barWidth: '50%', // Increased bar width from 60% to 70%
+                        itemStyle: {
+                            color: barColor // Single color for all bars
+                        },
+                        data: officerCount,
+                        label: {
+                            show: true,
+                            position: 'right',
+                            fontSize: 12,
+                            color: '#333',
+                            fontWeight: 'normal',
+                            formatter: function (params) {
+                                return params.value;
+                            }
+                        }
+                    }
+                ]
+            };
+
+            gradeClassChart.setOption(option);
+
+            $(window).on('resize', function () {
+                gradeClassChart.resize();
+            });
+        } catch (error) {
+            console.error('Error initializing chart:', error);
+        }
+    });
+})(jQuery, echarts);
+
+
+// Ministry Workforce Chart
+(function ($, echarts) {
+    $(document).ready(function () {
+        var chartElement = document.getElementById('workforce');
+
+        if (!chartElement) {
+            console.error('Chart container not found. Check your HTML.');
+            return;
+        }
+
+        if (typeof echarts === 'undefined') {
+            console.error('ECharts library not loaded');
+            return;
+        }
+
+        try {
+            var gradeClassChart = echarts.init(chartElement);
+
+            var option = {
+                title: {
+                    text: 'Staff Demographics',
+                    subtext: 'Workforce Categories',
+                    left: 'center'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b}: {c} ({d}%)'
+                },
+                legend: {
+                    orient: 'vertical',
+                    x: 'right',
+                    y: 'bottom',
+                    data: ['Staff', 'Interns', 'NSP']
+                },
+                color: ['#2e5797', '#32cd32', '#fac858'],
+                series: [{
+                    name: 'Employee Grade',
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    avoidLabelOverlap: false,
+                    padAngle: 5,
+                    itemStyle: {
+                        borderRadius: 10
+                    },
+                    label: {
+                        show: true,
+                        formatter: '{c}',
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: 15,
+                            fontWeight: '500'
+                        }
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    data: [
+                        { value: 703, name: 'Staff' },
+                        { value: 120, name: 'Interns' },
+                        { value: 190, name: 'NSP' },
+
+                    ]
+                }]
+            };
+
+            gradeClassChart.setOption(option);
+
+            $(window).on('resize', function () {
+                gradeClassChart.resize();
+            });
+        } catch (error) {
+            console.error('Error initializing chart:', error);
+        }
+    });
+})(jQuery, echarts);
