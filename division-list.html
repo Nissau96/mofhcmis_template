@@ -118,21 +118,21 @@
                                 </a>
                             </li>
                             <li class="has-submenu">
-                                <a href="staff-list.html">
+                                <a href="#">
                                     <!-- <i class="fa fa-address-book"></i> -->
                                     <i class="bx bxs-cabinet bx-sm"></i>
                                     <span class="nav-label">Document Management</span>
                                 </a>
                             </li>
                             <li class="has-submenu">
-                                <a href="staff-list.html">
+                                <a href="#">
                                     <!-- <i class="fa fa-address-book"></i> -->
                                     <i class="bx bx-scatter-chart bx-sm"></i>
                                     <span class="nav-label">Reports & Analytics</span>
                                 </a>
                             </li>
                             <li class="has-submenu">
-                                <a href="staff-list.html">
+                                <a href="#">
                                     <!-- <i class="fa fa-address-book"></i> -->
                                     <i class="bx bxs-cog bx-sm"></i>
                                     <span class="nav-label">Administrative Settings</span>
@@ -213,9 +213,22 @@
                                         <h3>Staff Overview</h3>
                                     </div>
                                     <div class="col-8 text-end">
-                                        <form action="" class="d-flex justify-content-end align-items-center">
+                                        <div class="d-flex justify-content-end align-items-center">
+                                            <div class="search-bx mx-2">
+                                                <form>
+                                                    <div class="input-group">
+                                                        <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" />
+                                                        <div class="input-group-append" style="align-content: center">
+                                                            <button class="btn" type="submit" id="button-addon3"><i class="ti ti-search" style="color: #2e5797"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- <div class="form-inline me-2">
+                                                <input id="myInputTextField" class="form-control" type="search" placeholder="Search by staff name" aria-label="Search" style="height: 2.75rem !important; width: 100%" />
+                                            </div> -->
                                             <div class="form-inline me-2">
-                                                <select class="form-control form-select" name="marital_status" id="marital_status" style="height: 2.75rem !important; width: 100%">
+                                                <select class="form-control form-select" name="marital_status" id="marital_status" style="height: 2.75rem !important; width: auto">
                                                     <option value="">Division</option>
                                                     <option value="BD">Budget Division (BD)</option>
                                                     <option value="CFD">Climate Financing Division (CFD)</option>
@@ -232,15 +245,7 @@
                                                     <option value="TDMD">Treasury & Debt Management Division (TDMD)</option>
                                                 </select>
                                             </div>
-                                            <div class="form-inline me-2">
-                                                <select name="number_of_children" id="number_of_children" class="form-control form-select" style="height: 2.75rem !important; width: 5rem">
-                                                    <option value="">Unit</option>
-                                                    <option value="0">0</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-inline me-2">
+                                            <!-- <div class="form-inline me-2">
                                                 <select class="form-control form-select" name="marital_status" id="marital_status" style="height: 2.75rem !important; width: 100%">
                                                     <option value="">Grade</option>
                                                     <option value="Single">Single</option>
@@ -257,10 +262,17 @@
                                                     <option value="Divorced">Divorced</option>
                                                     <option value="Separated">Separated</option>
                                                 </select>
-                                            </div>
-
-                                            <button type="submit" class="btn btn-primary" style="height: 2.75rem !important">Filter</button>
-                                        </form>
+                                            </div> -->
+                                            <!-- <div class="form-inline me-2">
+                                                <select name="number_of_children" id="number_of_children" class="form-control form-select" style="height: 2.75rem !important; width: 5rem">
+                                                    <option value="">Unit</option>
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                </select>
+                                            </div> -->
+                                            <button type="submit" class="btn btn-primary" style="height: 2.75rem !important"><i class="ti ti-adjustments-horizontal mx-2"></i>Filter</button>
+                                        </div>
                                         <!-- <div class="sort-dropdown">
                                             <a href="javascript:void(0);" class="sort-dropdown-toggle" id="sortDropdownToggle"> Sort By : Last 7 Days </a>
                                             <div class="sort-dropdown-menu" id="sortDropdownMenu">
@@ -280,27 +292,26 @@
                         <div class="row g-4 mb-3">
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Naira Muskan" class="employee-image" />
-                                    <h3>Naira Muskan</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <img src="assets/images/Staff/5.Haneef_Siita_v3.jpg" alt="Emily Johnson" class="employee-image" />
+                                    <h3>Haneef Siita</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Principal IT/IM Officer</span>
+                                    <p class="text-primary">716940</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">ICT Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary" data-bs-toggle="modal" data-bs-target="#viewProfile"><i class="ti ti-scan-eye me-1"></i> View</button>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Emily Johnson" class="employee-image" />
-                                    <h3>Emily Johnson</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <img src="assets/images/Staff/David-Kotey.jpg" alt="Naira Muskan" class="employee-image" />
+                                    <h3>David Nii Amon Kotey</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Principal IT/IM Officer </span>
+                                    <p class="text-primary">565069</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">ICT Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
@@ -310,12 +321,12 @@
 
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Jessica Miller" class="employee-image" />
-                                    <h3>Jessica Miller</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
+                                    <img src="assets/images/Staff/Ekow.JPG" alt="Jessica Miller" class="employee-image" />
+                                    <h3>Ekow Turkson</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Senior IT/IM Officer</span>
                                     <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">ICT Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
@@ -325,12 +336,12 @@
 
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Jennifer Brown" class="employee-image" />
-                                    <h3>Jennifer Brown</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <img src="assets/images/Staff/48. Benjamin_Opuni.JPG" alt="Christopher Wilson" class="employee-image" />
+                                    <h3>Benjamin Opuni</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Senior Records Officer</span>
+                                    <p class="text-primary">876353</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">Records Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
@@ -340,12 +351,12 @@
 
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Sarah Martinez" class="employee-image" />
-                                    <h3>Sarah Martinez</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <img src="assets/images/Staff/Antoinette_Ballans.JPG" alt="Sarah Martinez" class="employee-image" />
+                                    <h3>Antoinette Ballans</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Assistant Director I</span>
+                                    <p class="text-primary">1207844</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">Human Capital Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
@@ -355,12 +366,12 @@
 
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Amanda Taylor" class="employee-image" />
-                                    <h3>Amanda Taylor</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <img src="assets/images/Staff/Kwabena_Danquah_v2.jpg" alt="Amanda Taylor" class="employee-image" />
+                                    <h3>Kwabena Danquah</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">IT/IM Officer</span>
+                                    <p class="text-primary">1329440</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">ICT Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
@@ -370,12 +381,12 @@
 
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Christopher Wilson" class="employee-image" />
-                                    <h3>Christopher Wilson</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <img src="assets/images/Staff/Jessica Ocran_V2.JPG" alt="Matthew Clark" class="employee-image" />
+                                    <h3>Jessica Ocran</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Assistant Director IIA</span>
+                                    <p class="text-primary">1328931</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">Human Capital Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
@@ -385,12 +396,12 @@
 
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Matthew Clark" class="employee-image" />
-                                    <h3>Matthew Clark</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <img src="assets/images/Staff/Bertha_Amonoo-Neizer.jpg" alt="Jennifer Brown" class="employee-image" />
+                                    <h3>Bertha Amonoo-Neizer</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">IT/IM Officer</span>
+                                    <p class="text-primary">1408060</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">ICT Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>

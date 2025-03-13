@@ -20,7 +20,7 @@ $(document).ready(function () {
         { division: 'PD', staff: 11 },
         { division: 'PIAD', staff: 47 },
         { division: 'RPD', staff: 45 },
-        { division: 'TDMD', staff: 38 }
+        { division: 'TDMD', staff: 38 },
     ];
 
     // Sort the data alphabetically by division name
@@ -29,11 +29,15 @@ $(document).ready(function () {
     });
 
     // Extract sorted divisions and staff counts
-    var divisions = data.map(function (item) { return item.division; });
-    var staffData = data.map(function (item) { return item.staff; });
+    var divisions = data.map(function (item) {
+        return item.division;
+    });
+    var staffData = data.map(function (item) {
+        return item.staff;
+    });
 
     // Single color for all bars
-    var barColor = "#2e5797";
+    var barColor = '#2e5797';
 
     // Initialize ECharts instance
     var chart = echarts.init(chartElement);
@@ -54,33 +58,33 @@ $(document).ready(function () {
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
-                    type: 'shadow'
+                    type: 'shadow',
                 },
                 formatter: function (params) {
                     return params[0].name + ': ' + params[0].value + ' staff members';
-                }
+                },
             },
             grid: {
                 left: '3%',
                 right: '10%',
                 bottom: '5%',
-                containLabel: true
+                containLabel: true,
             },
             xAxis: {
                 type: 'value',
-                name: 'Staff Strength',
+                name: 'Staff Number',
                 nameLocation: 'middle', // Positions the name in the middle
                 nameGap: 22, // Gap between axis and name
                 nameTextStyle: {
                     fontSize: 12,
-                    fontWeight: 'normal'
+                    fontWeight: 'normal',
                 },
                 axisLabel: {
-                    fontSize: 12
+                    fontSize: 12,
                 },
                 splitLine: {
-                    show: false // Keep horizontal gridlines
-                }
+                    show: false, // Keep horizontal gridlines
+                },
             },
             yAxis: {
                 type: 'category',
@@ -89,12 +93,11 @@ $(document).ready(function () {
                 //     fontSize: 12
                 // },
                 axisTick: {
-                    alignWithLabel: true
+                    alignWithLabel: true,
                 },
                 splitLine: {
-                    show: true // Remove vertical gridlines
-                }
-
+                    show: true, // Remove vertical gridlines
+                },
             },
             series: [
                 {
@@ -102,7 +105,7 @@ $(document).ready(function () {
                     type: 'bar',
                     barWidth: '70%', // Increased bar width from 60% to 70%
                     itemStyle: {
-                        color: barColor // Single color for all bars
+                        color: barColor, // Single color for all bars
                     },
                     data: staffData,
                     label: {
@@ -113,10 +116,10 @@ $(document).ready(function () {
                         fontWeight: 'normal',
                         formatter: function (params) {
                             return params.value;
-                        }
-                    }
-                }
-            ]
+                        },
+                    },
+                },
+            ],
         };
 
         // Apply options to the chart
