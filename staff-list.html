@@ -38,40 +38,30 @@
                     </div>
                     <div class="select-Layout">
                         <div class="items-panel layout_direction">
-                            <h6>LTR and RTL VERSIONS</h6>
-                            <ul>
-                                <li class="ltr-version active">LTR Version</li>
-                                <li class="rtl-version">RTL Version</li>
-                            </ul>
-                        </div>
-                        <div class="items-panel sidebar_size">
-                            <h6>Sidemenu layout Styles</h6>
-                            <ul>
-                                <li class="sidebar-size-default active">Default Menu</li>
-                                <li class="sidebar-size-compact">Icon with Text</li>
-                                <li class="sidebar-size-small">Small (Icon View)</li>
-                                <li class="sidebar-size-close">Closed Sidemenu</li>
-                            </ul>
-                        </div>
-                        <div class="items-panel sidebar_size1 layout_width">
-                            <h6>Layout Width Styles</h6>
-                            <ul>
-                                <li class="layout-width-full active">Full Width</li>
-                                <li class="layout-width-boxed">Boxed</li>
-                            </ul>
-                        </div>
-                        <div class="items-panel sidebar_size1 layout_positions">
-                            <h6>Layout Positions</h6>
-                            <ul>
-                                <li class="layout-positions-fixed active">Fixed</li>
-                                <li class="layout-positions-scrollable">Scrollable</li>
-                            </ul>
+                            <div class="box mb-15 pull-up" style="background-color: #f5f9fc !important">
+                                <div class="box-body" style="padding: 0.5rem !important; background-color: #f5f9fc">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <!-- <div class="d-flex align-items-center">
+                                            
+                                        </div> -->
+                                        <div class="d-flex align-items-center">
+                                            <div class="widget-user-image">
+                                                <img src="assets/images/Staff/David-Kotey.jpg" class="rounded-circle" alt="people" width="60" />
+                                            </div>
+                                            <div class="media-body mx-2">
+                                                <h4 class="mb-0">David Amon Kotey</h4>
+                                                <span>Principal IT/IM Officer</span>
+                                            </div>
+                                        </div>
+                                        <a href="#">
+                                            <span class="icon-Arrow-right fs-24"><span class="path1"></span><span class="path2"></span></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="mainicon sidebaricon">
-                        <!-- <span class="fas fa-bell" style="animation: fa-shake 2s infinite linear">
-                            
-                        </span> -->
                         <div style="position: relative; display: inline-block">
                             <i class="fas fa-bell fa-shake" style="font-size: 20px"></i>
                             <span style="background-color: red; font-size: 10px; color: white; text-align: center; width: 15px; height: 15px; border-radius: 35%; position: absolute; /* changed */ top: -5px; /* changed */ right: -6px">3</span>
@@ -213,17 +203,39 @@
                                         <h3>Staff List</h3>
                                     </div>
                                     <div class="col-8 text-end">
-                                        <form action="" class="d-flex justify-content-end align-items-center">
-                                            <div class="form-inline me-2">
-                                                <select class="form-control form-select" name="marital_status" id="marital_status" style="height: 2.75rem !important; width: 100%">
-                                                    <option value="">Division</option>
-                                                    <option value="Single">Single</option>
-                                                    <option value="Married">Married</option>
-                                                    <option value="Divorced">Divorced</option>
-                                                    <option value="Separated">Separated</option>
-                                                </select>
+                                        <div class="d-flex justify-content-end align-items-center">
+                                            <div class="search-bx mx-2">
+                                                <form>
+                                                    <div class="input-group">
+                                                        <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" />
+                                                        <div class="input-group-append" style="align-content: center">
+                                                            <button class="btn" type="submit" id="button-addon3"><i class="ti ti-search" style="color: #2e5797"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
-                                            <div class="form-inline me-2">
+                                            <!-- <div class="form-inline me-2">
+                                                <input id="myInputTextField" class="form-control" type="search" placeholder="Search by staff name" aria-label="Search" style="height: 2.75rem !important; width: 100%" />
+                                            </div> -->
+                                            <!-- <div class="form-inline me-2">
+                                                <select class="form-control form-select" name="marital_status" id="marital_status" style="height: 2.75rem !important; width: auto">
+                                                    <option value="">Division</option>
+                                                    <option value="BD">Budget Division (BD)</option>
+                                                    <option value="CFD">Climate Financing Division (CFD)</option>
+                                                    <option value="ESRD">Economic Strategy & Research Division (ESRD)</option>
+                                                    <option value="ERMERD">External Resource Mobilisation & Economic Relations Division (ERMERD)</option>
+                                                    <option value="FSD">Financial Sector Division (FSD)</option>
+                                                    <option value="HCGAD">Human Capital & General Administration Division (HCGAD)</option>
+                                                    <option value="IAD">Internal Audit Division (IAD)</option>
+                                                    <option value="LD">Legal Division (LD)</option>
+                                                    <option value="PCMED">Policy Coordination, Monitoring & Evaluation Division (PCMED)</option>
+                                                    <option value="PD">Procurement Division (PD)</option>
+                                                    <option value="PIAD">Public Investment & Assets Division (PIAD)</option>
+                                                    <option value="RPD">Revenue Policy Division (RPD)</option>
+                                                    <option value="TDMD">Treasury & Debt Management Division (TDMD)</option>
+                                                </select>
+                                            </div> -->
+                                            <!-- <div class="form-inline me-2">
                                                 <select class="form-control form-select" name="marital_status" id="marital_status" style="height: 2.75rem !important; width: 100%">
                                                     <option value="">Grade</option>
                                                     <option value="Single">Single</option>
@@ -240,7 +252,7 @@
                                                     <option value="Divorced">Divorced</option>
                                                     <option value="Separated">Separated</option>
                                                 </select>
-                                            </div>
+                                            </div> -->
                                             <!-- <div class="form-inline me-2">
                                                 <select name="number_of_children" id="number_of_children" class="form-control form-select" style="height: 2.75rem !important; width: 5rem">
                                                     <option value="">Unit</option>
@@ -249,8 +261,8 @@
                                                     <option value="2">2</option>
                                                 </select>
                                             </div> -->
-                                            <button type="submit" class="btn btn-primary" style="height: 2.75rem !important">Filter</button>
-                                        </form>
+                                            <button type="submit" class="btn btn-primary" style="height: 2.75rem !important"><i class="ti ti-adjustments-horizontal mx-2"></i>Filter</button>
+                                        </div>
                                         <!-- <div class="sort-dropdown">
                                             <a href="javascript:void(0);" class="sort-dropdown-toggle" id="sortDropdownToggle"> Sort By : Last 7 Days </a>
                                             <div class="sort-dropdown-menu" id="sortDropdownMenu">
@@ -270,12 +282,26 @@
                         <div class="row g-4 mb-3">
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Naira Muskan" class="employee-image" />
-                                    <h3>Naira Muskan</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <img src="assets/images/Staff/5.Haneef_Siita_v3.jpg" alt="Emily Johnson" class="employee-image" />
+                                    <h3>Haneef Siita</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Principal IT/IM Officer</span>
+                                    <p class="text-primary">716940</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">ICT Unit</p>
+                                    <div class="action-buttons">
+                                        <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
+                                        <button class="crdbtn crdbtn-outline-primary" data-bs-toggle="modal" data-bs-target="#viewProfile"><i class="ti ti-scan-eye me-1"></i> View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="employee-card">
+                                    <img src="assets/images/Staff/David-Kotey.jpg" alt="Naira Muskan" class="employee-image" />
+                                    <h3>David Nii Amon Kotey</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Principal IT/IM Officer </span>
+                                    <p class="text-primary">565069</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">ICT Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
@@ -285,12 +311,12 @@
 
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Emily Johnson" class="employee-image" />
-                                    <h3>Emily Johnson</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
+                                    <img src="assets/images/Staff/Ekow.JPG" alt="Jessica Miller" class="employee-image" />
+                                    <h3>Ekow Turkson</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Senior IT/IM Officer</span>
                                     <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">ICT Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
@@ -300,12 +326,12 @@
 
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Jessica Miller" class="employee-image" />
-                                    <h3>Jessica Miller</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <img src="assets/images/Staff/48. Benjamin_Opuni.JPG" alt="Christopher Wilson" class="employee-image" />
+                                    <h3>Benjamin Opuni</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Senior Records Officer</span>
+                                    <p class="text-primary">876353</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">Records Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
@@ -315,12 +341,12 @@
 
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Jennifer Brown" class="employee-image" />
-                                    <h3>Jennifer Brown</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <img src="assets/images/Staff/Antoinette_Ballans.JPG" alt="Sarah Martinez" class="employee-image" />
+                                    <h3>Antoinette Ballans</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Assistant Director I</span>
+                                    <p class="text-primary">1207844</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">Human Capital Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
@@ -330,12 +356,12 @@
 
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Sarah Martinez" class="employee-image" />
-                                    <h3>Sarah Martinez</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <img src="assets/images/Staff/Kwabena_Danquah_v2.jpg" alt="Amanda Taylor" class="employee-image" />
+                                    <h3>Kwabena Danquah</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">IT/IM Officer</span>
+                                    <p class="text-primary">1329440</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">ICT Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
@@ -345,12 +371,12 @@
 
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Amanda Taylor" class="employee-image" />
-                                    <h3>Amanda Taylor</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <img src="assets/images/Staff/Jessica Ocran_V2.JPG" alt="Matthew Clark" class="employee-image" />
+                                    <h3>Jessica Ocran</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Assistant Director IIA</span>
+                                    <p class="text-primary">1328931</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">Human Capital Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
@@ -360,27 +386,12 @@
 
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Christopher Wilson" class="employee-image" />
-                                    <h3>Christopher Wilson</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
-                                    <div class="action-buttons">
-                                        <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
-                                        <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="employee-card">
-                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=faces&auto=format&q=80" alt="Matthew Clark" class="employee-image" />
-                                    <h3>Matthew Clark</h3>
-                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">Economics Officer</span>
-                                    <p class="text-primary">935122</p>
-                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">Budget Division</span>
-                                    <p class="mb-2">Budget Technical Advisory</p>
+                                    <img src="assets/images/Staff/Bertha_Amonoo-Neizer.jpg" alt="Jennifer Brown" class="employee-image" />
+                                    <h3>Bertha Amonoo-Neizer</h3>
+                                    <span class="badge badge-soft-secondary fw-medium fs-10 mb-1">IT/IM Officer</span>
+                                    <p class="text-primary">1408060</p>
+                                    <span class="badge bg-primary text-white fs-10 fw-medium mb-1">HCGAD</span>
+                                    <p class="mb-2">ICT Unit</p>
                                     <div class="action-buttons">
                                         <button class="crdbtn crdbtn-outline-secondary"><i class="ti ti-edit me-1"></i>Update</button>
                                         <button class="crdbtn crdbtn-outline-primary"><i class="ti ti-scan-eye me-1"></i> View</button>
@@ -405,6 +416,526 @@
             </div>
         </div>
         <!-- End section footer -->
+
+        <!-- Staff Profile Modal -->
+        <div class="modal fade selectRefresh" id="viewProfile" tabindex="-1" role="dialog" aria-labelledby="modal-title-addDrug-modal">
+            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable" role="document" style="max-width: 1586px !important">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="main_container">
+                            <div class="row">
+                                <div class="col-lg-4 theiaStickySidebar">
+                                    <div class="card card-bg-1">
+                                        <div class="card-body p-01">
+                                            <span class="avatar avatar-xl avatar-rounded border border-2 border-white m-auto d-flex mb-2 align-items-center">
+                                                <img src="assets/images/avtar/1.jpg" class="rounded-circle" width="300" alt="Img" />
+                                            </span>
+                                            <div class="text-center px-3 pb-3 border-bottom" style="padding-left: 5px !important; padding-right: 5px !important">
+                                                <div class="mb-3">
+                                                    <h4 class="d-flex align-items-center justify-content-center mb-1">
+                                                        John Doe
+                                                        <i class="ti ti-discount-check-filled text-success ms-1"></i>
+                                                    </h4>
+                                                    <span class="badge bg-gradient-primary text-white fw-medium me-2"> <i class="ti ti-point-filled me-1"></i>Economics Officer </span>
+                                                    <span class="badge badge-soft-secondary fw-medium">10+ years in the Ministry</span>
+                                                </div>
+                                                <div class="">
+                                                    <div class="info-row mb-3">
+                                                        <span class="info-label">
+                                                            <i class="ti ti-id me-2"></i>
+                                                            Staff ID
+                                                        </span>
+                                                        <p class="info-value text-primary fw-bold">1577070</p>
+                                                    </div>
+                                                    <div class="info-row mb-3">
+                                                        <span class="info-label">
+                                                            <i class="ti ti-building-bank me-2"></i>
+                                                            Division
+                                                        </span>
+                                                        <p class="info-value text-dark">Budget Division</p>
+                                                    </div>
+                                                    <div class="info-row mb-3">
+                                                        <span class="info-label">
+                                                            <i class="ti ti-accessible me-2"></i>
+                                                            Unit
+                                                        </span>
+                                                        <p class="info-value text-dark">Budget Technical Advisory</p>
+                                                    </div>
+                                                    <div class="info-row mb-3">
+                                                        <span class="info-label">
+                                                            <i class="ti ti-calendar-check me-2"></i>
+                                                            First Appointment
+                                                        </span>
+                                                        <p class="info-value text-dark">1st January 2023</p>
+                                                    </div>
+                                                    <div class="info-row mb-3">
+                                                        <span class="info-label">
+                                                            <i class="ti ti-building-skyscraper me-2"></i>
+                                                            Office
+                                                        </span>
+                                                        <p class="info-value text-dark">Room 419, Main Block</p>
+                                                    </div>
+                                                    <div class="info-row mb-2">
+                                                        <span class="info-label">
+                                                            <i class="ti ti-award me-2"></i>
+                                                            Classification
+                                                        </span>
+                                                        <p class="info-value text-dark">Professional</p>
+                                                    </div>
+                                                    <div class="row gx-2 mt-3">
+                                                        <div class="col-12">
+                                                            <div>
+                                                                <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#edit_employee"><i class="ti ti-edit me-1"></i>Request Update</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 border-bottom">
+                                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <h6>Basic information</h6>
+                                                </div>
+                                                <div class="info-row mb-3">
+                                                    <span class="info-label">
+                                                        <i class="ti ti-user-square-rounded me-2"></i>
+                                                        Title
+                                                    </span>
+                                                    <p class="info-value text-dark">Mr.</p>
+                                                </div>
+                                                <div class="info-row mb-3">
+                                                    <span class="info-label">
+                                                        <i class="ti ti-phone me-2"></i>
+                                                        Phone
+                                                    </span>
+                                                    <p class="info-value text-dark">+233 302-747-197</p>
+                                                </div>
+                                                <div class="info-row mb-3">
+                                                    <span class="info-label">
+                                                        <i class="ti ti-mail-check me-2"></i>
+                                                        Official Email
+                                                    </span>
+                                                    <p class="info-value text-info">helpdesk@mofep.gov.gh</p>
+                                                </div>
+
+                                                <div class="info-row mb-3">
+                                                    <span class="info-label">
+                                                        <i class="ti ti-gender-male me-2"></i>
+                                                        Gender
+                                                    </span>
+                                                    <p class="info-value text-dark">Male</p>
+                                                </div>
+                                                <div class="info-row mb-3">
+                                                    <span class="info-label">
+                                                        <i class="ti ti-calendar me-2"></i>
+                                                        Date of Birth
+                                                    </span>
+                                                    <p class="info-value text-dark">24th July 2000</p>
+                                                </div>
+                                                <div class="info-row mb-3">
+                                                    <span class="info-label">
+                                                        <i class="ti ti-spaces me-2"></i>
+                                                        Marital Status
+                                                    </span>
+                                                    <p class="info-value text-dark">Single</p>
+                                                </div>
+                                                <div class="info-row mb-3">
+                                                    <span class="info-label">
+                                                        <i class="ti ti-id me-2"></i>
+                                                        Ghana Card Number
+                                                    </span>
+                                                    <p class="info-value text-primary fw-bold">GHA-12203-864-3</p>
+                                                </div>
+                                                <div class="info-row mb-2">
+                                                    <span class="info-label">
+                                                        <i class="ti ti-id me-2"></i>
+                                                        SSNIT Number
+                                                    </span>
+                                                    <p class="info-value text-dark">12349587</p>
+                                                </div>
+                                            </div>
+                                            <div class="p-3">
+                                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <h6>Personal information</h6>
+                                                </div>
+                                                <div class="">
+                                                    <div class="info-row mb-3">
+                                                        <span class="info-label">
+                                                            <i class="ti ti-mail-check me-2"></i>
+                                                            Personal Email
+                                                        </span>
+                                                        <p class="info-value text-info">pjwsjw@gmail.com</p>
+                                                    </div>
+                                                    <!-- <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <span class="d-inline-flex align-items-center">
+                                                        <i class="ti ti-id me-2"></i>
+                                                        SSNIT Number
+                                                    </span>
+                                                    <p class="text-dark">12349587</p>
+                                                </div> -->
+                                                    <!-- <div class="d-flex align-items-center justify-content-between mb-2">
+                                                        <span class="d-inline-flex align-items-center">
+                                                            <i class="ti ti-bookmark-plus me-2"></i>
+                                                            Religion
+                                                        </span>
+                                                        <p class="text-dark">Christian</p>
+                                                    </div> -->
+                                                    <!-- <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <span class="d-inline-flex align-items-center">
+                                                        <i class="ti ti-spaces me-2"></i>
+                                                        Marital Status
+                                                    </span>
+                                                    <p class="text-dark">Single</p>
+                                                </div> -->
+                                                    <div class="info-row mb-3">
+                                                        <span class="info-label">
+                                                            <i class="ti ti-map-pin-check me-2"></i>
+                                                            Digital Address
+                                                        </span>
+                                                        <p class="info-value text-dark">GA-144-2024</p>
+                                                    </div>
+                                                    <div class="info-row mb-3">
+                                                        <span class="info-label">
+                                                            <i class="ti ti-map-pins me-2"></i>
+                                                            Residential Address
+                                                        </span>
+                                                        <p class="info-value text-dark">Finance Drive, Accra.</p>
+                                                    </div>
+                                                    <div class="info-row mb-2">
+                                                        <span class="info-label">
+                                                            <i class="ti ti-baby-bottle me-2"></i>
+                                                            No. of children
+                                                        </span>
+                                                        <p class="info-value text-dark">2</p>
+                                                    </div>
+
+                                                    <!-- <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <span class="d-inline-flex align-items-center">
+                                                        <i class="ti ti-mailbox me-2"></i>
+                                                        Postal Address
+                                                    </span>
+                                                    <p class="text-dark">P. O. Box M40, Accra</p>
+                                                </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="card shadow widget1">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center pb-3 mb-3 border-bottom align-items-center flex-fill">
+                                                        <div>
+                                                            <h5 class="mb-1">Career Development</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="education__box">
+                                                            <ul class="education__list">
+                                                                <li>
+                                                                    <div class="education__user">
+                                                                        <div class="before__circle"></div>
+                                                                    </div>
+                                                                    <div class="education__content st-current">
+                                                                        <div class="timeline-content">
+                                                                            <a class="name" href="#">Economics Officer</a>
+                                                                            <span class="degree">Budget Division</span>
+                                                                            <span class="year">2023 - Present</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="">
+                                                                    <div class="education__user">
+                                                                        <div class="before__circle"></div>
+                                                                    </div>
+                                                                    <div class="education__content">
+                                                                        <div class="timeline-content">
+                                                                            <a class="name" href="#">Assistant Economics Officer</a>
+                                                                            <span class="degree">Budget Division</span>
+                                                                            <span class="year">2020 - 2023</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="row">
+                                                <div class="col-xl-12">
+                                                    <div class="card shadow widget1">
+                                                        <div class="card-body">
+                                                            <div class="d-flex align-items-center pb-3 mb-3 border-bottom align-items-center flex-fill">
+                                                                <div>
+                                                                    <h5 class="mb-1">Qualification</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="underline-tabs mb-1" style="margin-top: -15px">
+                                                                <ul class="nav nav-tabs d-flex" id="underlineTabs" role="tablist">
+                                                                    <li class="nav-item flex-fill" role="presentation">
+                                                                        <button class="nav-link active" id="home-tab2" data-bs-toggle="tab" data-bs-target="#academic" type="button" role="tab">Academic</button>
+                                                                    </li>
+                                                                    <li class="nav-item flex-fill" role="presentation">
+                                                                        <button class="nav-link" id="profile-tab2" data-bs-toggle="tab" data-bs-target="#professional" type="button" role="tab">Professional</button>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="tab-content" id="underlineTabsContent">
+                                                                    <div class="tab-pane fade show active" id="academic" role="tabpanel">
+                                                                        <div class="row mt-1">
+                                                                            <div class="education__box">
+                                                                                <ul class="education__list">
+                                                                                    <li>
+                                                                                        <div class="education__user">
+                                                                                            <div class="before__circle"></div>
+                                                                                        </div>
+                                                                                        <div class="education__content st-current">
+                                                                                            <div class="timeline-content"><a class="name" href="#">International College of Arts and Science (UG)</a><span class="degree">MSc In Computer Science</span><span class="year">2000 - 2003</span></div>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="education__user">
+                                                                                            <div class="before__circle"></div>
+                                                                                        </div>
+                                                                                        <div class="education__content">
+                                                                                            <div class="timeline-content"><a class="name" href="#">International College of Arts and Science (PG)</a><span class="degree">BSc In Computer Science</span><span class="year">2000 - 2003</span></div>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade" id="professional" role="tabpanel">
+                                                                        <div class="row mt-3">
+                                                                            <div class="education__box">
+                                                                                <ul class="education__list">
+                                                                                    <li>
+                                                                                        <div class="education__user">
+                                                                                            <div class="before__circle"></div>
+                                                                                        </div>
+                                                                                        <div class="education__content st-current">
+                                                                                            <div class="timeline-content"><a class="name" href="#">International College of Arts and Science (UG)</a><span class="degree">MSc In Computer Science</span><span class="year">2000 - 2003</span></div>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="education__user">
+                                                                                            <div class="before__circle"></div>
+                                                                                        </div>
+                                                                                        <div class="education__content">
+                                                                                            <div class="timeline-content"><a class="name" href="#">International College of Arts and Science (PG)</a><span class="degree">BSc In Computer Science</span><span class="year">2000 - 2003</span></div>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="card shadow widget1">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center pb-3 mb-3 border-bottom align-items-center flex-fill">
+                                                        <div>
+                                                            <h5 class="mb-1">Family Background</h5>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="underline-tabs mb-1" style="margin-top: -10px">
+                                                        <ul class="nav nav-tabs d-flex" id="underlineTabs" role="tablist">
+                                                            <li class="nav-item flex-fill" role="presentation">
+                                                                <button class="nav-link active" id="home-tab2" data-bs-toggle="tab" data-bs-target="#home2" type="button" role="tab">Family Information</button>
+                                                            </li>
+                                                            <li class="nav-item flex-fill" role="presentation">
+                                                                <button class="nav-link" id="profile-tab2" data-bs-toggle="tab" data-bs-target="#profile2" type="button" role="tab">Next of Kin</button>
+                                                            </li>
+                                                            <li class="nav-item flex-fill" role="presentation">
+                                                                <button class="nav-link" id="contact-tab2" data-bs-toggle="tab" data-bs-target="#contact2" type="button" role="tab">Emergency Contact</button>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="tab-content" id="underlineTabsContent">
+                                                            <div class="tab-pane fade show active" id="home2" role="tabpanel">
+                                                                <div class="row mt-3">
+                                                                    <div class="col-xl-12 col-12 d-flex">
+                                                                        <div class="card bg-secondary text-primary shadow flex-fill mb-4 mb-md-0">
+                                                                            <div class="card-body mb-3">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Name </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">Mary Doe</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Relationship </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">Wife</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Date of birth </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">25 May 1993</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Phone </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">+6956 961</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-12 col-12 d-flex">
+                                                                        <div class="card bg-secondary text-primary shadow flex-fill mb-2 mb-md-0">
+                                                                            <div class="card-body mb-3">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Name </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">Hendry Peralt</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Relationship </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">Brother</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Date of birth </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">25 May 2014</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Phone </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">+1 265 6956 961</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-12 col-12 d-flex">
+                                                                        <div class="card shadow bg-secondary text-primary flex-fill mb-4 mb-md-0">
+                                                                            <div class="card-body mb-3">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Name </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">Paul Watson</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Relationship </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">Son</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Date of birth </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">25 May 2014</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Phone </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">+1 265 6956 961</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane fade" id="profile2" role="tabpanel">
+                                                                <div class="row mt-3">
+                                                                    <div class="col-xl-12 col-12 d-flex">
+                                                                        <div class="card shadow bg-secondary text-primary flex-fill mb-4 mb-md-0">
+                                                                            <div class="card-body mb-3">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Name </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">Paul Watson</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Relationship </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">Son</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Address </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">25 May 2014</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Phone </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">+1 265 6956 961</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane fade" id="contact2" role="tabpanel">
+                                                                <div class="row mt-3">
+                                                                    <div class="col-xl-12 col-12 d-flex">
+                                                                        <div class="card shadow bg-secondary text-primary flex-fill mb-4 mb-md-0">
+                                                                            <div class="card-body mb-3">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Name </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">Paul Watson</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Relationship </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">Son</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Address </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">25 May 2014</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Phone </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">+1 265 6956 961</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-12 col-12 d-flex">
+                                                                        <div class="card shadow bg-secondary text-primary flex-fill mb-4 mb-md-0">
+                                                                            <div class="card-body mb-3">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Name </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">Paul Watson</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Relationship </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">Son</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Address </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">25 May 2014</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <span class="d-inline-flex align-items-center fw-medium"> Phone </span>
+                                                                                        <p class="d-flex align-items-center mt-1 text-dark">+1 265 6956 961</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Staff Profile Modal -->
 
         <!-- Box icon CDN -->
         <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->

@@ -1,3 +1,7 @@
+.media-body {
+    flex: 1;
+}
+
 /* Mannerz Staff Grid */
 /* Employee Card Styles */
 .employee-card {
@@ -256,7 +260,6 @@
     border-radius: 0.25rem;
 }
 
-.crdbtn-outline-primary:focus,
 .crdbtn-outline-primary:active {
     box-shadow: 0 0 0 0.25rem rgba(46, 87, 151, 0.25);
     background-color: #2e5797;
@@ -284,7 +287,6 @@
     border-radius: 0.25rem;
 }
 
-.crdbtn-outline-secondary:focus,
 .crdbtn-outline-secondary:active {
     box-shadow: 0 0 0 0.25rem rgba(245, 249, 252, 0.4);
     background-color: transparent;
@@ -2936,6 +2938,55 @@ td span:hover,
 }
 
 /* EduAdmin Box Styling */
+
+.search-bx {
+    max-width: 250px;
+    -webkit-box-shadow: 0 0 30px 0 rgba(82, 63, 105, 0.05);
+    box-shadow: 0 0 30px 0 rgba(82, 63, 105, 0.05);
+    border: 1px solid #d7dae3;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.search-bx input[type="search"] {
+    background-color: transparent;
+    color: #172b4c;
+    font-size: 16px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    height: 45px;
+}
+
+.search-bx ::placeholder {
+    color: #717C99;
+}
+
+.search-bx .input-group {
+    margin-top: 0px;
+}
+
+.search-bx .input-group-append {
+    margin-left: 0px;
+}
+
+.search-bx .btn {
+    background-color: transparent;
+    color: #172b4c;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 0 5px 5px 0;
+    padding: 3px 15px 3px 5px;
+    box-shadow: none;
+
+}
+
+.search-bx .btn img {
+    width: 20px;
+    margin-top: -3px;
+    filter: invert(0.6) sepia(1) saturate(1) hue-rotate(185deg);
+}
+
 
 .box {
     position: relative;
@@ -10212,10 +10263,10 @@ Main Color class
 Theme Customizer
 *****************************/
 .in-demo-panel {
-    right: -280px;
+    right: -400px;
     position: fixed;
     top: 0;
-    width: 280px;
+    width: 400px;
     background-color: #ffffff !important;
     height: 100vh;
     transition: all 0.5s ease-in-out;
