@@ -22,7 +22,7 @@
                 },
                 tooltip: {
                     trigger: 'item',
-                    formatter: '{a} <br/>{b}: {c} ({d}%)',
+                    formatter: '{b}: {c} ({d}%)',
                 },
                 legend: {
                     orient: 'vertical',
@@ -100,12 +100,12 @@
             var option = {
                 title: {
                     text: 'Staff Demographics',
-                    subtext: 'Scheme of Service Class',
+                    subtext: 'Professional Class',
                     x: 'center',
                 },
                 tooltip: {
                     trigger: 'item',
-                    formatter: '{a} <br/>{b}: {c} ({d}%)',
+                    formatter: '{b}: {c} ({d}%)',
                 },
                 legend: {
                     orient: 'vertical',
@@ -161,6 +161,95 @@
 
             $(window).on('resize', function () {
                 sosClassChart.resize();
+            });
+        } catch (error) {
+            console.error('Error initializing chart:', error);
+        }
+    });
+})(jQuery, echarts);
+
+
+// Documentation Statistics
+(function ($, echarts) {
+    $(document).ready(function () {
+        var chartElement = document.getElementById('document-stats');
+        if (!chartElement) {
+            console.error('Chart container not found. Check your HTML.');
+            return;
+        }
+
+        if (typeof echarts === 'undefined') {
+            console.error('ECharts library not loaded');
+            return;
+        }
+
+        try {
+            var docStatsChart = echarts.init(chartElement);
+
+            var option = {
+                title: {
+                    text: 'Statistics',
+                    subtext: 'Personal Files',
+                    x: 'center',
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{b}: {c} ({d}%)',
+                },
+                legend: {
+                    orient: 'vertical',
+                    x: 'right',
+                    y: 'bottom',
+                    data: ['In-service', 'Entry'],
+                },
+                color: ['#38649f', '#32cd32'],
+                series: [
+                    {
+                        name: 'Documentation',
+                        type: 'pie',
+                        radius: ['40%', '70%'],
+                        avoidLabelOverlap: false,
+                        padAngle: 5,
+                        // center: ['50%', '57.5%'],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    formatter: '{c}',
+                                    textStyle: {
+                                        fontSize: '14',
+                                        fontWeight: '500',
+                                    },
+                                },
+                                labelLine: { show: false },
+                            },
+                            emphasis: {
+                                label: {
+                                    show: true,
+                                    // formatter: '{c}' + '\n\n' + '({d}%)',
+                                    position: 'center',
+                                    textStyle: {
+                                        fontSize: '15',
+                                        fontWeight: '500',
+                                    },
+                                },
+                            },
+                            borderRadius: 10,
+                            // borderColor: '#fff',
+                            // borderWidth: 2,
+                        },
+                        data: [
+                            { value: 2, name: 'Entry' },
+                            { value: 7, name: 'In-service' },
+                        ],
+                    },
+                ],
+            };
+
+            docStatsChart.setOption(option);
+
+            $(window).on('resize', function () {
+                docStatsChart.resize();
             });
         } catch (error) {
             console.error('Error initializing chart:', error);
@@ -286,7 +375,7 @@
             var option = {
                 title: {
                     text: 'Staff Demographics',
-                    subtext: 'Grade Analogous Class',
+                    subtext: 'Grade Class',
                     left: 'center'
                 },
                 tooltip: {
@@ -383,12 +472,12 @@
             var option = {
                 title: {
                     text: 'Staff Demographics',
-                    subtext: 'Workforce Categories',
+                    subtext: 'Personnel Classification',
                     left: 'center'
                 },
                 tooltip: {
                     trigger: 'item',
-                    formatter: '{a} <br/>{b}: {c} ({d}%)'
+                    formatter: '{b}: {c} ({d}%)'
                 },
                 legend: {
                     orient: 'vertical',
@@ -398,7 +487,7 @@
                 },
                 color: ['#2e5797', '#32cd32', '#fac858'],
                 series: [{
-                    name: 'Employee Grade',
+                    name: 'Category',
                     type: 'pie',
                     radius: ['40%', '70%'],
                     avoidLabelOverlap: false,
